@@ -32,6 +32,8 @@ jobs:
     env:
       PYTHONIOENCODING: utf-8
       CI: "true"
+      PYTHONUNBUFFERED: "1"
+      PYTHONFAULTHANDLER: "1"
       GUNLUK_YENI: ${{ github.event.inputs.gunluk_yeni || '1' }}
     steps:
       - uses: actions/checkout@v4

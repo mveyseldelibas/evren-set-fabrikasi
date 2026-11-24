@@ -86,10 +86,42 @@ def cikar(pbf: Path, siniflar, calisma_dizini: Path, log=print) -> list[dict]:
     from shapely import wkb
 
     kaynak = _on_filtre(pbf, siniflar, calisma_dizini, log)
-    anahtarlar = sorted({k for s in siniflar for kural in s["kurallar"] for k in kural})
-    fp = osmium.FileProcessor(str(kaynak)).with_areas(osmium.filter.KeyFilter(*anahtarlar))
-    fab = osmium.geom.WKBFactory()
     ham, t0, n = [], time.time(), 0
+    arac = shutil.which("osmium")
+    if arac:
+        # 25.11: GitHub runner'da pyosmium with_areas Türkiye dökümünde segfault verdi. osmium-tool'un kendi
+        # çokgen kurucusu (export) hem daha hızlı hem sağlam: GeoJSONSeq satırlarını shapely ile oku.
+        import json
+        from shapely.geometry import shape
+        cikis = calisma_dizini / "alanlar.geojsonseq"
+        subprocess.run([arac, "export", str(kaynak), "-f", "geojsonseq", "--geometry-types=polygon",
+                        "-a", "type,id", "-o", str(cikis), "--overwrite"], check=True)
+        with open(cikis, encoding="utf-8") as f:
+            for satir in f:
+                satir = satir.strip().lstrip("\x1e")
+                if not satir:
+                    continue
+                o = json.loads(satir)
+                n += 1
+                t = o.get("properties") or {}
+                si = sinif_bul(t, siniflar)
+                if si is None or hassas_mi(t):
+                    continue
+                try:
+                    g = shape(o["geometry"])
+                except Exception:
+                    continue
+                if g.is_empty:
+                    continue
+                if not g.is_valid:
+                    g = shapely.make_valid(g)
+                tur = str(t.get("@type", "way"))
+                ham.append({"id": ("w" if tur.startswith("w") else "r") + str(t.get("@id", n)), "geom": g, "sinif": si,
+                            "ad": t.get("name")})
+        log(f"OSM (osmium export): {n} alan tarandı, {len(ham)} aday, {time.time() - t0:.0f} sn")
+    anahtarlar = sorted({k for s in siniflar for kural in s["kurallar"] for k in kural})
+    fp = [] if arac else osmium.FileProcessor(str(kaynak)).with_areas(osmium.filter.KeyFilter(*anahtarlar))
+    fab = osmium.geom.WKBFactory()
     for o in fp:
         if not o.is_area():
             continue

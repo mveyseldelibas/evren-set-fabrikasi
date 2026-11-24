@@ -1,0 +1,49 @@
+{
+ "sahip": "u43bd0650c87e",
+ "ogeler": [
+  {
+   "id": "sanayi_bolgesi",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "mezarlik",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "meyve_bahcesi_ve_bag",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "sulak_alan",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "zeytinlik",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "hobi_bahcesi",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "balik_ciftligi",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "liman_marina",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "futbol_sahasi",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "insaat_alani",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "universite_kampusu",
+   "durum": "bekliyor"
+  }
+ ]
+}

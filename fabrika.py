@@ -202,6 +202,8 @@ class Fabrika:
         except Exception as e:
             return f"kazanç özeti okunamadı ({type(e).__name__}); güvenli tarafta durduruldu"
         cr, et = s.get("today_earned_cr") or 0, s.get("today_annotation_count") or 0
+        if cr >= 100:
+            return None  # günlük tavan zaten dolu: o gün etiket puanı gelmez, yüklemenin kaybettireceği bir şey yok
         if cr > KAZANC_CR_ESIK and et < KAZANC_ETIKET_ESIK:
             return f"kazanç koruması: bugün {cr} CR kazanıldı, etiket {et} < {KAZANC_ETIKET_ESIK}; yükleme yarına"
         return None

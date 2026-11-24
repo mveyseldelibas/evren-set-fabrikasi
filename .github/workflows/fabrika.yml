@@ -82,4 +82,4 @@ jobs:
 
       - name: Durumu gönder (yedek; hata olsa da)
         if: always()
-        run: python -P -c "from pathlib import Path; from cekirdek import durum; durum.gonder(Path('.'))"
+        run: python -c "import sys; sys.path.insert(0, '.'); from pathlib import Path; from cekirdek import durum; durum.gonder(Path('.'))"

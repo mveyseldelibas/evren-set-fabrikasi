@@ -9,6 +9,9 @@ on:
       tarif:
         description: "Yalnız bu tarifi başlat (boş: sıradaki)"
         default: ""
+      yayim:
+        description: "1: eşikten geçenleri yayımla, 0: yalnız özel yükle (deneme)"
+        default: "1"
   push:
     branches: [main]
     paths: ["tetik/**"]     # dış rutin her gece buraya bir tetik dosyası iter (cron tek başına güvenilmedi)
@@ -70,7 +73,7 @@ jobs:
       - name: Fabrikayı çalıştır
         env:
           EVREN_PLATFORM_KEY: ${{ secrets.EVREN_PLATFORM_KEY }}
-          YAYIM: "1"
+          YAYIM: ${{ github.event.inputs.yayim || '1' }}
           TARIF: ${{ github.event.inputs.tarif }}
         run: |
           if [ -n "$TARIF" ]; then python -P fabrika.py --tarif "$TARIF"; else python -P fabrika.py; fi

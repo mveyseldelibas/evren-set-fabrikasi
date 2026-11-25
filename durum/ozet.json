@@ -6,19 +6,26 @@
    "model_yayin": 0
   },
   "2026-11-25": {
-   "yeni_yukleme": 0,
+   "yeni_yukleme": 1,
    "set_yayin": 0,
    "model_yayin": 0
   }
  },
  "yayinlananlar": [],
  "hatalar": [],
- "son_calisma": "2026-11-25T00:06:47Z",
- "bu_calismada_yapilanlar": [],
- "bu_calismada_hatalar": [],
+ "son_calisma": "2026-11-25T00:32:23Z",
+ "bu_calismada_yapilanlar": [
+  "sanayi_bolgesi: veri kuruluyor",
+  "sanayi_bolgesi: set oluşturuldu (özel)",
+  "sanayi_bolgesi: ZIP yükleme bitti"
+ ],
+ "bu_calismada_hatalar": [
+  "sanayi_bolgesi: RuntimeError yükleme eksik: val yerel 540, platform 0"
+ ],
  "kuyruk_uzunlugu": 11,
- "kalan_tarif": 11,
+ "kalan_tarif": 10,
  "durum_sayilari": {
-  "bekliyor": 11
+  "hata": 1,
+  "bekliyor": 10
  }
 }

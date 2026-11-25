@@ -3,7 +3,78 @@
  "ogeler": [
   {
    "id": "sanayi_bolgesi",
-   "durum": "bekliyor"
+   "durum": "hata",
+   "set_id": "01a21018-5831-7b10-9a00-a84ff2b9c170",
+   "set_slug": "turkiye-sanayi-bolgesi-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "sanayi_bolgesi",
+    "siniflar": [
+     "sanayi_bolgesi"
+    ],
+    "goruntu_bolum": {
+     "train": 1889,
+     "val": 540,
+     "test": 270
+    },
+    "goruntu_toplam": 2699,
+    "pencere_bolum": {
+     "train": 630,
+     "val": 180,
+     "test": 90
+    },
+    "pencere_toplam": 900,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "sanayi_bolgesi": 3923
+     },
+     "val": {
+      "sanayi_bolgesi": 1080
+     },
+     "test": {
+      "sanayi_bolgesi": 468
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "sanayi_bolgesi": 1889
+     },
+     "val": {
+      "sanayi_bolgesi": 540
+     },
+     "test": {
+      "sanayi_bolgesi": 270
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "sanayi_bolgesi": 3073
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 217,
+     "2020": 219,
+     "2021": 175,
+     "2022": 526,
+     "2023": 386,
+     "2024": 328,
+     "2025": 465,
+     "2026": 383
+    },
+    "mevsim_dagilimi": {
+     "ilkbahar": 897,
+     "sonbahar": 899,
+     "yaz": 903
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 814,
+     "yazilan_pencere": 900,
+     "goruntu": 2699
+    },
+    "uretim_zamani": "2026-11-25T00:25Z"
+   },
+   "zamanlar": {
+    "hata": "2026-11-25T00:32:23Z"
+   },
+   "neden": "RuntimeError: yükleme eksik: val yerel 540, platform 0"
   },
   {
    "id": "mezarlik",

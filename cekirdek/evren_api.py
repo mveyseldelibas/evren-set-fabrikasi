@@ -18,6 +18,16 @@ except Exception:
 TABAN = "https://api.ssyz.org.tr/api/v1"
 
 
+
+# EVREN'in kabul ettiği lisans kodları (25.11, 422 hata iletisinden). Listede olmayan (ör. ODbL-1.0) "custom" olarak
+# gönderilir; gerçek lisans README ve atıf metninde yazar.
+PLATFORM_LISANSLARI = {"MIT", "Apache-2.0", "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC0-1.0", "custom", "unlicensed"}
+
+
+def platform_lisansi(lisans: str | None) -> str:
+    return lisans if lisans in PLATFORM_LISANSLARI else "custom"
+
+
 class ApiHata(RuntimeError):
     pass
 
@@ -64,7 +74,8 @@ class EvrenApi:
     # -- veri seti -----------------------------------------------------------------------
     def set_olustur(self, ad, aciklama, lisans, gorunurluk="private") -> dict:
         r = self._tamam(self._iste("POST", "/datasets", headers=self.hj, json={
-            "name": ad, "modality": "VISION", "visibility": gorunurluk, "license": lisans, "description": aciklama}),
+            "name": ad, "modality": "VISION", "visibility": gorunurluk, "license": platform_lisansi(lisans),
+            "description": aciklama}),
             "set oluşturma")
         x = _veri(r)
         return {"id": x["id"], "slug": x.get("slug")}
@@ -148,7 +159,7 @@ class EvrenApi:
 
     def model_atif(self, model_id, lisans, kaynak, atif) -> int:
         return self._iste("PATCH", f"/models/{model_id}/attribution", headers=self.hj,
-                          json={"license": lisans, "source_info": kaynak, "citation_text": atif}).status_code
+                          json={"license": platform_lisansi(lisans), "source_info": kaynak, "citation_text": atif}).status_code
 
     def model_aciklama(self, model_id, aciklama) -> None:
         self._tamam(self._iste("PATCH", f"/models/{model_id}/description", headers=self.hj,

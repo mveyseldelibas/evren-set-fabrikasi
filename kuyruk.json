@@ -3,11 +3,7 @@
  "ogeler": [
   {
    "id": "sanayi_bolgesi",
-   "durum": "hata",
-   "zamanlar": {
-    "hata": "2026-11-25T00:03:45Z"
-   },
-   "neden": "ApiHata: set oluşturma: HTTP 422 {\"success\":false,\"error\":{\"code\":\"VALIDATION_ERROR\",\"message\":\"license: 'MIT', 'Apache-2.0', 'CC-BY-4.0', 'CC-BY-SA-4.0', 'CC-BY-NC-4.0', 'CC0-1.0', 'custom' or 'unlicensed' olmalı\",\"details\":[{\"field"
+   "durum": "bekliyor"
   },
   {
    "id": "mezarlik",

@@ -1,6 +1,13 @@
 {
  "mesajlar": [
   {
+   "id": "2026-11-25T19:12:05Z-zayif-sanayi_bolgesi",
+   "zaman": "2026-11-25T19:12:05Z",
+   "tur": "zayif",
+   "tarif": "sanayi_bolgesi",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Sanayi Bölgesi Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.392 < 0.50)."
+  },
+  {
    "id": "2026-11-25T00:34:37Z-basladi-sanayi_bolgesi",
    "zaman": "2026-11-25T00:34:37Z",
    "tur": "basladi",
@@ -29,6 +36,13 @@
    "tur": "basladi",
    "tarif": "sanayi_bolgesi",
    "mesaj": "Eğitim başladı: Türkiye Sanayi Bölgesi Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2699 öğe, ~0 CR)."
+  },
+  {
+   "id": "2026-11-25T19:12:05Z-zayif-sanayi_bolgesi",
+   "zaman": "2026-11-25T19:12:05Z",
+   "tur": "zayif",
+   "tarif": "sanayi_bolgesi",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Sanayi Bölgesi Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.392 < 0.50)."
   }
  ]
 }

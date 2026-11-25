@@ -13,15 +13,13 @@
  },
  "yayinlananlar": [],
  "hatalar": [],
- "son_calisma": "2026-11-25T00:34:37Z",
- "bu_calismada_yapilanlar": [
-  "sanayi_bolgesi: kuru koşu epok=60 tahmin=0.20 CR (x2.4=0.5)"
- ],
+ "son_calisma": "2026-11-25T19:12:05Z",
+ "bu_calismada_yapilanlar": [],
  "bu_calismada_hatalar": [],
  "kuyruk_uzunlugu": 11,
  "kalan_tarif": 10,
  "durum_sayilari": {
-  "egitimde": 1,
+  "zayif": 1,
   "bekliyor": 10
  }
 }

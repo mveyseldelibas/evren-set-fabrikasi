@@ -13,19 +13,20 @@
  },
  "yayinlananlar": [],
  "hatalar": [],
- "son_calisma": "2026-11-25T19:44:58Z",
+ "son_calisma": "2026-11-25T19:45:04Z",
  "bu_calismada_yapilanlar": [
   "mezarlik: veri kuruluyor",
   "mezarlik: set oluşturuldu (özel)",
   "mezarlik: ZIP yükleme bitti",
-  "yükleme doğrulandı: platform {'train': 1889, 'validation': 540, 'test': 270}, yerel {'train': 1889, 'val': 540, 'test': 270}, etiketsiz 0"
+  "yükleme doğrulandı: platform {'train': 1889, 'validation': 540, 'test': 270}, yerel {'train': 1889, 'val': 540, 'test': 270}, etiketsiz 0",
+  "mezarlik: kuru koşu epok=60 tahmin=0.20 CR (x2.4=0.5)"
  ],
  "bu_calismada_hatalar": [],
  "kuyruk_uzunlugu": 11,
  "kalan_tarif": 9,
  "durum_sayilari": {
   "zayif": 1,
-  "yuklendi": 1,
+  "egitimde": 1,
   "bekliyor": 9
  }
 }

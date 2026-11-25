@@ -1,18 +1,11 @@
 {
  "mesajlar": [
   {
-   "id": "2026-11-25T00:32:23Z-hata-sanayi_bolgesi",
-   "zaman": "2026-11-25T00:32:23Z",
-   "tur": "hata",
+   "id": "2026-11-25T00:34:37Z-basladi-sanayi_bolgesi",
+   "zaman": "2026-11-25T00:34:37Z",
+   "tur": "basladi",
    "tarif": "sanayi_bolgesi",
-   "mesaj": "Tarif başarısız: sanayi_bolgesi (RuntimeError: yükleme eksik: val yerel 540, platform 0)."
-  },
-  {
-   "id": "2026-11-25T00:03:45Z-hata-sanayi_bolgesi",
-   "zaman": "2026-11-25T00:03:45Z",
-   "tur": "hata",
-   "tarif": "sanayi_bolgesi",
-   "mesaj": "Tarif başarısız: sanayi_bolgesi (ApiHata: set oluşturma: HTTP 422 {\"success\":false,\"error\":{\"code\":\"VALIDATION_ERROR\",\"message\":\"license: 'MIT', 'Apache-2.0', 'CC)."
+   "mesaj": "Eğitim başladı: Türkiye Sanayi Bölgesi Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2699 öğe, ~0 CR)."
   }
  ],
  "gecmis": [
@@ -29,6 +22,13 @@
    "tur": "hata",
    "tarif": "sanayi_bolgesi",
    "mesaj": "Tarif başarısız: sanayi_bolgesi (RuntimeError: yükleme eksik: val yerel 540, platform 0)."
+  },
+  {
+   "id": "2026-11-25T00:34:37Z-basladi-sanayi_bolgesi",
+   "zaman": "2026-11-25T00:34:37Z",
+   "tur": "basladi",
+   "tarif": "sanayi_bolgesi",
+   "mesaj": "Eğitim başladı: Türkiye Sanayi Bölgesi Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2699 öğe, ~0 CR)."
   }
  ]
 }

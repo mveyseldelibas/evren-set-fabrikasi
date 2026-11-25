@@ -287,8 +287,9 @@ class Fabrika:
         yerel = {b: len(list((dizin / "images" / b).glob("*.jpg"))) for b in ("train", "val", "test")}
         etiketsiz = sum(1 for x in ogeler if not x.get("annotation_count"))
         for b, n in yerel.items():
-            if n and sayim.get(b, 0) < 0.98 * n:
-                raise RuntimeError(f"yükleme eksik: {b} yerel {n}, platform {sayim.get(b, 0)}")
+            pn = sayim.get(b, 0) + (sayim.get("validation", 0) if b == "val" else 0)  # platform 'val' bölümünü 'validation' adlandırıyor
+            if n and pn < 0.98 * n:
+                raise RuntimeError(f"yükleme eksik: {b} yerel {n}, platform {pn}")
         if etiketsiz > 0.02 * max(len(ogeler), 1):
             raise RuntimeError(f"etiketsiz öğe fazla: {etiketsiz}/{len(ogeler)}")
         self.d.eylem(f"yükleme doğrulandı: platform {sayim}, yerel {yerel}, etiketsiz {etiketsiz}")

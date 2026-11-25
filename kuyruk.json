@@ -3,7 +3,7 @@
  "ogeler": [
   {
    "id": "sanayi_bolgesi",
-   "durum": "hata",
+   "durum": "egitimde",
    "set_id": "01a21018-5831-7b10-9a00-a84ff2b9c170",
    "set_slug": "turkiye-sanayi-bolgesi-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -72,9 +72,22 @@
     "uretim_zamani": "2026-11-25T00:25Z"
    },
    "zamanlar": {
-    "hata": "2026-11-25T00:32:23Z"
+    "hata": "2026-11-25T00:32:23Z",
+    "yuklendi": "2026-11-25T00:34:32Z",
+    "egitimde": "2026-11-25T00:34:37Z"
    },
-   "neden": "RuntimeError: yükleme eksik: val yerel 540, platform 0"
+   "surum_id": "01a21020-27c8-7eb0-bd9d-8f11f0ff54d1",
+   "item_sayisi": 2699,
+   "bolum_ayari": {
+    "train": 1889,
+    "val": 540,
+    "test": 270,
+    "unassigned": 0
+   },
+   "proje_id": "01a21020-2bdd-7112-bf5c-725e0d0ca511",
+   "is_id": "01a21020-38f3-79f2-bfff-410007163c6c",
+   "epok": 60,
+   "tahmin_cr": 0.2
   },
   {
    "id": "mezarlik",

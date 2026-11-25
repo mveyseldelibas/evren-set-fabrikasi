@@ -13,19 +13,15 @@
  },
  "yayinlananlar": [],
  "hatalar": [],
- "son_calisma": "2026-11-25T00:32:25Z",
+ "son_calisma": "2026-11-25T00:34:37Z",
  "bu_calismada_yapilanlar": [
-  "sanayi_bolgesi: veri kuruluyor",
-  "sanayi_bolgesi: set oluşturuldu (özel)",
-  "sanayi_bolgesi: ZIP yükleme bitti"
+  "sanayi_bolgesi: kuru koşu epok=60 tahmin=0.20 CR (x2.4=0.5)"
  ],
- "bu_calismada_hatalar": [
-  "sanayi_bolgesi: RuntimeError yükleme eksik: val yerel 540, platform 0"
- ],
+ "bu_calismada_hatalar": [],
  "kuyruk_uzunlugu": 11,
  "kalan_tarif": 10,
  "durum_sayilari": {
-  "hata": 1,
+  "egitimde": 1,
   "bekliyor": 10
  }
 }

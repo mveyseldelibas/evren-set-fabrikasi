@@ -1,19 +1,24 @@
 {
  "gunluk": {
   "2026-11-24": {
-   "yeni_yukleme": 0,
+   "yeni_yukleme": 1,
    "set_yayin": 0,
    "model_yayin": 0
   }
  },
  "yayinlananlar": [],
  "hatalar": [],
- "son_calisma": "2026-11-24T23:45:36Z",
- "bu_calismada_yapilanlar": [],
- "bu_calismada_hatalar": [],
+ "son_calisma": "2026-11-25T00:03:45Z",
+ "bu_calismada_yapilanlar": [
+  "sanayi_bolgesi: veri kuruluyor"
+ ],
+ "bu_calismada_hatalar": [
+  "sanayi_bolgesi: ApiHata set oluşturma: HTTP 422 {\"success\":false,\"error\":{\"code\":\"VALIDATION_ERROR\",\"message\":\"license: 'MIT', 'Apache-2.0', 'CC-BY-4.0', 'CC-BY-SA-4.0', 'CC-BY-NC-4.0', 'CC0-1.0', 'custom' or 'unlicensed' ol"
+ ],
  "kuyruk_uzunlugu": 11,
- "kalan_tarif": 11,
+ "kalan_tarif": 10,
  "durum_sayilari": {
-  "bekliyor": 11
+  "hata": 1,
+  "bekliyor": 10
  }
 }

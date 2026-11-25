@@ -1,4 +1,20 @@
 {
- "mesajlar": [],
- "gecmis": []
+ "mesajlar": [
+  {
+   "id": "2026-11-25T00:03:45Z-hata-sanayi_bolgesi",
+   "zaman": "2026-11-25T00:03:45Z",
+   "tur": "hata",
+   "tarif": "sanayi_bolgesi",
+   "mesaj": "Tarif başarısız: sanayi_bolgesi (ApiHata: set oluşturma: HTTP 422 {\"success\":false,\"error\":{\"code\":\"VALIDATION_ERROR\",\"message\":\"license: 'MIT', 'Apache-2.0', 'CC)."
+  }
+ ],
+ "gecmis": [
+  {
+   "id": "2026-11-25T00:03:45Z-hata-sanayi_bolgesi",
+   "zaman": "2026-11-25T00:03:45Z",
+   "tur": "hata",
+   "tarif": "sanayi_bolgesi",
+   "mesaj": "Tarif başarısız: sanayi_bolgesi (ApiHata: set oluşturma: HTTP 422 {\"success\":false,\"error\":{\"code\":\"VALIDATION_ERROR\",\"message\":\"license: 'MIT', 'Apache-2.0', 'CC)."
+  }
+ ]
 }

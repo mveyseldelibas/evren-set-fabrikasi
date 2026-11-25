@@ -104,7 +104,86 @@
   },
   {
    "id": "mezarlik",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a2143a-d102-73b3-924e-5ccc0272e19a",
+   "set_slug": "turkiye-mezarlik-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "mezarlik",
+    "siniflar": [
+     "mezarlik"
+    ],
+    "goruntu_bolum": {
+     "val": 540,
+     "train": 1889,
+     "test": 270
+    },
+    "goruntu_toplam": 2699,
+    "pencere_bolum": {
+     "val": 180,
+     "train": 630,
+     "test": 90
+    },
+    "pencere_toplam": 900,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "mezarlik": 2261
+     },
+     "val": {
+      "mezarlik": 630
+     },
+     "test": {
+      "mezarlik": 330
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "mezarlik": 1889
+     },
+     "val": {
+      "mezarlik": 540
+     },
+     "test": {
+      "mezarlik": 270
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "mezarlik": 7548
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 271,
+     "2020": 336,
+     "2021": 237,
+     "2022": 467,
+     "2023": 308,
+     "2024": 300,
+     "2025": 458,
+     "2026": 322
+    },
+    "mevsim_dagilimi": {
+     "sonbahar": 904,
+     "ilkbahar": 893,
+     "yaz": 902
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 520,
+     "yazilan_pencere": 900,
+     "goruntu": 2699,
+     "okumaHatasi": 1
+    },
+    "uretim_zamani": "2026-11-25T19:41Z"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-25T19:44:58Z"
+   },
+   "surum_id": "01a2143d-695d-7180-bc30-d5d70a498597",
+   "item_sayisi": 2699,
+   "bolum_ayari": {
+    "train": 1889,
+    "val": 540,
+    "test": 270,
+    "unassigned": 0
+   }
   },
   {
    "id": "meyve_bahcesi_ve_bag",

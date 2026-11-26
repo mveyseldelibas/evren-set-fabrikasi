@@ -1,7 +1,7 @@
 """Tarif kaydı. SIRA, kuyruğa girecek tarif kimliklerini sırasıyla verir; her kimlik tarifler/<kimlik>.py modülüdür."""
 import importlib
 
-SIRA = ['sanayi_bolgesi', 'mezarlik', 'meyve_bahcesi_ve_bag', 'sulak_alan', 'zeytinlik', 'hobi_bahcesi', 'balik_ciftligi', 'liman_marina', 'futbol_sahasi', 'insaat_alani', 'universite_kampusu']
+SIRA = ['sanayi_bolgesi', 'mezarlik', 'meyve_bahcesi_ve_bag', 'sulak_alan', 'zeytinlik', 'hobi_bahcesi', 'balik_ciftligi', 'liman_marina', 'futbol_sahasi', 'insaat_alani', 'universite_kampusu', 'sera', 'gunes_enerjisi', 'maden_ocagi']
 
 
 def yukle(tarif_id: str):

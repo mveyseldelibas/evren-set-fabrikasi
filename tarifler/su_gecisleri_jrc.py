@@ -28,6 +28,7 @@ TARIF = s2_raster.tarif_olustur(
     sinirlar=["Etiket 30 m Landsat tabanlı bir haritadır; 10 m görüntüde kıyı çizgisi kademeli görünür.",
               "'Kaybolan su' 1984-1999 ile 2000-2020 dönemlerinin karşılaştırmasıdır; 2020 görüntüsünde bu alanlar kara olarak görünür.",
               "Etiketsiz pikseller su olmayan arka plandır (her yer etiketli değildir).",
+              "Kıyıya yakın deniz yüzeyi de kalıcı su olarak etiketlidir (kaynak haritada olduğu gibi).",
               "Etiket bir algoritmanın ürünüdür, el ile denetlenmedi."],
     raster=RASTER,
     kaynaklar=[{"ad": "EC JRC / Google, Global Surface Water v1.3 (Microsoft Planetary Computer `jrc-gsw`); Pekel vd. 2016, Nature 540, 418-422",

@@ -34,8 +34,11 @@ def _sinif_tablosu(ozet: dict) -> str:
 
 def set_readme(tarif: dict, ozet: dict, yontem: str) -> str:
     kaynaklar = "".join(f"- {k['ad']}: {k['url']} ({k['lisans']})\n" for k in tarif["kaynaklar"])
-    kurallar = "".join(f"- `{s['ad']}`: " + " veya ".join(
-        "+".join(f"{k}={v}" for k, v in kural.items()) for kural in s["kurallar"]) + "\n" for s in tarif["siniflar"])
+    kurallar = "".join(f"- `{s['ad']}`: " + (" veya ".join(
+        "+".join(f"{k}={v}" for k, v in kural.items()) for kural in s["kurallar"]) if "kurallar" in s
+        else s.get("tanim", "")) + "\n" for s in tarif["siniflar"])
+    kaynak_satiri = ozet.get("kaynak_satiri") or f"OpenStreetMap dökümü tarihi: {ozet.get('osm_dokum_tarihi')}"
+    kural_basligi = tarif.get("kural_basligi", "Sınıf kuralları (OpenStreetMap etiketleri):")
     sinirlar = "".join(f"- {x}\n" for x in tarif["sinirlar"])
     return f"""# {tarif['ad']}
 
@@ -46,7 +49,7 @@ def set_readme(tarif: dict, ozet: dict, yontem: str) -> str:
 - **{_n(ozet['goruntu_toplam'])} gerçek görüntü**, {_n(ozet['pencere_toplam'])} ayrı konum (224x224 px, 10 m, yaklaşık 2,24 km). Her konum için farklı mevsimlerden en çok 3 ayrı Sentinel-2 geçişi.
 - Etiket türü: çokgen (YOLO segmentasyon). Görüntü biçimi: RGB JPEG.
 - Mevsim dağılımı: {ozet['mevsim_dagilimi']}. Yıl dağılımı: {ozet['yil_dagilimi']}.
-- OpenStreetMap dökümü tarihi: {ozet['osm_dokum_tarihi']}.
+- {kaynak_satiri}.
 
 | Bölüm | Konum | Görüntü |
 |---|--:|--:|
@@ -54,7 +57,7 @@ def set_readme(tarif: dict, ozet: dict, yontem: str) -> str:
 | YOLO sınıfı | Ad | Sınıfı içeren görüntü | Etiket (çokgen satırı) |
 |--:|---|--:|--:|
 {_sinif_tablosu(ozet)}
-Sınıf kuralları (OpenStreetMap etiketleri):
+{kural_basligi}
 
 {kurallar}
 ## Yöntem

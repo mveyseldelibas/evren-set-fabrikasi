@@ -9,17 +9,25 @@
    "yeni_yukleme": 2,
    "set_yayin": 0,
    "model_yayin": 0
+  },
+  "2026-11-26": {
+   "yeni_yukleme": 0,
+   "set_yayin": 0,
+   "model_yayin": 0
   }
  },
  "yayinlananlar": [],
  "hatalar": [],
- "son_calisma": "2026-11-25T19:45:41Z",
- "bu_calismada_yapilanlar": [],
+ "son_calisma": "2026-11-26T02:01:18Z",
+ "bu_calismada_yapilanlar": [
+  "mezarlik: kapılar geçildi, yayım penceresini bekliyor"
+ ],
  "bu_calismada_hatalar": [],
  "kuyruk_uzunlugu": 11,
- "kalan_tarif": 10,
+ "kalan_tarif": 9,
  "durum_sayilari": {
   "zayif": 1,
-  "bekliyor": 10
+  "egitimde": 1,
+  "bekliyor": 9
  }
 }

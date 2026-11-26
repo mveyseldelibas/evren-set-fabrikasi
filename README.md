@@ -15,11 +15,11 @@ Hedef platform: EVREN (https://evren.ssyz.org.tr). Kod lisansı: MIT. Ürettiği
    (yalnız bu açılıştan doğan fark gizlenir; önceden açık olanlara dokunulmaz). Geçemeyen `zayif` olur ve gizli kalır.
 3. Bugün başlatılan yeni iş sayısı `GUNLUK_YENI`'den (iş akışında 6, en çok 6) azsa önce günün `bekliyor` tarifleri kurulur: veri üretilir, ÖZEL yüklenir,
    öğe sayısı ve bölüm ayarı doğrulanır, sürüm oluşturulur, eğitim kuru koşusu 30 CR'yi (tahmin x 2,4) aşarsa iptal edilir, değilse eğitim başlar.
-4. **Kazanç koruması:** ZIP yüklemeden önce `/billing/earning/overview` okunur; bugünkü CR > 60 ve bugünkü etiket sayısı < 400 ise yükleme yarına bırakılır.
+4. **Kazanç koruması:** ZIP yüklemeden önce `/billing/earning/overview` okunur; bugünkü CR > 60 ve bugünkü etiket sayısı < 300 ise (platform sayacı 300'de durur) yükleme yarına bırakılır.
 5. **CR penceresi:** günlük 100 CR tavanı 00:00 TSİ'de sıfırlanır ve dolunca etiket puanı da durur. ZIP içe aktarma ve yayım gibi CR kazandıran
    adımlar yalnız 23:25-23:58 TSİ (20:25-20:58 UTC) penceresinde yapılır; bugünkü kazanç zaten >= 100 ise her an serbesttir. Veri önce kurulur,
-   sonra pencere beklenir (en çok 4 saat); pencere kaçarsa yükleme ve yayım ertesi geceye kalır (durum değişmez). Bu yüzden koşu en geç ~22:00 TSİ'de
-   (19:00 UTC) başlamalıdır; dış rutin tetiği bu saate göre ayarlanmalı, cron yedeği 19:00 UTC'dedir.
+   sonra pencere beklenir (en çok 4 saat); pencere kaçarsa yükleme ve yayım ertesi geceye kalır (durum değişmez). Günün setleri önce topluca kurulur; koşu ~18:30 TSİ'de
+   (15:30 UTC) başlar; dış rutin tetiği ve cron yedeği bu saattedir.
 6. Günlük sert sınırlar: en çok 10 veri seti yayımı, 10 model yayımı, 6 yeni yükleme. Yükleme penceresi 23:25-23:58 TSİ; günün etiket sayacı 300 ise 20:30 TSİ'de açılır.
 7. `kuyruk.json`, `durum/ozet.json`, `durum/bildirim.json` yazılır ve çakışmasız (alıp-birleştir-yeniden dene) gönderilir. Başka hiçbir dosya commit edilmez.
 

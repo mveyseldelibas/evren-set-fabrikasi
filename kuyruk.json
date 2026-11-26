@@ -104,7 +104,7 @@
   },
   {
    "id": "mezarlik",
-   "durum": "egitimde",
+   "durum": "yayimlandi",
    "set_id": "01a2143a-d102-73b3-924e-5ccc0272e19a",
    "set_slug": "turkiye-mezarlik-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -175,7 +175,8 @@
    },
    "zamanlar": {
     "yuklendi": "2026-11-25T19:44:58Z",
-    "egitimde": "2026-11-25T19:45:03Z"
+    "egitimde": "2026-11-25T19:45:03Z",
+    "yayimlandi": "2026-11-26T20:26:16Z"
    },
    "surum_id": "01a2143d-695d-7180-bc30-d5d70a498597",
    "item_sayisi": 2699,
@@ -199,8 +200,7 @@
     "recall": 0.67302,
     "kapi_olcusu": 0.68088
    },
-   "cr_gercek": "2.50",
-   "yayina_hazir": true
+   "cr_gercek": "2.50"
   },
   {
    "id": "meyve_bahcesi_ve_bag",

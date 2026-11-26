@@ -1,6 +1,13 @@
 {
  "mesajlar": [
   {
+   "id": "2026-11-26T20:26:16Z-yayimlandi-mezarlik",
+   "zaman": "2026-11-26T20:26:16Z",
+   "tur": "yayimlandi",
+   "tarif": "mezarlik",
+   "mesaj": "Yayımlandı: Türkiye Mezarlık Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (ölçü %68.1, 2699 öğe). https://evren.ssyz.org.tr/models/u43bd0650c87e/tr-mezarlik-seg-sentinel2-yolo11s-seg"
+  },
+  {
    "id": "2026-11-25T19:45:03Z-basladi-mezarlik",
    "zaman": "2026-11-25T19:45:03Z",
    "tur": "basladi",
@@ -57,6 +64,13 @@
    "tur": "basladi",
    "tarif": "mezarlik",
    "mesaj": "Eğitim başladı: Türkiye Mezarlık Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2699 öğe, ~0 CR)."
+  },
+  {
+   "id": "2026-11-26T20:26:16Z-yayimlandi-mezarlik",
+   "zaman": "2026-11-26T20:26:16Z",
+   "tur": "yayimlandi",
+   "tarif": "mezarlik",
+   "mesaj": "Yayımlandı: Türkiye Mezarlık Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (ölçü %68.1, 2699 öğe). https://evren.ssyz.org.tr/models/u43bd0650c87e/tr-mezarlik-seg-sentinel2-yolo11s-seg"
   }
  ]
 }

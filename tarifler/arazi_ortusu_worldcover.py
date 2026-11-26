@@ -22,6 +22,7 @@ RASTER = {
     "yaygin_siniflar": [0, 1, 2, 3, 5], "seyreltme": 0.6, "aday_carpani": 2.4,
     "kaynak_adi": "ESA WorldCover 2021 (v200)",
     "kaynak_satiri": "Etiket haritası: ESA WorldCover 2021 v200 (10 m); görüntüler 2021 yılından",
+    "dogruluk_notu": "Etiket ESA'nın bir model ile ürettiği haritadır (yaklaşık %75-80 genel doğruluk), el ile çizilmiş değildir; bu doğruluk setin üst sınırıdır.",
 }
 
 TARIF = s2_raster.tarif_olustur(

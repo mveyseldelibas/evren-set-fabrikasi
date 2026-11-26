@@ -71,6 +71,67 @@ def konum_planla(sinir, adet: int, tohum: int, bant_derece: float = 3.0):
     return secilen
 
 
+def hedefli_konumlar(tarif, sinir, adet: int, tohum: int, log=print, kaba_derece: float = 0.0025):
+    """Seyrek konular (ör. su) için: etiket haritasının kaba önizlemesinde (~250 m) hedef sınıf piksellerini bul,
+    sınıf başına dengeli ve birbirine en az 1,5 km uzak pencere merkezleri seç. 'sinif' = hedef sınıf (katmanlı bölme)."""
+    import numpy as np
+    import planetary_computer
+    import pystac_client
+    import rasterio
+    import shapely
+    from pyproj import Transformer
+    from rasterio.enums import Resampling
+    from tarifler.osm_cikar import ALAN_PROJ
+    r = tarif["raster"]
+    deger = {int(k): v for k, v in r["deger_sinif"].items()}
+    ns = len(tarif["siniflar"])
+    istemci = pystac_client.Client.open(s2_osm.STAC_URL)
+    ic = sinir.buffer(-0.015)
+    shapely.prepare(ic)
+    ogeler = list(istemci.search(collections=[r["koleksiyon"]], bbox=list(sinir.bounds),
+                                 datetime=f"{r['yil']}-01-01/{r['yil']}-12-31", limit=50).items_as_dicts())
+    adaylar = {k: [] for k in range(ns)}
+    for o in ogeler:
+        href = planetary_computer.sign(o["assets"][r["varlik"]]["href"])
+        with rasterio.open(href) as ds:
+            b = ds.bounds
+            gen, yuk = int(round((b.right - b.left) / kaba_derece)), int(round((b.top - b.bottom) / kaba_derece))
+            v = ds.read(1, out_shape=(yuk, gen), resampling=Resampling.nearest)
+        for d, sn in deger.items():
+            ys, xs = np.nonzero(v == d)
+            if not len(xs):
+                continue
+            lon = b.left + (xs + 0.5) * kaba_derece
+            lat = b.top - (ys + 0.5) * kaba_derece
+            icte = shapely.contains_xy(ic, lon, lat)
+            adaylar[sn].extend(zip(lon[icte].tolist(), lat[icte].tolist()))
+        log(f"  {o['id']}: {[len(adaylar[k]) for k in range(ns)]}")
+    ileri = Transformer.from_crs(4326, ALAN_PROJ, always_xy=True)
+    rng = random.Random(f"hedefli:{tohum}")
+    secilen, hucre = [], {}
+    sira = sorted(range(ns), key=lambda k: len(adaylar[k]))        # en seyrek sınıf önce; artan kota sonrakilere
+    for i, sn in enumerate(sira):
+        tavan = max(1, (adet - len(secilen)) // (ns - i))
+        a = adaylar[sn]
+        rng.shuffle(a)
+        n = 0
+        for lon, lat in a:
+            x, y = ileri.transform(lon, lat)
+            h = (int(x // MIN_PENCERE_ARALIGI_M), int(y // MIN_PENCERE_ARALIGI_M))
+            if any(((x - p) ** 2 + (y - q) ** 2) ** 0.5 < MIN_PENCERE_ARALIGI_M
+                   for dx in (-1, 0, 1) for dy in (-1, 0, 1) for p, q in hucre.get((h[0] + dx, h[1] + dy), ())):
+                continue
+            hucre.setdefault(h, []).append((x, y))
+            secilen.append({"konum_id": f"k{int(round(lat * 1e4))}_{int(round(lon * 1e4))}", "x": x, "y": y,
+                            "lon": lon, "lat": lat, "sinif": sn})
+            n += 1
+            if n >= tavan:
+                break
+    log(f"hedefli konum: {len(secilen)} ({Counter(s['sinif'] for s in secilen)})")
+    rng.shuffle(secilen)
+    return secilen
+
+
 class RasterUretici(Uretici):
     """Etiketi raster haritadan okuyan üretici. tarif['raster']: koleksiyon, varlık, yıl, deger_sinif eşlemesi."""
 
@@ -144,7 +205,7 @@ class RasterUretici(Uretici):
         maske = cv2.medianBlur(maske, 3)
         dagilim = Counter({int(k): int(v) for k, v in zip(*np.unique(maske[maske != 255], return_counts=True))})
         toplam = sum(dagilim.values())
-        if toplam < KARO * KARO * 0.9:
+        if toplam < KARO * KARO * self.r.get("en_az_kapsama", 0.9):
             self.say["etiket_bos"] += 1
             return [], Counter()
         baskin, n = dagilim.most_common(1)[0]
@@ -176,7 +237,8 @@ def hazirla(tarif: dict, cikti: Path, pilot: int | None = None, is_parcacigi: in
     sinir = turkiye_siniri(Path(__file__).resolve().parent.parent / "veri" / "onbellek" / "turkiye_ne50m.json")
     hedef = tarif.get("hedef_pencere", 1000)
     aday = max(pilot * 4, 40) if pilot else int(hedef * tarif["raster"].get("aday_carpani", 2.2))
-    penceler = kumele_ve_bol(konum_planla(sinir, aday, tohum), tohum)
+    planla = hedefli_konumlar if tarif["raster"].get("hedefli") else (lambda t, s, a, h, log: konum_planla(s, a, h))
+    penceler = kumele_ve_bol(planla(tarif, sinir, aday, tohum, log), tohum)
     if pilot:
         random.Random("pilot").shuffle(penceler)
     log(f"aday konum: {len(penceler)} (hedef pencere {hedef if not pilot else pilot})")
@@ -206,16 +268,25 @@ def hazirla(tarif: dict, cikti: Path, pilot: int | None = None, is_parcacigi: in
 
 def yontem_metni(tarif: dict, ozet: dict) -> str:
     r = tarif["raster"]
-    return f"""1. Konumlar: Türkiye sınırı (Natural Earth 1:50m, kamu malı) içinde tohumlu rastgele noktalar; pencere tamamen ülke içinde, \
-merkezler birbirine en az 1,5 km uzak. Tek bir yaygın sınıfın %97'den fazlasını kapladığı pencerelerin bir kısmı çeşitlilik için atlandı.
+    if r.get("hedefli"):
+        konum = ("1. Konumlar: etiket haritasının yaklaşık 250 m'lik kaba önizlemesinde hedef sınıf pikselleri bulundu; Türkiye sınırı "
+                 "(Natural Earth 1:50m, kamu malı) içindekilerden sınıf başına dengeli (en seyrek sınıf önce), merkezleri birbirine en az "
+                 "1,5 km uzak pencereler seçildi. Hedef sınıflar dışındaki pikseller etiketsiz arka plandır.")
+        bolme = "kümeler hedef sınıfa göre katmanlı"
+    else:
+        konum = ("1. Konumlar: Türkiye sınırı (Natural Earth 1:50m, kamu malı) içinde tohumlu rastgele noktalar; pencere tamamen ülke içinde, "
+                 "merkezler birbirine en az 1,5 km uzak. Tek bir yaygın sınıfın %97'den fazlasını kapladığı pencerelerin bir kısmı çeşitlilik için atlandı.")
+        bolme = "kümeler 3 derecelik boylam bantlarına göre katmanlı"
+    dogruluk = r.get("dogruluk_notu", "Etiket bir algoritmanın ürettiği haritadır, el ile çizilmiş değildir; haritanın kendi doğruluğu bu setin üst sınırıdır.")
+    return f"""{konum}
 2. Her konum için 224x224 piksellik (10 m, yaklaşık 2,24 km) pencere.
 3. Görüntü: Microsoft Planetary Computer `sentinel-2-l2a`, yalnız {r['yil']} yılı (etiket haritasıyla aynı yıl). SCL ile bulut/gölge en çok %3, \
 kar en çok %5, boş piksel en çok %0,5. Kış dışında farklı mevsimlerden en çok 3 **gerçek** tarih (aralarında en az 20 gün); kopya yok. \
 Kırmızı-yeşil-mavi bantlar 0-3500 yansıtımdan 0-255'e ölçeklendi (gama 0,9).
 4. Etiket: {r['kaynak_adi']} haritası pencerenin Sentinel-2 ızgarasına en yakın komşu ile yeniden örneklendi, 3x3 medyan süzgeçten geçirildi; \
 her sınıfın dış sınırları YOLO çokgenine çevrildi (1,5 piksel sadeleştirme, 16 pikselden küçük parçalar atıldı, iç boşluklar korunmaz). \
-Etiket bir modelin ürettiği haritadır, el ile çizilmiş değildir: haritanın kendi doğruluğu (yaklaşık %75-80 genel doğruluk) bu setin üst sınırıdır.
-5. Bölme: birbirine 4 km'den yakın pencereler tek kümede; kümeler 3 derecelik boylam bantlarına göre katmanlı, yaklaşık 70/20/10 (train/val/test), sabit tohum."""
+{dogruluk}
+5. Bölme: birbirine 4 km'den yakın pencereler tek kümede; {bolme}, yaklaşık 70/20/10 (train/val/test), sabit tohum."""
 
 
 def tarif_olustur(id, ad, aciklama, siniflar, model_adi, sinirlar, raster, kaynaklar, lisans, lisans_gorunen,

@@ -120,7 +120,7 @@ class EvrenApi:
     # -- eğitim --------------------------------------------------------------------------
     def proje_olustur(self, ad, aciklama) -> str:
         r = self._tamam(self._iste("POST", "/projects", headers=self.hj, json={
-            "name": ad, "description": aciklama[:300], "visibility": "private"}), "proje")
+            "name": ad, "description": aciklama[:300], "visibility": "public"}), "proje")
         return _veri(r)["id"]
 
     def egitim_kuru(self, proje_id, govde) -> dict:

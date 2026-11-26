@@ -20,7 +20,7 @@ Hedef platform: EVREN (https://evren.ssyz.org.tr). Kod lisansı: MIT. Ürettiği
    adımlar yalnız 23:25-23:58 TSİ (20:25-20:58 UTC) penceresinde yapılır; bugünkü kazanç zaten >= 100 ise her an serbesttir. Veri önce kurulur,
    sonra pencere beklenir (en çok 4 saat); pencere kaçarsa yükleme ve yayım ertesi geceye kalır (durum değişmez). Günün setleri önce topluca kurulur; koşu ~18:30 TSİ'de
    (15:30 UTC) başlar; dış rutin tetiği ve cron yedeği bu saattedir.
-6. Günlük sert sınırlar: en çok 10 veri seti yayımı, 10 model yayımı, 6 yeni yükleme. Yükleme penceresi 23:25-23:58 TSİ; günün etiket sayacı 300 ise 20:30 TSİ'de açılır.
+6. Günlük sert sınırlar: en çok 10 veri seti yayımı, 10 model yayımı, 10 yeni yükleme. Yükleme penceresi 23:25-23:58 TSİ; günün etiket sayacı 300 ise 20:30 TSİ'de açılır.
 7. `kuyruk.json`, `durum/ozet.json`, `durum/bildirim.json` yazılır ve çakışmasız (alıp-birleştir-yeniden dene) gönderilir. Başka hiçbir dosya commit edilmez.
 
 ## Dosyalar

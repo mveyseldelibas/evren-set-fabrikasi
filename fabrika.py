@@ -6,7 +6,7 @@ Sırayla:
   c) ZIP yüklemeden önce kazanç korumasını uygular (aşılmaz).
   d) durum/ozet.json ve durum/bildirim.json yazar; yalnız durum dosyalarını çakışmasız gönderir.
 
-Ortam: EVREN_PLATFORM_KEY (zorunlu), GUNLUK_YENI (varsayılan 1, en çok 6), YAYIM (0 ise hiçbir şey yayımlanmaz),
+Ortam: EVREN_PLATFORM_KEY (zorunlu), GUNLUK_YENI (varsayılan 1, en çok 10), YAYIM (0 ise hiçbir şey yayımlanmaz),
        CI=true ise durum dosyaları git'e gönderilir.
 Kullanım: python -P fabrika.py [--kuru] [--tarif ID] [--pilot N]
 """

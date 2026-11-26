@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
     inputs:
       gunluk_yeni:
-        description: "Bugün başlatılacak en çok yeni tarif (en çok 6)"
-        default: "6"
+        description: "Bugün başlatılacak en çok yeni tarif (en çok 10)"
+        default: "10"
       tarif:
         description: "Yalnız bu tarifi başlat (boş: sıradaki)"
         default: ""
@@ -34,7 +34,7 @@ jobs:
       CI: "true"
       PYTHONUNBUFFERED: "1"
       PYTHONFAULTHANDLER: "1"
-      GUNLUK_YENI: ${{ github.event.inputs.gunluk_yeni || '6' }}
+      GUNLUK_YENI: ${{ github.event.inputs.gunluk_yeni || '10' }}
     steps:
       - uses: actions/checkout@v4
 

@@ -265,8 +265,9 @@ class Kaynak:
                 if not yeni:
                     self.acik.move_to_end(href)
                     return self.acik[href]
-                eski, _ = self.acik.pop(href)
-                eski.close()
+                eski, ekl = self.acik.pop(href)
+                with ekl:                      # 26.11: başka iş parçacığı okurken kapatma segfault veriyordu
+                    eski.close()
         ds = yeniden_dene(lambda: rasterio.open(planetary_computer.sign(href)))
         with self.kilit:
             if href in self.acik:
@@ -274,9 +275,10 @@ class Kaynak:
                 return self.acik[href]
             self.acik[href] = (ds, threading.Lock())
             while len(self.acik) > self.en_cok_acik:
-                _, (e, _) = self.acik.popitem(last=False)
+                _, (e, ekl) = self.acik.popitem(last=False)
                 try:
-                    e.close()
+                    with ekl:                  # okuyan iş parçacığı bitmeden kapatma (26.11 segfault)
+                        e.close()
                 except Exception:
                     pass
             return self.acik[href]

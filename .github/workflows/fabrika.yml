@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
     inputs:
       gunluk_yeni:
-        description: "Bugün başlatılacak en çok yeni tarif (en çok 2)"
-        default: "1"
+        description: "Bugün başlatılacak en çok yeni tarif (en çok 6)"
+        default: "6"
       tarif:
         description: "Yalnız bu tarifi başlat (boş: sıradaki)"
         default: ""
@@ -16,7 +16,7 @@ on:
     branches: [main]
     paths: ["tetik/**"]     # dış rutin her gece buraya bir tetik dosyası iter (cron tek başına güvenilmedi)
   schedule:
-    - cron: "0 19 * * *"    # yedek (22:00 TSİ): veri kurulur, 23:25 TSİ penceresini bekler
+    - cron: "30 15 * * *"   # yedek (18:30 TSİ): önce günün setleri kurulur, 20:30/23:25 TSİ penceresinde yüklenir
 
 concurrency:
   group: fabrika
@@ -34,7 +34,7 @@ jobs:
       CI: "true"
       PYTHONUNBUFFERED: "1"
       PYTHONFAULTHANDLER: "1"
-      GUNLUK_YENI: ${{ github.event.inputs.gunluk_yeni || '1' }}
+      GUNLUK_YENI: ${{ github.event.inputs.gunluk_yeni || '6' }}
     steps:
       - uses: actions/checkout@v4
 

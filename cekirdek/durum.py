@@ -10,7 +10,7 @@ from pathlib import Path
 
 from . import kuyruk as kq
 
-GUNLUK_SINIR = {"yeni_yukleme": 2, "set_yayin": 10, "model_yayin": 10}
+GUNLUK_SINIR = {"yeni_yukleme": 6, "set_yayin": 10, "model_yayin": 10}
 DURUM_DOSYALARI = ("kuyruk.json", "durum/ozet.json", "durum/bildirim.json")
 
 

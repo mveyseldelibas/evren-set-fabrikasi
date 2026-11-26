@@ -223,6 +223,14 @@ class PencereTesti(unittest.TestCase):
         self.assertIsNone(pencere.kalan_bekleme_sn(self.U(20, 59)))      # 23:59 TSİ: pencere kaçtı
         self.assertEqual(pencere.kalan_bekleme_sn(self.U(10, 0)), (10 * 60 + 25) * 60)   # 13:00 -> 23:25 TSİ
 
+    def test_erken_pencere(self):                                       # 27.11: etiket sayacı 300 ise 20:30 TSİ
+        self.assertFalse(pencere.izinli(self.U(17, 29), 50, 300)[0])     # 20:29 TSİ
+        self.assertTrue(pencere.izinli(self.U(17, 30), 50, 300)[0])      # 20:30 TSİ
+        self.assertFalse(pencere.izinli(self.U(17, 30), 50, 299)[0])
+        self.assertFalse(pencere.izinli(self.U(20, 59), 50, 300)[0])     # 23:59 TSİ kapalı
+        self.assertEqual(pencere.kalan_bekleme_sn(self.U(17, 0), 300), 30 * 60)
+        self.assertEqual(pencere.kalan_bekleme_sn(self.U(17, 0), 10), (3 * 60 + 25) * 60)
+
     def _fabrika(self, api, saat, d):
         t = {"an": saat}
 
@@ -335,6 +343,25 @@ class YuklemeYoluTesti(unittest.TestCase):
             f2 = self._kur(api2, d)
             f2.yeni_baslat()
             self.assertEqual(f2.d.kuyruk["ogeler"][0]["durum"], "egitimde")
+
+    def test_kazanc_korumasi_etiket_300(self):                         # platform sayacı 300'de durur
+        with tempfile.TemporaryDirectory() as d:
+            f = self._kur(SahteYuklemeApi(bugun_cr=87, etiket=300), d)
+            f.yeni_baslat()
+            self.assertEqual(f.d.kuyruk["ogeler"][0]["durum"], "egitimde")
+
+    def test_once_hepsi_kurulur(self):
+        with tempfile.TemporaryDirectory() as d:
+            api = SahteYuklemeApi()
+            f = self._kur(api, d)
+            f.gunluk_yeni = 6
+            sira = []
+            eski_h, eski_y = f.hazirla, f._yukle_ve_baslat
+            f.hazirla = lambda t, dz: (sira.append("kur"), eski_h(t, dz))[1]
+            f._yukle_ve_baslat = lambda *a: (sira.append("yukle"), eski_y(*a))[1]
+            f.yeni_baslat()
+            self.assertEqual(sira, ["kur", "kur", "yukle", "yukle"])
+            self.assertEqual([o["durum"] for o in f.d.kuyruk["ogeler"]], ["egitimde", "egitimde"])
 
     def test_pahali_egitim_hata(self):
         with tempfile.TemporaryDirectory() as d:

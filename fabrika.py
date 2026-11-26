@@ -6,7 +6,7 @@ Sırayla:
   c) ZIP yüklemeden önce kazanç korumasını uygular (aşılmaz).
   d) durum/ozet.json ve durum/bildirim.json yazar; yalnız durum dosyalarını çakışmasız gönderir.
 
-Ortam: EVREN_PLATFORM_KEY (zorunlu), GUNLUK_YENI (varsayılan 1, en çok 2), YAYIM (0 ise hiçbir şey yayımlanmaz),
+Ortam: EVREN_PLATFORM_KEY (zorunlu), GUNLUK_YENI (varsayılan 1, en çok 6), YAYIM (0 ise hiçbir şey yayımlanmaz),
        CI=true ise durum dosyaları git'e gönderilir.
 Kullanım: python -P fabrika.py [--kuru] [--tarif ID] [--pilot N]
 """
@@ -29,7 +29,7 @@ from datetime import datetime, timezone  # noqa: E402
 from cekirdek import kuyruk as kq           # noqa: E402
 
 BOY = 300                    # ZIP parçası başına görüntü
-KAZANC_CR_ESIK, KAZANC_ETIKET_ESIK = 60, 400
+KAZANC_CR_ESIK, KAZANC_ETIKET_ESIK = 60, 300   # platform günlük etiket sayacı 300'de durur (27.11)
 EN_AZ_DISK_GB = 3.0
 BITIS_DURUMLARI = ("COMPLETED", "SUCCEEDED")
 HATA_DURUMLARI = ("FAILED", "CANCELLED", "ERROR")
@@ -129,7 +129,9 @@ class Fabrika:
     # -- CR penceresi -----------------------------------------------------------------------
     def _bugun_cr(self):
         try:
-            return self.api.kazanc_ozeti().get("today_earned_cr") or 0
+            s = self.api.kazanc_ozeti()
+            self._bugun_etiket = s.get("today_annotation_count")
+            return s.get("today_earned_cr") or 0
         except Exception:
             return None
 
@@ -140,10 +142,11 @@ class Fabrika:
             if cr is None:
                 self.d.eylem("kazanç özeti okunamadı; CR kazandıran adım yapılmadı")
                 return False
-            ok, neden = pencere.izinli(self.simdi(), cr)
+            et = getattr(self, "_bugun_etiket", None)
+            ok, neden = pencere.izinli(self.simdi(), cr, et)
             if ok:
                 return True
-            kalan = pencere.kalan_bekleme_sn(self.simdi())
+            kalan = pencere.kalan_bekleme_sn(self.simdi(), et)
             if not bekle or kalan is None or kalan > self.azami_bekleme_sn:
                 self.d.eylem(neden + "; sonraki koşuya bırakıldı")
                 return False
@@ -210,30 +213,54 @@ class Fabrika:
 
     # ================================================================== b) yeni iş
     def yeni_baslat(self, zorla_tarif: str | None = None) -> None:
-        while (kq.bugun_baslayan(self.d.kuyruk, self.d.bugun) < self.gunluk_yeni
-               and self.d.hakki_var("yeni_yukleme")):
-            o = kq.bul(self.d.kuyruk, zorla_tarif) if zorla_tarif else kq.sirada_bekleyen(self.d.kuyruk)
-            if o is None or o["durum"] != "bekliyor":
-                break
-            if shutil.disk_usage(self.kok).free / 1e9 < EN_AZ_DISK_GB:
-                self.d.hata("disk yetersiz, yeni tarif başlatılmadı")
-                return
-            self.d.artir("yeni_yukleme")
-            try:
-                self._kur_ve_baslat(o)
-            except Ertelendi as e:
-                self.d.artir("yeni_yukleme", -1)
-                self.d.eylem(f"{o['id']}: ertelendi ({e})")
-                return
-            except Exception as e:
-                kq.gecis(o, "hata", neden=f"{type(e).__name__}: {str(e)[:250]}")
-                self.d.bildir("hata", f"Tarif başarısız: {o['id']} ({type(e).__name__}: {str(e)[:120]}).", o["id"])
-                self.d.hata(f"{o['id']}: {type(e).__name__} {str(e)[:200]}")
-            self.gonder()
-            if zorla_tarif:
-                break
+        """27.11: iki aşama. Önce günün tariflerinin HEPSİ kurulur (CR getirmez, pencere beklemez), sonra pencere
+        açılınca sırayla yüklenip eğitime gönderilir. Böylece bir tarifin pencere beklemesi ötekilerin kurulmasını
+        geciktirmez."""
+        hazir, alinan = [], set()
+        try:
+            # A) kurulum
+            while (kq.bugun_baslayan(self.d.kuyruk, self.d.bugun) + len(hazir) < self.gunluk_yeni
+                   and self.d.hakki_var("yeni_yukleme")):
+                if zorla_tarif:
+                    o = kq.bul(self.d.kuyruk, zorla_tarif)
+                else:
+                    o = next((x for x in self.d.kuyruk["ogeler"] if x["durum"] == "bekliyor" and x["id"] not in alinan), None)
+                if o is None or o["durum"] != "bekliyor" or o["id"] in alinan:
+                    break
+                alinan.add(o["id"])
+                if shutil.disk_usage(self.kok).free / 1e9 < EN_AZ_DISK_GB:
+                    self.d.hata("disk yetersiz, yeni tarif başlatılmadı")
+                    break
+                self.d.artir("yeni_yukleme")
+                try:
+                    hazir.append((o, *self._kur(o)))
+                except Exception as e:
+                    self.d.artir("yeni_yukleme", -1)
+                    self._tarif_hatasi(o, e)
+                if zorla_tarif:
+                    break
+            # B) yükleme + eğitim
+            for i, (o, tarif, calisma, ozet, readme) in enumerate(hazir):
+                try:
+                    self._yukle_ve_baslat(o, tarif, calisma, ozet, readme)
+                except Ertelendi as e:
+                    for o2, *_ in hazir[i:]:
+                        self.d.artir("yeni_yukleme", -1)
+                        self.d.eylem(f"{o2['id']}: ertelendi ({e})")
+                    return
+                except Exception as e:
+                    self._tarif_hatasi(o, e)
+                self.gonder()
+        finally:
+            for _, _, calisma, _, _ in hazir:
+                shutil.rmtree(calisma, ignore_errors=True)
 
-    def _kur_ve_baslat(self, o: dict) -> None:
+    def _tarif_hatasi(self, o: dict, e: Exception) -> None:
+        kq.gecis(o, "hata", neden=f"{type(e).__name__}: {str(e)[:250]}")
+        self.d.bildir("hata", f"Tarif başarısız: {o['id']} ({type(e).__name__}: {str(e)[:120]}).", o["id"])
+        self.d.hata(f"{o['id']}: {type(e).__name__} {str(e)[:200]}")
+
+    def _kur(self, o: dict):
         tarif = self.tarif_yukle(o["id"]).TARIF
         calisma = Path(tempfile.mkdtemp(prefix=f"set_{o['id']}_", dir=os.environ.get("FABRIKA_GECICI") or None))
         try:
@@ -242,29 +269,33 @@ class Fabrika:
             if ozet["goruntu_toplam"] < kapilar.EN_AZ_OGE:
                 raise RuntimeError(f"yeterli görüntü üretilemedi: {ozet['goruntu_toplam']} < {kapilar.EN_AZ_OGE}")
             readme = kartlar.set_readme(tarif, ozet, tarif["yontem"](tarif, ozet))
-            if not self.pencere_izni():
-                raise Ertelendi("CR penceresi kaçtı; yükleme yarın gece")
-            self.yayimla_hazirlar(bekle=False)       # yayımlar da pencerede, yüklemeden önce (kısa sürer)
-            engel = self.kazanc_koruma_engeli()
-            if engel:
-                raise Ertelendi(engel)
-            s = self.api.set_olustur(tarif["ad"], tarif["aciklama"], tarif["lisans"])
-            o.update(set_id=s["id"], set_slug=s.get("slug"), veri_ozeti=ozet)
-            self.d.eylem(f"{o['id']}: set oluşturuldu (özel)")
-            self._zip_yukle(o["id"], s["id"], calisma)
-            self._denetle(s["id"], calisma, ozet)
-            self.api.set_readme(s["id"], readme)
-            v = self.api.surum_olustur(s["id"], "v1.0", "Konum kümesine göre bölünmüş ilk sürüm")
-            birak = (v.get("split_config") or {}).get("unassigned")
-            if birak:
-                raise RuntimeError(f"atanmamış bölüm var ({birak})")
-            if (v.get("item_count") or 0) < kapilar.EN_AZ_OGE:
-                raise RuntimeError(f"sürüm öğe sayısı {v.get('item_count')} < {kapilar.EN_AZ_OGE}")
-            kq.gecis(o, "yuklendi", surum_id=v["id"], item_sayisi=v.get("item_count"), bolum_ayari=v.get("split_config"))
-            self.gonder()
-            self._egitim_baslat(o, tarif)
-        finally:
+        except BaseException:
             shutil.rmtree(calisma, ignore_errors=True)
+            raise
+        return tarif, calisma, ozet, readme
+
+    def _yukle_ve_baslat(self, o: dict, tarif: dict, calisma: Path, ozet: dict, readme: str) -> None:
+        if not self.pencere_izni():
+            raise Ertelendi("CR penceresi kaçtı; yükleme yarın gece")
+        self.yayimla_hazirlar(bekle=False)       # yayımlar da pencerede, yüklemeden önce (kısa sürer)
+        engel = self.kazanc_koruma_engeli()
+        if engel:
+            raise Ertelendi(engel)
+        s = self.api.set_olustur(tarif["ad"], tarif["aciklama"], tarif["lisans"])
+        o.update(set_id=s["id"], set_slug=s.get("slug"), veri_ozeti=ozet)
+        self.d.eylem(f"{o['id']}: set oluşturuldu (özel)")
+        self._zip_yukle(o["id"], s["id"], calisma)
+        self._denetle(s["id"], calisma, ozet)
+        self.api.set_readme(s["id"], readme)
+        v = self.api.surum_olustur(s["id"], "v1.0", "Konum kümesine göre bölünmüş ilk sürüm")
+        birak = (v.get("split_config") or {}).get("unassigned")
+        if birak:
+            raise RuntimeError(f"atanmamış bölüm var ({birak})")
+        if (v.get("item_count") or 0) < kapilar.EN_AZ_OGE:
+            raise RuntimeError(f"sürüm öğe sayısı {v.get('item_count')} < {kapilar.EN_AZ_OGE}")
+        kq.gecis(o, "yuklendi", surum_id=v["id"], item_sayisi=v.get("item_count"), bolum_ayari=v.get("split_config"))
+        self.gonder()
+        self._egitim_baslat(o, tarif)
 
     def _zip_yukle(self, tarif_id, set_id, dizin: Path) -> None:
         from cekirdek.evren_api import zip_parca

@@ -1,0 +1,34 @@
+name: etiket-hazirla
+# Büyük açık etiket haritalarının Türkiye parçalarını COG'a çevirip 'etiket-v1' sürümüne yükler (elle, bir kez).
+on:
+  workflow_dispatch:
+    inputs:
+      is:
+        description: "worldcereal ya da ghsl"
+        required: true
+permissions:
+  contents: write
+jobs:
+  hazirla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      PYTHONIOENCODING: utf-8
+      PYTHONUNBUFFERED: "1"
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Disk aç
+        run: sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL && df -h /
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Hazırla
+        run: python araclar/etiket_hazirla.py "${{ github.event.inputs.is }}" cikti
+      - name: Sürüme yükle
+        run: |
+          ls -l cikti
+          gh release view etiket-v1 >/dev/null 2>&1 || gh release create etiket-v1 --title "Etiket haritaları (Türkiye parçaları)" --notes "Fabrika tariflerinin uzaktan okuduğu etiket COG'ları. ESA WorldCereal 2021 (CC BY 4.0, ESA WorldCereal consortium) ve JRC GHSL GHS-BUILT-C MSZ 2018 (CC BY 4.0, (c) European Union). Türkiye kutusuna kırpıldı; WorldCereal ürünleri tek haritada birleştirildi (değer anlamları araclar/etiket_hazirla.py içinde)."
+          gh release upload etiket-v1 cikti/*.tif cikti/*_karolar.json --clobber

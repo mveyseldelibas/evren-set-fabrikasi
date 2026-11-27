@@ -1121,7 +1121,91 @@
   },
   {
    "id": "urun_turu_worldcereal",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a21e49-e8fc-7681-9d14-67588f63aab3",
+   "set_slug": "turkiye-tarla-urunu-segmentasyonu-kislik-tahil-misir-diger-sentinel-2-2021-esa-worldcereal",
+   "veri_ozeti": {
+    "tarif": "urun_turu_worldcereal",
+    "siniflar": [
+     "kislik_tahil",
+     "misir",
+     "diger_tarla"
+    ],
+    "goruntu_bolum": {
+     "train": 1954,
+     "val": 550,
+     "test": 263
+    },
+    "goruntu_toplam": 2767,
+    "pencere_bolum": {
+     "train": 655,
+     "val": 184,
+     "test": 88
+    },
+    "pencere_toplam": 927,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "kislik_tahil": 28751,
+      "misir": 13011,
+      "diger_tarla": 39431
+     },
+     "val": {
+      "kislik_tahil": 6895,
+      "misir": 3494,
+      "diger_tarla": 10330
+     },
+     "test": {
+      "kislik_tahil": 4174,
+      "diger_tarla": 5668,
+      "misir": 1923
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "kislik_tahil": 1933,
+      "misir": 1176,
+      "diger_tarla": 1954
+     },
+     "val": {
+      "kislik_tahil": 544,
+      "misir": 373,
+      "diger_tarla": 550
+     },
+     "test": {
+      "kislik_tahil": 263,
+      "diger_tarla": 263,
+      "misir": 168
+     }
+    },
+    "yil_dagilimi": {
+     "2021": 2767
+    },
+    "mevsim_dagilimi": {
+     "ilkbahar": 913,
+     "yaz": 932,
+     "sonbahar": 922
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 546,
+     "yazilan_pencere": 927,
+     "goruntu": 2767,
+     "etiket_bos": 1,
+     "gecerli_tarih_yok": 1
+    },
+    "uretim_zamani": "2026-11-27T18:06Z",
+    "kaynak_satiri": "Etiket haritası: ESA WorldCereal 2021 v100 (10 m; kışlık tahıl, mısır, geçici ürün); görüntüler 2021 yılından"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-27T18:38:23Z"
+   },
+   "surum_id": "01a21e4d-1fdf-7af0-8cff-7ed3dfdb4af1",
+   "item_sayisi": 2767,
+   "bolum_ayari": {
+    "train": 1954,
+    "val": 550,
+    "test": 263,
+    "unassigned": 0
+   }
   },
   {
    "id": "orman",

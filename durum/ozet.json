@@ -45,7 +45,7 @@
   }
  ],
  "hatalar": [],
- "son_calisma": "2026-11-27T18:34:40Z",
+ "son_calisma": "2026-11-27T18:38:23Z",
  "bu_calismada_yapilanlar": [
   "meyve_bahcesi_ve_bag: veri kuruluyor",
   "sulak_alan: veri kuruluyor",
@@ -97,7 +97,10 @@
   "yapi_islev_yukseklik_ghsl: set oluşturuldu (özel)",
   "yapi_islev_yukseklik_ghsl: ZIP yükleme bitti",
   "yükleme doğrulandı: platform {'train': 1695, 'validation': 510, 'test': 379}, yerel {'train': 1695, 'val': 510, 'test': 379}, etiketsiz 0",
-  "yapi_islev_yukseklik_ghsl: kuru koşu epok=60 tahmin=0.20 CR (x2.4=0.5)"
+  "yapi_islev_yukseklik_ghsl: kuru koşu epok=60 tahmin=0.20 CR (x2.4=0.5)",
+  "urun_turu_worldcereal: set oluşturuldu (özel)",
+  "urun_turu_worldcereal: ZIP yükleme bitti",
+  "yükleme doğrulandı: platform {'train': 1954, 'validation': 550, 'test': 263}, yerel {'train': 1954, 'val': 550, 'test': 263}, etiketsiz 0"
  ],
  "bu_calismada_hatalar": [
   "zeytinlik: RuntimeError yeterli görüntü üretilemedi: 240 < 1000",
@@ -110,12 +113,13 @@
   "su_gecisleri_jrc: RuntimeError yükleme eksik: val yerel 598, platform 522"
  ],
  "kuyruk_uzunlugu": 34,
- "kalan_tarif": 17,
+ "kalan_tarif": 16,
  "durum_sayilari": {
   "zayif": 1,
   "yayimlandi": 1,
   "egitimde": 7,
   "hata": 8,
-  "bekliyor": 17
+  "yuklendi": 1,
+  "bekliyor": 16
  }
 }

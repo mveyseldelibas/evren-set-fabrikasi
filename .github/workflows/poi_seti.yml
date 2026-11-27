@@ -1,0 +1,37 @@
+name: poi-seti
+# Türkiye OSM işletme/kurum adı -> tür metin seti ve taban sınıflandırıcı (elle tetiklenir; sonuç yapıt olarak saklanır).
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  kur:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      PYTHONIOENCODING: utf-8
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "osmium>=4.0" scikit-learn joblib
+      - name: Geofabrik ay anahtarı
+        id: ay
+        run: echo "ay=$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
+      - name: OSM dökümü önbelleği
+        id: osm
+        uses: actions/cache/restore@v4
+        with:
+          path: veri/turkey-latest.osm.pbf
+          key: osm-turkiye-${{ steps.ay.outputs.ay }}
+      - name: OSM dökümünü indir
+        if: steps.osm.outputs.cache-hit != 'true'
+        run: mkdir -p veri && curl -fL --retry 5 --retry-delay 10 -o veri/turkey-latest.osm.pbf https://download.geofabrik.de/europe/turkey-latest.osm.pbf
+      - run: python araclar/poi_seti.py veri/turkey-latest.osm.pbf poi_cikti
+      - uses: actions/upload-artifact@v4
+        with:
+          name: poi-seti
+          path: poi_cikti
+          retention-days: 30

@@ -1,0 +1,31 @@
+name: kafes-tara
+# Balık çiftliği kafesi adaylarını tarar; adaylar.json ve önizlemeler yapıt olarak saklanır (görsel denetim için).
+on:
+  workflow_dispatch:
+    inputs:
+      sure:
+        description: "Tarama süre sınırı (sn)"
+        default: "18000"
+permissions:
+  contents: read
+jobs:
+  tara:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    env:
+      PYTHONIOENCODING: utf-8
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt scipy
+      - run: python araclar/kafes_tara.py cikti "${{ github.event.inputs.sure }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: kafes-adaylari
+          path: cikti
+          retention-days: 30

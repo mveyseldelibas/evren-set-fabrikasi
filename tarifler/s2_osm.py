@@ -212,6 +212,7 @@ class Kaynak:
     """Planetary Computer: hücre başına STAC araması (önbellekli) + açık COG LRU önbelleği."""
 
     HUCRE_DERECE = 0.2
+    BANTLAR = ("B02", "B03", "B04", "SCL")    # alt sınıflar ek bant isteyebilir (ör. kafes taraması B08)
 
     def __init__(self, en_cok_acik=64):
         import pystac_client
@@ -232,7 +233,7 @@ class Kaynak:
             bbox = [anahtar[0] * h - 0.03, anahtar[1] * h - 0.03, (anahtar[0] + 1) * h + 0.03, (anahtar[1] + 1) * h + 0.03]
             alanlar = {"include": ["id", "geometry", "properties.datetime", "properties.eo:cloud_cover",
                                    "properties.s2:mgrs_tile", "properties.proj:epsg", "properties.proj:code"]
-                                  + [f"assets.{b}.href" for b in ("B02", "B03", "B04", "SCL")],
+                                  + [f"assets.{b}.href" for b in self.BANTLAR],
                        "exclude": ["links"]}
             bugun = dt.date.today().isoformat()
 
@@ -249,11 +250,11 @@ class Kaynak:
                 if epsg is None and str(p.get("proj:code", "")).startswith("EPSG:"):
                     epsg = int(p["proj:code"].split(":")[1])
                 v = o.get("assets", {})
-                if epsg is None or any(b not in v for b in ("B02", "B03", "B04", "SCL")):
+                if epsg is None or any(b not in v for b in self.BANTLAR):
                     continue
                 sahneler.append({"id": o["id"], "tarih": p["datetime"][:10], "bulut": float(p["eo:cloud_cover"]),
                                  "epsg": int(epsg), "geom": shape(o["geometry"]),
-                                 "h": {b: v[b]["href"].split("?", 1)[0] for b in ("B02", "B03", "B04", "SCL")}})
+                                 "h": {b: v[b]["href"].split("?", 1)[0] for b in self.BANTLAR}})
             self.arama_onbellek[anahtar] = sahneler
             return sahneler
 

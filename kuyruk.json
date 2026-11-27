@@ -508,7 +508,85 @@
   },
   {
    "id": "insaat_alani",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a21e38-af76-7ee3-a388-2e2711904beb",
+   "set_slug": "turkiye-insaat-alani-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "insaat_alani",
+    "siniflar": [
+     "insaat_alani"
+    ],
+    "goruntu_bolum": {
+     "val": 765,
+     "test": 168,
+     "train": 1167
+    },
+    "goruntu_toplam": 2100,
+    "pencere_bolum": {
+     "val": 255,
+     "test": 56,
+     "train": 389
+    },
+    "pencere_toplam": 700,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "insaat_alani": 2130
+     },
+     "val": {
+      "insaat_alani": 2967
+     },
+     "test": {
+      "insaat_alani": 342
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "insaat_alani": 1167
+     },
+     "val": {
+      "insaat_alani": 765
+     },
+     "test": {
+      "insaat_alani": 168
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "insaat_alani": 1771
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 178,
+     "2020": 216,
+     "2021": 121,
+     "2022": 417,
+     "2023": 269,
+     "2024": 277,
+     "2025": 339,
+     "2026": 283
+    },
+    "mevsim_dagilimi": {
+     "ilkbahar": 703,
+     "yaz": 698,
+     "sonbahar": 699
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 573,
+     "yazilan_pencere": 700,
+     "goruntu": 2100
+    },
+    "uretim_zamani": "2026-11-27T16:33Z"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-27T18:18:19Z"
+   },
+   "surum_id": "01a21e3a-c93f-7a02-b6c2-a40616f2c4a4",
+   "item_sayisi": 2100,
+   "bolum_ayari": {
+    "train": 1167,
+    "val": 765,
+    "test": 168,
+    "unassigned": 0
+   }
   },
   {
    "id": "universite_kampusu",

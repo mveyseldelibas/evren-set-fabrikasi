@@ -111,10 +111,13 @@ def worldcereal(cikti: Path):
             continue
         acik = {k: rasterio.open(p) for k, p in yollar.items()}
         ana = acik["gecici"]
+        from rasterio.enums import Resampling
+        from rasterio.vrt import WarpedVRT
         for k in list(acik):
-            if (acik[k].transform, acik[k].shape) != (ana.transform, ana.shape):
-                print(f"  {a} {k}: ızgara farklı, atlandı", flush=True)
-                acik.pop(k).close()
+            if k != "gecici" and (acik[k].transform, acik[k].shape) != (ana.transform, ana.shape):
+                print(f"  {a} {k}: ızgara farklı ({acik[k].shape} / {ana.shape}), ana ızgaraya hizalanıyor", flush=True)
+                acik[k] = WarpedVRT(acik[k], crs=ana.crs, transform=ana.transform, width=ana.width, height=ana.height,
+                                    resampling=Resampling.nearest, nodata=255)
         b = ana.bounds
         kutu = (max(b.left, TR_KUTU[0]), max(b.bottom, TR_KUTU[1]), min(b.right, TR_KUTU[2]), min(b.top, TR_KUTU[3]))
         if kutu[0] >= kutu[2] or kutu[1] >= kutu[3]:

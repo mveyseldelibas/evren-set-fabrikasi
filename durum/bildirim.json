@@ -71,6 +71,13 @@
    "mesaj": "Eğitim başladı: Türkiye İnşaat Alanı Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2100 öğe, ~0 CR)."
   },
   {
+   "id": "2026-11-27T18:20:58Z-basladi-gunes_enerjisi",
+   "zaman": "2026-11-27T18:20:58Z",
+   "tur": "basladi",
+   "tarif": "gunes_enerjisi",
+   "mesaj": "Eğitim başladı: Türkiye Güneş Enerjisi Santrali Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2693 öğe, ~0 CR)."
+  },
+  {
    "id": "2026-11-26T20:26:16Z-yayimlandi-mezarlik",
    "zaman": "2026-11-26T20:26:16Z",
    "tur": "yayimlandi",
@@ -211,6 +218,13 @@
    "tur": "basladi",
    "tarif": "insaat_alani",
    "mesaj": "Eğitim başladı: Türkiye İnşaat Alanı Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2100 öğe, ~0 CR)."
+  },
+  {
+   "id": "2026-11-27T18:20:58Z-basladi-gunes_enerjisi",
+   "zaman": "2026-11-27T18:20:58Z",
+   "tur": "basladi",
+   "tarif": "gunes_enerjisi",
+   "mesaj": "Eğitim başladı: Türkiye Güneş Enerjisi Santrali Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2693 öğe, ~0 CR)."
   }
  ]
 }

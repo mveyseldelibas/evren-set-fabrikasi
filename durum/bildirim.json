@@ -92,6 +92,13 @@
    "mesaj": "Eğitim başladı: Türkiye Arazi Örtüsü Segmentasyonu (10 sınıf) - Sentinel-2 2021 + ESA WorldCover (3004 öğe, ~1 CR)."
   },
   {
+   "id": "2026-11-27T18:30:40Z-hata-su_gecisleri_jrc",
+   "zaman": "2026-11-27T18:30:40Z",
+   "tur": "hata",
+   "tarif": "su_gecisleri_jrc",
+   "mesaj": "Tarif başarısız: su_gecisleri_jrc (RuntimeError: yükleme eksik: val yerel 598, platform 522)."
+  },
+  {
    "id": "2026-11-26T20:26:16Z-yayimlandi-mezarlik",
    "zaman": "2026-11-26T20:26:16Z",
    "tur": "yayimlandi",
@@ -253,6 +260,13 @@
    "tur": "basladi",
    "tarif": "arazi_ortusu_worldcover",
    "mesaj": "Eğitim başladı: Türkiye Arazi Örtüsü Segmentasyonu (10 sınıf) - Sentinel-2 2021 + ESA WorldCover (3004 öğe, ~1 CR)."
+  },
+  {
+   "id": "2026-11-27T18:30:40Z-hata-su_gecisleri_jrc",
+   "zaman": "2026-11-27T18:30:40Z",
+   "tur": "hata",
+   "tarif": "su_gecisleri_jrc",
+   "mesaj": "Tarif başarısız: su_gecisleri_jrc (RuntimeError: yükleme eksik: val yerel 598, platform 522)."
   }
  ]
 }

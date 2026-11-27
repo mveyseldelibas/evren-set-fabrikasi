@@ -921,7 +921,93 @@
   },
   {
    "id": "su_gecisleri_jrc",
-   "durum": "bekliyor"
+   "durum": "hata",
+   "set_id": "01a21e44-0167-7023-a7b6-d0d651e959a7",
+   "set_slug": "turkiye-yuzey-suyu-degisimi-segmentasyonu-kalici-mevsimlik-yeni-kaybolan-sentinel-2-jrc-gsw",
+   "veri_ozeti": {
+    "tarif": "su_gecisleri_jrc",
+    "siniflar": [
+     "kalici_su",
+     "mevsimlik_su",
+     "yeni_su",
+     "kaybolan_su"
+    ],
+    "goruntu_bolum": {
+     "train": 1725,
+     "val": 598,
+     "test": 290
+    },
+    "goruntu_toplam": 2613,
+    "pencere_bolum": {
+     "train": 588,
+     "val": 215,
+     "test": 98
+    },
+    "pencere_toplam": 901,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "kalici_su": 2499,
+      "mevsimlik_su": 5752,
+      "kaybolan_su": 5286,
+      "yeni_su": 5691
+     },
+     "val": {
+      "mevsimlik_su": 1570,
+      "yeni_su": 1466,
+      "kaybolan_su": 1321,
+      "kalici_su": 397
+     },
+     "test": {
+      "yeni_su": 935,
+      "kaybolan_su": 884,
+      "kalici_su": 417,
+      "mevsimlik_su": 1015
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "kalici_su": 1207,
+      "mevsimlik_su": 1141,
+      "yeni_su": 1137,
+      "kaybolan_su": 984
+     },
+     "val": {
+      "mevsimlik_su": 484,
+      "yeni_su": 312,
+      "kaybolan_su": 233,
+      "kalici_su": 276
+     },
+     "test": {
+      "yeni_su": 221,
+      "mevsimlik_su": 194,
+      "kaybolan_su": 170,
+      "kalici_su": 210
+     }
+    },
+    "yil_dagilimi": {
+     "2020": 2613
+    },
+    "mevsim_dagilimi": {
+     "ilkbahar": 910,
+     "yaz": 832,
+     "sonbahar": 871
+    },
+    "atlanan_ve_sayaclar": {
+     "etiket_bos": 129,
+     "gecerli_tarih_yok": 192,
+     "bulutKarBos": 2421,
+     "yazilan_pencere": 901,
+     "goruntu": 2613,
+     "hata:RasterioIOError": 27,
+     "etiket_karo_siniri": 2
+    },
+    "uretim_zamani": "2026-11-27T17:38Z",
+    "kaynak_satiri": "Etiket haritası: JRC Global Surface Water v1.3 'transitions' katmanı (1984-2020, 30 m); görüntüler 2020 yılından"
+   },
+   "zamanlar": {
+    "hata": "2026-11-27T18:30:40Z"
+   },
+   "neden": "RuntimeError: yükleme eksik: val yerel 598, platform 522"
   },
   {
    "id": "yapi_islev_yukseklik_ghsl",

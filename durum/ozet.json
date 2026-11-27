@@ -45,7 +45,7 @@
   }
  ],
  "hatalar": [],
- "son_calisma": "2026-11-27T18:28:17Z",
+ "son_calisma": "2026-11-27T18:30:40Z",
  "bu_calismada_yapilanlar": [
   "meyve_bahcesi_ve_bag: veri kuruluyor",
   "sulak_alan: veri kuruluyor",
@@ -91,7 +91,9 @@
   "arazi_ortusu_worldcover: set oluşturuldu (özel)",
   "arazi_ortusu_worldcover: ZIP yükleme bitti",
   "yükleme doğrulandı: platform {'train': 2051, 'validation': 629, 'test': 324}, yerel {'train': 2051, 'val': 629, 'test': 324}, etiketsiz 0",
-  "arazi_ortusu_worldcover: kuru koşu epok=60 tahmin=0.21 CR (x2.4=0.5)"
+  "arazi_ortusu_worldcover: kuru koşu epok=60 tahmin=0.21 CR (x2.4=0.5)",
+  "su_gecisleri_jrc: set oluşturuldu (özel)",
+  "su_gecisleri_jrc: ZIP yükleme bitti"
  ],
  "bu_calismada_hatalar": [
   "zeytinlik: RuntimeError yeterli görüntü üretilemedi: 240 < 1000",
@@ -100,15 +102,16 @@
   "liman_marina: RuntimeError yeterli görüntü üretilemedi: 198 < 1000",
   "universite_kampusu: RuntimeError yeterli görüntü üretilemedi: 948 < 1000",
   "sera: RuntimeError yeterli görüntü üretilemedi: 423 < 1000",
-  "maden_ocagi: RuntimeError eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz"
+  "maden_ocagi: RuntimeError eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz",
+  "su_gecisleri_jrc: RuntimeError yükleme eksik: val yerel 598, platform 522"
  ],
  "kuyruk_uzunlugu": 34,
- "kalan_tarif": 19,
+ "kalan_tarif": 18,
  "durum_sayilari": {
   "zayif": 1,
   "yayimlandi": 1,
   "egitimde": 6,
-  "hata": 7,
-  "bekliyor": 19
+  "hata": 8,
+  "bekliyor": 18
  }
 }

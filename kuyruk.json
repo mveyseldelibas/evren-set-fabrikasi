@@ -785,7 +785,7 @@
   },
   {
    "id": "arazi_ortusu_worldcover",
-   "durum": "yuklendi",
+   "durum": "egitimde",
    "set_id": "01a21e40-0790-7a71-a26a-00d982a60058",
    "set_slug": "turkiye-arazi-ortusu-segmentasyonu-10-sinif-sentinel-2-2021-esa-worldcover",
    "veri_ozeti": {
@@ -903,7 +903,8 @@
     "kaynak_satiri": "Etiket haritası: ESA WorldCover 2021 v200 (10 m); görüntüler 2021 yılından"
    },
    "zamanlar": {
-    "yuklendi": "2026-11-27T18:28:14Z"
+    "yuklendi": "2026-11-27T18:28:14Z",
+    "egitimde": "2026-11-27T18:28:17Z"
    },
    "surum_id": "01a21e43-cdce-78b1-b854-68b3dfb74672",
    "item_sayisi": 3004,
@@ -912,7 +913,11 @@
     "val": 629,
     "test": 324,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a21e43-e658-7a91-8fd8-bba322d156c7",
+   "is_id": "01a21e43-ea6d-7302-a1b3-8fc49b792c74",
+   "epok": 60,
+   "tahmin_cr": 0.21
   },
   {
    "id": "su_gecisleri_jrc",

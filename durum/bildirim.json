@@ -85,6 +85,13 @@
    "mesaj": "Tarif başarısız: maden_ocagi (RuntimeError: eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz)."
   },
   {
+   "id": "2026-11-27T18:28:17Z-basladi-arazi_ortusu_worldcover",
+   "zaman": "2026-11-27T18:28:17Z",
+   "tur": "basladi",
+   "tarif": "arazi_ortusu_worldcover",
+   "mesaj": "Eğitim başladı: Türkiye Arazi Örtüsü Segmentasyonu (10 sınıf) - Sentinel-2 2021 + ESA WorldCover (3004 öğe, ~1 CR)."
+  },
+  {
    "id": "2026-11-26T20:26:16Z-yayimlandi-mezarlik",
    "zaman": "2026-11-26T20:26:16Z",
    "tur": "yayimlandi",
@@ -239,6 +246,13 @@
    "tur": "hata",
    "tarif": "maden_ocagi",
    "mesaj": "Tarif başarısız: maden_ocagi (RuntimeError: eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz)."
+  },
+  {
+   "id": "2026-11-27T18:28:17Z-basladi-arazi_ortusu_worldcover",
+   "zaman": "2026-11-27T18:28:17Z",
+   "tur": "basladi",
+   "tarif": "arazi_ortusu_worldcover",
+   "mesaj": "Eğitim başladı: Türkiye Arazi Örtüsü Segmentasyonu (10 sınıf) - Sentinel-2 2021 + ESA WorldCover (3004 öğe, ~1 CR)."
   }
  ]
 }

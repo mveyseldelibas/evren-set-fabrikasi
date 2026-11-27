@@ -1011,7 +1011,7 @@
   },
   {
    "id": "yapi_islev_yukseklik_ghsl",
-   "durum": "yuklendi",
+   "durum": "egitimde",
    "set_id": "01a21e46-3446-7fb3-a25a-df9efd7020c6",
    "set_slug": "turkiye-yapi-islevi-ve-yukseklik-sinifi-segmentasyonu-sentinel-2-jrc-ghsl-2018",
    "veri_ozeti": {
@@ -1103,7 +1103,8 @@
     "kaynak_satiri": "Etiket haritası: JRC GHSL GHS-BUILT-C MSZ E2018 R2023A (10 m); görüntüler 2019 yılından"
    },
    "zamanlar": {
-    "yuklendi": "2026-11-27T18:34:32Z"
+    "yuklendi": "2026-11-27T18:34:32Z",
+    "egitimde": "2026-11-27T18:34:40Z"
    },
    "surum_id": "01a21e49-96b4-7521-8046-994b6666e5da",
    "item_sayisi": 2584,
@@ -1112,7 +1113,11 @@
     "val": 510,
     "test": 379,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a21e49-aa63-7593-8715-1e6dc9956177",
+   "is_id": "01a21e49-c1cb-7871-861b-c0c17394caa9",
+   "epok": 60,
+   "tahmin_cr": 0.2
   },
   {
    "id": "urun_turu_worldcereal",

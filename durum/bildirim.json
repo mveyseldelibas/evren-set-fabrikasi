@@ -99,6 +99,13 @@
    "mesaj": "Tarif başarısız: su_gecisleri_jrc (RuntimeError: yükleme eksik: val yerel 598, platform 522)."
   },
   {
+   "id": "2026-11-27T18:34:40Z-basladi-yapi_islev_yukseklik_ghsl",
+   "zaman": "2026-11-27T18:34:40Z",
+   "tur": "basladi",
+   "tarif": "yapi_islev_yukseklik_ghsl",
+   "mesaj": "Eğitim başladı: Türkiye Yapı İşlevi ve Yükseklik Sınıfı Segmentasyonu - Sentinel-2 + JRC GHSL (2018) (2584 öğe, ~0 CR)."
+  },
+  {
    "id": "2026-11-26T20:26:16Z-yayimlandi-mezarlik",
    "zaman": "2026-11-26T20:26:16Z",
    "tur": "yayimlandi",
@@ -267,6 +274,13 @@
    "tur": "hata",
    "tarif": "su_gecisleri_jrc",
    "mesaj": "Tarif başarısız: su_gecisleri_jrc (RuntimeError: yükleme eksik: val yerel 598, platform 522)."
+  },
+  {
+   "id": "2026-11-27T18:34:40Z-basladi-yapi_islev_yukseklik_ghsl",
+   "zaman": "2026-11-27T18:34:40Z",
+   "tur": "basladi",
+   "tarif": "yapi_islev_yukseklik_ghsl",
+   "mesaj": "Eğitim başladı: Türkiye Yapı İşlevi ve Yükseklik Sınıfı Segmentasyonu - Sentinel-2 + JRC GHSL (2018) (2584 öğe, ~0 CR)."
   }
  ]
 }

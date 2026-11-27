@@ -1,6 +1,48 @@
 {
  "mesajlar": [
   {
+   "id": "2026-11-27T16:04:45Z-hata-zeytinlik",
+   "zaman": "2026-11-27T16:04:45Z",
+   "tur": "hata",
+   "tarif": "zeytinlik",
+   "mesaj": "Tarif başarısız: zeytinlik (RuntimeError: yeterli görüntü üretilemedi: 240 < 1000)."
+  },
+  {
+   "id": "2026-11-27T16:06:07Z-hata-hobi_bahcesi",
+   "zaman": "2026-11-27T16:06:07Z",
+   "tur": "hata",
+   "tarif": "hobi_bahcesi",
+   "mesaj": "Tarif başarısız: hobi_bahcesi (RuntimeError: yeterli görüntü üretilemedi: 219 < 1000)."
+  },
+  {
+   "id": "2026-11-27T16:06:45Z-hata-balik_ciftligi",
+   "zaman": "2026-11-27T16:06:45Z",
+   "tur": "hata",
+   "tarif": "balik_ciftligi",
+   "mesaj": "Tarif başarısız: balik_ciftligi (RuntimeError: yeterli görüntü üretilemedi: 57 < 1000)."
+  },
+  {
+   "id": "2026-11-27T16:08:10Z-hata-liman_marina",
+   "zaman": "2026-11-27T16:08:10Z",
+   "tur": "hata",
+   "tarif": "liman_marina",
+   "mesaj": "Tarif başarısız: liman_marina (RuntimeError: yeterli görüntü üretilemedi: 198 < 1000)."
+  },
+  {
+   "id": "2026-11-27T16:38:27Z-hata-universite_kampusu",
+   "zaman": "2026-11-27T16:38:27Z",
+   "tur": "hata",
+   "tarif": "universite_kampusu",
+   "mesaj": "Tarif başarısız: universite_kampusu (RuntimeError: yeterli görüntü üretilemedi: 948 < 1000)."
+  },
+  {
+   "id": "2026-11-27T16:40:41Z-hata-sera",
+   "zaman": "2026-11-27T16:40:41Z",
+   "tur": "hata",
+   "tarif": "sera",
+   "mesaj": "Tarif başarısız: sera (RuntimeError: yeterli görüntü üretilemedi: 423 < 1000)."
+  },
+  {
    "id": "2026-11-26T20:26:16Z-yayimlandi-mezarlik",
    "zaman": "2026-11-26T20:26:16Z",
    "tur": "yayimlandi",
@@ -71,6 +113,48 @@
    "tur": "yayimlandi",
    "tarif": "mezarlik",
    "mesaj": "Yayımlandı: Türkiye Mezarlık Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (ölçü %68.1, 2699 öğe). https://evren.ssyz.org.tr/models/u43bd0650c87e/tr-mezarlik-seg-sentinel2-yolo11s-seg"
+  },
+  {
+   "id": "2026-11-27T16:04:45Z-hata-zeytinlik",
+   "zaman": "2026-11-27T16:04:45Z",
+   "tur": "hata",
+   "tarif": "zeytinlik",
+   "mesaj": "Tarif başarısız: zeytinlik (RuntimeError: yeterli görüntü üretilemedi: 240 < 1000)."
+  },
+  {
+   "id": "2026-11-27T16:06:07Z-hata-hobi_bahcesi",
+   "zaman": "2026-11-27T16:06:07Z",
+   "tur": "hata",
+   "tarif": "hobi_bahcesi",
+   "mesaj": "Tarif başarısız: hobi_bahcesi (RuntimeError: yeterli görüntü üretilemedi: 219 < 1000)."
+  },
+  {
+   "id": "2026-11-27T16:06:45Z-hata-balik_ciftligi",
+   "zaman": "2026-11-27T16:06:45Z",
+   "tur": "hata",
+   "tarif": "balik_ciftligi",
+   "mesaj": "Tarif başarısız: balik_ciftligi (RuntimeError: yeterli görüntü üretilemedi: 57 < 1000)."
+  },
+  {
+   "id": "2026-11-27T16:08:10Z-hata-liman_marina",
+   "zaman": "2026-11-27T16:08:10Z",
+   "tur": "hata",
+   "tarif": "liman_marina",
+   "mesaj": "Tarif başarısız: liman_marina (RuntimeError: yeterli görüntü üretilemedi: 198 < 1000)."
+  },
+  {
+   "id": "2026-11-27T16:38:27Z-hata-universite_kampusu",
+   "zaman": "2026-11-27T16:38:27Z",
+   "tur": "hata",
+   "tarif": "universite_kampusu",
+   "mesaj": "Tarif başarısız: universite_kampusu (RuntimeError: yeterli görüntü üretilemedi: 948 < 1000)."
+  },
+  {
+   "id": "2026-11-27T16:40:41Z-hata-sera",
+   "zaman": "2026-11-27T16:40:41Z",
+   "tur": "hata",
+   "tarif": "sera",
+   "mesaj": "Tarif başarısız: sera (RuntimeError: yeterli görüntü üretilemedi: 423 < 1000)."
   }
  ]
 }

@@ -16,7 +16,7 @@
    "model_yayin": 1
   },
   "2026-11-27": {
-   "yeni_yukleme": 0,
+   "yeni_yukleme": 10,
    "set_yayin": 0,
    "model_yayin": 0
   }
@@ -45,14 +45,43 @@
   }
  ],
  "hatalar": [],
- "son_calisma": "2026-11-27T15:37:00Z",
- "bu_calismada_yapilanlar": [],
- "bu_calismada_hatalar": [],
+ "son_calisma": "2026-11-27T18:10:02Z",
+ "bu_calismada_yapilanlar": [
+  "meyve_bahcesi_ve_bag: veri kuruluyor",
+  "sulak_alan: veri kuruluyor",
+  "zeytinlik: veri kuruluyor",
+  "hobi_bahcesi: veri kuruluyor",
+  "balik_ciftligi: veri kuruluyor",
+  "liman_marina: veri kuruluyor",
+  "futbol_sahasi: veri kuruluyor",
+  "insaat_alani: veri kuruluyor",
+  "universite_kampusu: veri kuruluyor",
+  "sera: veri kuruluyor",
+  "gunes_enerjisi: veri kuruluyor",
+  "maden_ocagi: veri kuruluyor",
+  "arazi_ortusu_worldcover: veri kuruluyor",
+  "su_gecisleri_jrc: veri kuruluyor",
+  "yapi_islev_yukseklik_ghsl: veri kuruluyor",
+  "urun_turu_worldcereal: veri kuruluyor",
+  "meyve_bahcesi_ve_bag: set oluşturuldu (özel)",
+  "meyve_bahcesi_ve_bag: ZIP yükleme bitti",
+  "yükleme doğrulandı: platform {'train': 2082, 'validation': 611, 'test': 306}, yerel {'train': 2082, 'val': 611, 'test': 306}, etiketsiz 0"
+ ],
+ "bu_calismada_hatalar": [
+  "zeytinlik: RuntimeError yeterli görüntü üretilemedi: 240 < 1000",
+  "hobi_bahcesi: RuntimeError yeterli görüntü üretilemedi: 219 < 1000",
+  "balik_ciftligi: RuntimeError yeterli görüntü üretilemedi: 57 < 1000",
+  "liman_marina: RuntimeError yeterli görüntü üretilemedi: 198 < 1000",
+  "universite_kampusu: RuntimeError yeterli görüntü üretilemedi: 948 < 1000",
+  "sera: RuntimeError yeterli görüntü üretilemedi: 423 < 1000"
+ ],
  "kuyruk_uzunlugu": 34,
- "kalan_tarif": 32,
+ "kalan_tarif": 25,
  "durum_sayilari": {
   "zayif": 1,
   "yayimlandi": 1,
-  "bekliyor": 32
+  "yuklendi": 1,
+  "bekliyor": 25,
+  "hata": 6
  }
 }

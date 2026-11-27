@@ -204,7 +204,94 @@
   },
   {
    "id": "meyve_bahcesi_ve_bag",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a21e30-43f0-7e43-82c5-fc3e08becda2",
+   "set_slug": "turkiye-meyve-bahcesi-ve-bag-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "meyve_bahcesi_ve_bag",
+    "siniflar": [
+     "meyve_bahcesi",
+     "bag"
+    ],
+    "goruntu_bolum": {
+     "val": 611,
+     "test": 306,
+     "train": 2082
+    },
+    "goruntu_toplam": 2999,
+    "pencere_bolum": {
+     "val": 204,
+     "test": 102,
+     "train": 694
+    },
+    "pencere_toplam": 1000,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "meyve_bahcesi": 8367,
+      "bag": 1905
+     },
+     "val": {
+      "meyve_bahcesi": 3042,
+      "bag": 411
+     },
+     "test": {
+      "meyve_bahcesi": 1413,
+      "bag": 222
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "meyve_bahcesi": 1707,
+      "bag": 591
+     },
+     "val": {
+      "meyve_bahcesi": 467,
+      "bag": 180
+     },
+     "test": {
+      "meyve_bahcesi": 240,
+      "bag": 93
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "bag": 893,
+     "meyve_bahcesi": 12031
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 308,
+     "2020": 326,
+     "2021": 306,
+     "2022": 520,
+     "2023": 409,
+     "2024": 315,
+     "2025": 454,
+     "2026": 361
+    },
+    "mevsim_dagilimi": {
+     "ilkbahar": 999,
+     "yaz": 1001,
+     "sonbahar": 999
+    },
+    "atlanan_ve_sayaclar": {
+     "yazilan_pencere": 1000,
+     "goruntu": 2999,
+     "bulutKarBos": 405,
+     "okumaHatasi": 1
+    },
+    "uretim_zamani": "2026-11-27T15:50Z"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-27T18:10:02Z"
+   },
+   "surum_id": "01a21e33-3689-74e3-8316-0bcf8fddff08",
+   "item_sayisi": 2999,
+   "bolum_ayari": {
+    "train": 2082,
+    "val": 611,
+    "test": 306,
+    "unassigned": 0
+   }
   },
   {
    "id": "sulak_alan",
@@ -212,19 +299,35 @@
   },
   {
    "id": "zeytinlik",
-   "durum": "bekliyor"
+   "durum": "hata",
+   "zamanlar": {
+    "hata": "2026-11-27T16:04:45Z"
+   },
+   "neden": "RuntimeError: yeterli görüntü üretilemedi: 240 < 1000"
   },
   {
    "id": "hobi_bahcesi",
-   "durum": "bekliyor"
+   "durum": "hata",
+   "zamanlar": {
+    "hata": "2026-11-27T16:06:07Z"
+   },
+   "neden": "RuntimeError: yeterli görüntü üretilemedi: 219 < 1000"
   },
   {
    "id": "balik_ciftligi",
-   "durum": "bekliyor"
+   "durum": "hata",
+   "zamanlar": {
+    "hata": "2026-11-27T16:06:45Z"
+   },
+   "neden": "RuntimeError: yeterli görüntü üretilemedi: 57 < 1000"
   },
   {
    "id": "liman_marina",
-   "durum": "bekliyor"
+   "durum": "hata",
+   "zamanlar": {
+    "hata": "2026-11-27T16:08:10Z"
+   },
+   "neden": "RuntimeError: yeterli görüntü üretilemedi: 198 < 1000"
   },
   {
    "id": "futbol_sahasi",
@@ -236,11 +339,19 @@
   },
   {
    "id": "universite_kampusu",
-   "durum": "bekliyor"
+   "durum": "hata",
+   "zamanlar": {
+    "hata": "2026-11-27T16:38:27Z"
+   },
+   "neden": "RuntimeError: yeterli görüntü üretilemedi: 948 < 1000"
   },
   {
    "id": "sera",
-   "durum": "bekliyor"
+   "durum": "hata",
+   "zamanlar": {
+    "hata": "2026-11-27T16:40:41Z"
+   },
+   "neden": "RuntimeError: yeterli görüntü üretilemedi: 423 < 1000"
   },
   {
    "id": "gunes_enerjisi",

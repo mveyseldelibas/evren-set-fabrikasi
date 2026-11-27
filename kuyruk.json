@@ -595,19 +595,21 @@
   },
   {
    "id": "universite_kampusu",
-   "durum": "hata",
+   "durum": "bekliyor",
    "zamanlar": {
-    "hata": "2026-11-27T16:38:27Z"
+    "hata": "2026-11-27T16:38:27Z",
+    "bekliyor": "2026-11-27T21:32:28Z"
    },
-   "neden": "RuntimeError: yeterli görüntü üretilemedi: 948 < 1000"
+   "neden": null
   },
   {
    "id": "sera",
-   "durum": "hata",
+   "durum": "bekliyor",
    "zamanlar": {
-    "hata": "2026-11-27T16:40:41Z"
+    "hata": "2026-11-27T16:40:41Z",
+    "bekliyor": "2026-11-27T21:32:28Z"
    },
-   "neden": "RuntimeError: yeterli görüntü üretilemedi: 423 < 1000"
+   "neden": null
   },
   {
    "id": "gunes_enerjisi",
@@ -699,7 +701,7 @@
   },
   {
    "id": "maden_ocagi",
-   "durum": "hata",
+   "durum": "egitimde",
    "set_id": "01a21e3d-4e21-7983-b098-7797182c1b04",
    "set_slug": "turkiye-maden-ve-tas-ocagi-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -770,7 +772,8 @@
    },
    "zamanlar": {
     "yuklendi": "2026-11-27T18:23:49Z",
-    "hata": "2026-11-27T18:23:59Z"
+    "hata": "2026-11-27T18:23:59Z",
+    "egitimde": "2026-11-27T21:32:45Z"
    },
    "surum_id": "01a21e3f-d2d0-7441-843b-b545a4055252",
    "item_sayisi": 2699,
@@ -781,7 +784,10 @@
     "unassigned": 0
    },
    "proje_id": "01a21e3f-e469-75a3-8365-de0fa2007e5b",
-   "neden": "RuntimeError: eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz"
+   "neden": null,
+   "is_id": "01a21eec-cc73-76c3-81fe-85d703b59276",
+   "epok": 30,
+   "tahmin_cr": 0.14
   },
   {
    "id": "arazi_ortusu_worldcover",
@@ -921,7 +927,7 @@
   },
   {
    "id": "su_gecisleri_jrc",
-   "durum": "hata",
+   "durum": "egitimde",
    "set_id": "01a21e44-0167-7023-a7b6-d0d651e959a7",
    "set_slug": "turkiye-yuzey-suyu-degisimi-segmentasyonu-kalici-mevsimlik-yeni-kaybolan-sentinel-2-jrc-gsw",
    "veri_ozeti": {
@@ -1005,9 +1011,23 @@
     "kaynak_satiri": "Etiket haritası: JRC Global Surface Water v1.3 'transitions' katmanı (1984-2020, 30 m); görüntüler 2020 yılından"
    },
    "zamanlar": {
-    "hata": "2026-11-27T18:30:40Z"
+    "hata": "2026-11-27T18:30:40Z",
+    "yuklendi": "2026-11-27T21:32:28Z",
+    "egitimde": "2026-11-27T21:32:28Z"
    },
-   "neden": "RuntimeError: yükleme eksik: val yerel 598, platform 522"
+   "neden": null,
+   "surum_id": "01a21eec-8134-7433-93ff-3975ceca1a29",
+   "item_sayisi": 2537,
+   "bolum_ayari": {
+    "train": 1725,
+    "val": 522,
+    "test": 290,
+    "unassigned": 0
+   },
+   "proje_id": "01a21eec-85b3-7003-bd3d-97825cfd5f4e",
+   "is_id": "01a21eec-8a2c-7890-863b-98e6267fc6a9",
+   "epok": 60,
+   "tahmin_cr": 0.2
   },
   {
    "id": "yapi_islev_yukseklik_ghsl",

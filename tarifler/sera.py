@@ -4,7 +4,7 @@ from functools import partial
 from tarifler import s2_osm
 
 SINIFLAR = [
-    {"ad": "sera", "kurallar": [{"landuse": "greenhouse_horticulture"}], "en_az_alan_m2": 5000, "en_cok_alan_m2": 5000000},
+    {"ad": "sera", "kurallar": [{"landuse": "greenhouse_horticulture"}], "en_az_alan_m2": 2000, "en_cok_alan_m2": 5000000},
 ]
 
 TARIF = s2_osm.tarif_olustur(

@@ -12,6 +12,6 @@ TARIF = s2_osm.tarif_olustur(
     aciklama="Türkiye genelinde Sentinel-2 L2A (10 m) görüntülerinde açık maden ve taş ocaklarının (landuse=quarry) çokgen maskeleri; farklı mevsimlerden en çok 3 gerçek tarih.",
     siniflar=SINIFLAR, model_adi="tr-maden-ocagi-seg-sentinel2-yolo11s-seg",
     sinirlar=["Ocak sınırları hızlı değişir; OSM çizimi ile görüntü tarihi arasında genişleme farkı olabilir.", "Çıplak kaya, kum ve inşaat alanıyla karışabilir."],
-    hedef_pencere=900,
+    hedef_pencere=550,
 )
 hazirla = partial(s2_osm.hazirla)

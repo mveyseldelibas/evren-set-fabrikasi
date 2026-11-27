@@ -224,6 +224,9 @@ class RasterUretici(Uretici):
             self.say["etiket_bos"] += 1
             return [], Counter()
         baskin, n = dagilim.most_common(1)[0]
+        if self.r.get("hedefli") and n > KARO * KARO * 0.97:
+            self.say["tamamen_tek_sinif"] += 1        # ör. göl içi: tarihler neredeyse aynı, platform tekrar sayıp eliyor
+            return [], Counter()
         if n / toplam > YAYGIN_ESIK and baskin in self.yaygin:
             rng = random.Random(f"seyrelt:{self.tohum}:{x0}:{y0}")
             if rng.random() < self.r.get("seyreltme", 0.6):

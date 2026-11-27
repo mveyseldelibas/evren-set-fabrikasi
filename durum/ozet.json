@@ -45,7 +45,7 @@
   }
  ],
  "hatalar": [],
- "son_calisma": "2026-11-27T18:10:02Z",
+ "son_calisma": "2026-11-27T18:10:08Z",
  "bu_calismada_yapilanlar": [
   "meyve_bahcesi_ve_bag: veri kuruluyor",
   "sulak_alan: veri kuruluyor",
@@ -65,7 +65,8 @@
   "urun_turu_worldcereal: veri kuruluyor",
   "meyve_bahcesi_ve_bag: set oluşturuldu (özel)",
   "meyve_bahcesi_ve_bag: ZIP yükleme bitti",
-  "yükleme doğrulandı: platform {'train': 2082, 'validation': 611, 'test': 306}, yerel {'train': 2082, 'val': 611, 'test': 306}, etiketsiz 0"
+  "yükleme doğrulandı: platform {'train': 2082, 'validation': 611, 'test': 306}, yerel {'train': 2082, 'val': 611, 'test': 306}, etiketsiz 0",
+  "meyve_bahcesi_ve_bag: kuru koşu epok=60 tahmin=0.21 CR (x2.4=0.5)"
  ],
  "bu_calismada_hatalar": [
   "zeytinlik: RuntimeError yeterli görüntü üretilemedi: 240 < 1000",
@@ -80,7 +81,7 @@
  "durum_sayilari": {
   "zayif": 1,
   "yayimlandi": 1,
-  "yuklendi": 1,
+  "egitimde": 1,
   "bekliyor": 25,
   "hata": 6
  }

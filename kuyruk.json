@@ -204,7 +204,7 @@
   },
   {
    "id": "meyve_bahcesi_ve_bag",
-   "durum": "yuklendi",
+   "durum": "egitimde",
    "set_id": "01a21e30-43f0-7e43-82c5-fc3e08becda2",
    "set_slug": "turkiye-meyve-bahcesi-ve-bag-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -282,7 +282,8 @@
     "uretim_zamani": "2026-11-27T15:50Z"
    },
    "zamanlar": {
-    "yuklendi": "2026-11-27T18:10:02Z"
+    "yuklendi": "2026-11-27T18:10:02Z",
+    "egitimde": "2026-11-27T18:10:08Z"
    },
    "surum_id": "01a21e33-3689-74e3-8316-0bcf8fddff08",
    "item_sayisi": 2999,
@@ -291,7 +292,11 @@
     "val": 611,
     "test": 306,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a21e33-3f35-7453-8bec-2ddfe9402e52",
+   "is_id": "01a21e33-4ced-7692-809d-3d6cb489506b",
+   "epok": 60,
+   "tahmin_cr": 0.21
   },
   {
    "id": "sulak_alan",

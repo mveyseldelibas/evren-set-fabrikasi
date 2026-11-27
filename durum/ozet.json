@@ -45,7 +45,7 @@
   }
  ],
  "hatalar": [],
- "son_calisma": "2026-11-27T18:18:27Z",
+ "son_calisma": "2026-11-27T18:20:52Z",
  "bu_calismada_yapilanlar": [
   "meyve_bahcesi_ve_bag: veri kuruluyor",
   "sulak_alan: veri kuruluyor",
@@ -78,7 +78,10 @@
   "insaat_alani: set oluşturuldu (özel)",
   "insaat_alani: ZIP yükleme bitti",
   "yükleme doğrulandı: platform {'train': 1167, 'validation': 765, 'test': 168}, yerel {'train': 1167, 'val': 765, 'test': 168}, etiketsiz 0",
-  "insaat_alani: kuru koşu epok=60 tahmin=0.18 CR (x2.4=0.4)"
+  "insaat_alani: kuru koşu epok=60 tahmin=0.18 CR (x2.4=0.4)",
+  "gunes_enerjisi: set oluşturuldu (özel)",
+  "gunes_enerjisi: ZIP yükleme bitti",
+  "yükleme doğrulandı: platform {'train': 1884, 'validation': 539, 'test': 270}, yerel {'train': 1884, 'val': 539, 'test': 270}, etiketsiz 0"
  ],
  "bu_calismada_hatalar": [
   "zeytinlik: RuntimeError yeterli görüntü üretilemedi: 240 < 1000",
@@ -89,12 +92,13 @@
   "sera: RuntimeError yeterli görüntü üretilemedi: 423 < 1000"
  ],
  "kuyruk_uzunlugu": 34,
- "kalan_tarif": 22,
+ "kalan_tarif": 21,
  "durum_sayilari": {
   "zayif": 1,
   "yayimlandi": 1,
   "egitimde": 4,
   "hata": 6,
-  "bekliyor": 22
+  "yuklendi": 1,
+  "bekliyor": 21
  }
 }

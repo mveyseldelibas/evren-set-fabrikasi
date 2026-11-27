@@ -611,7 +611,86 @@
   },
   {
    "id": "gunes_enerjisi",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a21e3b-001f-79b2-ad42-a5a19202ba4f",
+   "set_slug": "turkiye-gunes-enerjisi-santrali-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "gunes_enerjisi",
+    "siniflar": [
+     "gunes_santrali"
+    ],
+    "goruntu_bolum": {
+     "train": 1884,
+     "val": 539,
+     "test": 270
+    },
+    "goruntu_toplam": 2693,
+    "pencere_bolum": {
+     "train": 630,
+     "val": 180,
+     "test": 90
+    },
+    "pencere_toplam": 900,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "gunes_santrali": 3622
+     },
+     "val": {
+      "gunes_santrali": 1028
+     },
+     "test": {
+      "gunes_santrali": 534
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "gunes_santrali": 1884
+     },
+     "val": {
+      "gunes_santrali": 539
+     },
+     "test": {
+      "gunes_santrali": 270
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "gunes_santrali": 2602
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 276,
+     "2020": 285,
+     "2021": 223,
+     "2022": 485,
+     "2023": 374,
+     "2024": 275,
+     "2025": 444,
+     "2026": 331
+    },
+    "mevsim_dagilimi": {
+     "sonbahar": 898,
+     "ilkbahar": 897,
+     "yaz": 898
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 455,
+     "yazilan_pencere": 900,
+     "goruntu": 2693,
+     "okumaHatasi": 7
+    },
+    "uretim_zamani": "2026-11-27T16:53Z"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-27T18:20:52Z"
+   },
+   "surum_id": "01a21e3d-1ff5-7f20-8d10-da2e8754f138",
+   "item_sayisi": 2693,
+   "bolum_ayari": {
+    "train": 1884,
+    "val": 539,
+    "test": 270,
+    "unassigned": 0
+   }
   },
   {
    "id": "maden_ocagi",

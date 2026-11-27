@@ -88,24 +88,29 @@ def hedefli_konumlar(tarif, sinir, adet: int, tohum: int, log=print, kaba_derece
     istemci = pystac_client.Client.open(s2_osm.STAC_URL)
     ic = sinir.buffer(-0.015)
     shapely.prepare(ic)
-    ogeler = list(istemci.search(collections=[r["koleksiyon"]], bbox=list(sinir.bounds),
-                                 datetime=f"{r['yil']}-01-01/{r['yil']}-12-31", limit=50).items_as_dicts())
+    if r.get("sabit_karolar"):
+        kaynaklar = [(k["url"], k["url"].rsplit("/", 1)[1]) for k in r["sabit_karolar"]]
+    else:
+        ogeler = list(istemci.search(collections=[r["koleksiyon"]], bbox=list(sinir.bounds),
+                                     datetime=f"{r['yil']}-01-01/{r['yil']}-12-31", limit=50).items_as_dicts())
+        kaynaklar = [(planetary_computer.sign(o["assets"][r["varlik"]]["href"]), o["id"]) for o in ogeler]
     adaylar = {k: [] for k in range(ns)}
-    for o in ogeler:
-        href = planetary_computer.sign(o["assets"][r["varlik"]]["href"])
+    for href, ad in kaynaklar:
         with rasterio.open(href) as ds:
-            b = ds.bounds
-            gen, yuk = int(round((b.right - b.left) / kaba_derece)), int(round((b.top - b.bottom) / kaba_derece))
-            v = ds.read(1, out_shape=(yuk, gen), resampling=Resampling.nearest)
+            piksel_m = abs(ds.res[0]) * (111320.0 if ds.crs.is_geographic else 1.0)
+            f = max(1, int(round(kaba_derece * 111320.0 / piksel_m)))
+            v = ds.read(1, out_shape=(max(1, ds.height // f), max(1, ds.width // f)), resampling=Resampling.nearest)
+            T = ds.transform * ds.transform.scale(ds.width / v.shape[1], ds.height / v.shape[0])
+            donus = None if ds.crs.to_epsg() == 4326 else Transformer.from_crs(ds.crs, 4326, always_xy=True)
         for d, sn in deger.items():
             ys, xs = np.nonzero(v == d)
             if not len(xs):
                 continue
-            lon = b.left + (xs + 0.5) * kaba_derece
-            lat = b.top - (ys + 0.5) * kaba_derece
+            px, py = T * (xs + 0.5, ys + 0.5)
+            lon, lat = (np.asarray(px), np.asarray(py)) if donus is None else map(np.asarray, donus.transform(px, py))
             icte = shapely.contains_xy(ic, lon, lat)
             adaylar[sn].extend(zip(lon[icte].tolist(), lat[icte].tolist()))
-        log(f"  {o['id']}: {[len(adaylar[k]) for k in range(ns)]}")
+        log(f"  {ad}: {[len(adaylar[k]) for k in range(ns)]}")
     ileri = Transformer.from_crs(4326, ALAN_PROJ, always_xy=True)
     rng = random.Random(f"hedefli:{tohum}")
     secilen, hucre = [], {}
@@ -145,7 +150,7 @@ class RasterUretici(Uretici):
 
     def _sec(self, adaylar, sinirlar, rng):
         """Önce etiket (ucuz) denetlenir: uygun değilse görüntü hiç okunmaz."""
-        yil = str(self.r["yil"])
+        yil = str(self.r.get("goruntu_yili", self.r["yil"]))
         adaylar = [c for c in adaylar if c["tarih"][:4] == yil]
         if not adaylar:
             return []
@@ -188,17 +193,27 @@ class RasterUretici(Uretici):
         from rasterio.windows import from_bounds
         x0, y0, x1, y1 = sinirlar
         geri = Transformer.from_crs(epsg, 4326, always_xy=True)
-        hrefler = {self._etiket_href(*geri.transform(x, y)) for x in (x0, x1) for y in (y0, y1)}
-        if len(hrefler) != 1 or None in hrefler:
-            self.say["etiket_karo_siniri"] += 1
-            return [], Counter()
-        href = hrefler.pop()
+        koseler = [geri.transform(x, y) for x in (x0, x1) for y in (y0, y1)]
+        if self.r.get("sabit_karolar"):
+            adaylar = [k["url"] for k in self.r["sabit_karolar"]
+                       if all(k["sinirlar"][0] <= a <= k["sinirlar"][2] and k["sinirlar"][1] <= b <= k["sinirlar"][3] for a, b in koseler)]
+        else:
+            hrefler = {self._etiket_href(*k) for k in koseler}
+            adaylar = list(hrefler) if len(hrefler) == 1 and None not in hrefler else []
 
         def oku(ds):
             with WarpedVRT(ds, crs=f"EPSG:{epsg}", resampling=Resampling.nearest) as v:
                 w = from_bounds(x0, y0, x1, y1, transform=v.transform)
                 return v.read(1, window=w, out_shape=(KARO, KARO), resampling=Resampling.nearest)
-        ham = self.kaynak.oku(href, oku)
+        ham, bos = None, self.r.get("bos_deger")
+        for href in adaylar:
+            h = self.kaynak.oku(href, oku)
+            if bos is None or float(np.mean(h == bos)) < 0.1:
+                ham = h
+                break
+        if ham is None:
+            self.say["etiket_karo_siniri"] += 1
+            return [], Counter()
         maske = np.full((KARO, KARO), 255, np.uint8)
         for d, sn in self.deger.items():
             maske[ham == d] = sn
@@ -280,7 +295,7 @@ def yontem_metni(tarif: dict, ozet: dict) -> str:
     dogruluk = r.get("dogruluk_notu", "Etiket bir algoritmanın ürettiği haritadır, el ile çizilmiş değildir; haritanın kendi doğruluğu bu setin üst sınırıdır.")
     return f"""{konum}
 2. Her konum için 224x224 piksellik (10 m, yaklaşık 2,24 km) pencere.
-3. Görüntü: Microsoft Planetary Computer `sentinel-2-l2a`, yalnız {r['yil']} yılı (etiket haritasıyla aynı yıl). SCL ile bulut/gölge en çok %3, \
+3. Görüntü: Microsoft Planetary Computer `sentinel-2-l2a`, yalnız {r.get('goruntu_yili', r['yil'])} yılı ({'etiket haritasıyla aynı yıl' if r.get('goruntu_yili', r['yil']) == r['yil'] else 'etiket ' + str(r['yil']) + '; Sentinel-2 L2A arşivi 2019 öncesini içermez'}). SCL ile bulut/gölge en çok %3, \
 kar en çok %5, boş piksel en çok %0,5. Kış dışında farklı mevsimlerden en çok 3 **gerçek** tarih (aralarında en az 20 gün); kopya yok. \
 Kırmızı-yeşil-mavi bantlar 0-3500 yansıtımdan 0-255'e ölçeklendi (gama 0,9).
 4. Etiket: {r['kaynak_adi']} haritası pencerenin Sentinel-2 ızgarasına en yakın komşu ile yeniden örneklendi, 3x3 medyan süzgeçten geçirildi; \

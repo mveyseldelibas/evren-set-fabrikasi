@@ -699,7 +699,86 @@
   },
   {
    "id": "maden_ocagi",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a21e3d-4e21-7983-b098-7797182c1b04",
+   "set_slug": "turkiye-maden-ve-tas-ocagi-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "maden_ocagi",
+    "siniflar": [
+     "maden_ocagi"
+    ],
+    "goruntu_bolum": {
+     "train": 1886,
+     "test": 270,
+     "val": 543
+    },
+    "goruntu_toplam": 2699,
+    "pencere_bolum": {
+     "train": 629,
+     "test": 90,
+     "val": 181
+    },
+    "pencere_toplam": 900,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "maden_ocagi": 3281
+     },
+     "val": {
+      "maden_ocagi": 954
+     },
+     "test": {
+      "maden_ocagi": 543
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "maden_ocagi": 1886
+     },
+     "val": {
+      "maden_ocagi": 543
+     },
+     "test": {
+      "maden_ocagi": 270
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "maden_ocagi": 3393
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 258,
+     "2020": 284,
+     "2021": 246,
+     "2022": 494,
+     "2023": 356,
+     "2024": 320,
+     "2025": 420,
+     "2026": 321
+    },
+    "mevsim_dagilimi": {
+     "yaz": 903,
+     "sonbahar": 902,
+     "ilkbahar": 894
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 645,
+     "yazilan_pencere": 900,
+     "goruntu": 2699,
+     "okumaHatasi": 1
+    },
+    "uretim_zamani": "2026-11-27T17:05Z"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-27T18:23:49Z"
+   },
+   "surum_id": "01a21e3f-d2d0-7441-843b-b545a4055252",
+   "item_sayisi": 2699,
+   "bolum_ayari": {
+    "train": 1886,
+    "val": 543,
+    "test": 270,
+    "unassigned": 0
+   }
   },
   {
    "id": "arazi_ortusu_worldcover",

@@ -106,6 +106,13 @@
    "mesaj": "Eğitim başladı: Türkiye Yapı İşlevi ve Yükseklik Sınıfı Segmentasyonu - Sentinel-2 + JRC GHSL (2018) (2584 öğe, ~0 CR)."
   },
   {
+   "id": "2026-11-27T18:38:28Z-basladi-urun_turu_worldcereal",
+   "zaman": "2026-11-27T18:38:28Z",
+   "tur": "basladi",
+   "tarif": "urun_turu_worldcereal",
+   "mesaj": "Eğitim başladı: Türkiye Tarla Ürünü Segmentasyonu (kışlık tahıl, mısır, diğer) - Sentinel-2 2021 + ESA WorldCereal (2767 öğe, ~1 CR)."
+  },
+  {
    "id": "2026-11-26T20:26:16Z-yayimlandi-mezarlik",
    "zaman": "2026-11-26T20:26:16Z",
    "tur": "yayimlandi",
@@ -281,6 +288,13 @@
    "tur": "basladi",
    "tarif": "yapi_islev_yukseklik_ghsl",
    "mesaj": "Eğitim başladı: Türkiye Yapı İşlevi ve Yükseklik Sınıfı Segmentasyonu - Sentinel-2 + JRC GHSL (2018) (2584 öğe, ~0 CR)."
+  },
+  {
+   "id": "2026-11-27T18:38:28Z-basladi-urun_turu_worldcereal",
+   "zaman": "2026-11-27T18:38:28Z",
+   "tur": "basladi",
+   "tarif": "urun_turu_worldcereal",
+   "mesaj": "Eğitim başladı: Türkiye Tarla Ürünü Segmentasyonu (kışlık tahıl, mısır, diğer) - Sentinel-2 2021 + ESA WorldCereal (2767 öğe, ~1 CR)."
   }
  ]
 }

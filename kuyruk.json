@@ -1121,7 +1121,7 @@
   },
   {
    "id": "urun_turu_worldcereal",
-   "durum": "yuklendi",
+   "durum": "egitimde",
    "set_id": "01a21e49-e8fc-7681-9d14-67588f63aab3",
    "set_slug": "turkiye-tarla-urunu-segmentasyonu-kislik-tahil-misir-diger-sentinel-2-2021-esa-worldcereal",
    "veri_ozeti": {
@@ -1196,7 +1196,8 @@
     "kaynak_satiri": "Etiket haritası: ESA WorldCereal 2021 v100 (10 m; kışlık tahıl, mısır, geçici ürün); görüntüler 2021 yılından"
    },
    "zamanlar": {
-    "yuklendi": "2026-11-27T18:38:23Z"
+    "yuklendi": "2026-11-27T18:38:23Z",
+    "egitimde": "2026-11-27T18:38:28Z"
    },
    "surum_id": "01a21e4d-1fdf-7af0-8cff-7ed3dfdb4af1",
    "item_sayisi": 2767,
@@ -1205,7 +1206,11 @@
     "val": 550,
     "test": 263,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a21e4d-30f4-7ee0-b2c1-db9ea597919e",
+   "is_id": "01a21e4d-3cf5-7650-aae0-c63bdd0d68c4",
+   "epok": 60,
+   "tahmin_cr": 0.21
   },
   {
    "id": "orman",

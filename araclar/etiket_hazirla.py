@@ -194,4 +194,71 @@ def ghsl(cikti: Path):
 if __name__ == "__main__":
     is_, c = sys.argv[1], Path(sys.argv[2])
     c.mkdir(parents=True, exist_ok=True)
-    {"worldcereal": worldcereal, "ghsl": ghsl}[is_](c)
+    {"worldcereal": worldcereal, "ghsl": ghsl, "clc": clc}[is_](c)
+
+
+CLC_KAYNAK = "https://sdi.eea.europa.eu/data/a65428d3-bd66-4b47-bcf9-6bfd6fa5df0c"
+
+
+def clc(cikti: Path):
+    """CORINE Land Cover 2024 (100 m, EEA). Önce kaynağın içeriği listelenir; Türkiye kapsaması ve sınıf dağılımı raporlanır.
+    Türkiye karesine kırpılmış COG yazılır (EPSG:3035)."""
+    import re
+    import rasterio
+    from rasterio.windows import from_bounds
+    from pyproj import Transformer
+    r = requests.get(CLC_KAYNAK + "/", timeout=120)
+    print("liste", r.status_code, r.headers.get("content-type"), flush=True)
+    linkler = sorted(set(re.findall(r'href="([^"?#]+\.(?:zip|tif|tiff|gpkg|txt|pdf|xml|csv|lyr|qml|sld))"', r.text, re.I)))
+    print("dosyalar:", linkler[:40], flush=True)
+    zipler = [l for l in linkler if l.lower().endswith((".zip", ".tif", ".tiff"))]
+    if not zipler:
+        print(r.text[:3000], flush=True)
+        raise SystemExit("indirilebilir raster yok")
+    hedef = zipler[0] if zipler[0].startswith("http") else CLC_KAYNAK + "/" + zipler[0].lstrip("/")
+    print("indiriliyor:", hedef, flush=True)
+    yerel = cikti / ("_clc" + Path(hedef).suffix)
+    with requests.get(hedef, stream=True, timeout=1800) as q:
+        q.raise_for_status()
+        with open(yerel, "wb") as f:
+            for blok in q.iter_content(16 << 20):
+                f.write(blok)
+    print("boyut MB", round(yerel.stat().st_size / 1e6), flush=True)
+    tif = yerel
+    if yerel.suffix == ".zip":
+        with zipfile.ZipFile(yerel) as z:
+            adlar = [i.filename for i in z.infolist()]
+            print("zip içeriği:", adlar[:30], flush=True)
+            secim = max((i for i in z.infolist() if i.filename.lower().endswith((".tif", ".tiff"))), key=lambda i: i.file_size)
+            tif = cikti / "_clc.tif"
+            with z.open(secim) as s_, open(tif, "wb") as f:
+                while True:
+                    b = s_.read(64 << 20)
+                    if not b:
+                        break
+                    f.write(b)
+            for i in z.infolist():
+                if i.filename.lower().endswith((".txt", ".csv", ".clr", ".qml", ".xml")) and i.file_size < 2_000_000:
+                    (cikti / ("_" + Path(i.filename).name)).write_bytes(z.read(i))
+        yerel.unlink()
+    with rasterio.open(tif) as ds:
+        print("crs", ds.crs, "boyut", ds.shape, "nodata", ds.nodata, "dtype", ds.dtypes, flush=True)
+        t = Transformer.from_crs(4326, ds.crs, always_xy=True)
+        xs, ys = zip(*[t.transform(x, y) for x in (TR_KUTU[0], TR_KUTU[2]) for y in (TR_KUTU[1], TR_KUTU[3])])
+        w = from_bounds(min(xs), min(ys), max(xs), max(ys), transform=ds.transform).round_offsets().round_lengths()
+        a = ds.read(1, window=w, boundless=True, fill_value=ds.nodata if ds.nodata is not None else 0)
+        prof = ds.profile.copy()
+        prof.update(width=a.shape[1], height=a.shape[0], transform=ds.window_transform(w), driver="GTiff", compress="DEFLATE",
+                    tiled=True, blockxsize=512, blockysize=512, BIGTIFF="YES")
+    import numpy as np
+    v, n = np.unique(a, return_counts=True)
+    dag = {int(x): int(y) for x, y in zip(v, n)}
+    print("Türkiye karesi değer dağılımı:", dag, flush=True)
+    ara = cikti / "_clc_tr.tif"
+    with rasterio.open(ara, "w", **prof) as d:
+        d.write(a, 1)
+    hedef_cog = cikti / "clc2024_tr.tif"
+    cog_yaz(ara, hedef_cog)
+    tif.unlink(missing_ok=True)
+    (cikti / "clc_karolar.json").write_text(json.dumps([{"dosya": hedef_cog.name, "sinirlar": list(TR_KUTU), "crs": str(prof["crs"]),
+                                                          "deger": {str(k): v for k, v in dag.items()}, "kaynak": CLC_KAYNAK}], indent=1), encoding="utf-8")

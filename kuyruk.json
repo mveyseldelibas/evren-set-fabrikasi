@@ -420,7 +420,7 @@
   },
   {
    "id": "futbol_sahasi",
-   "durum": "yuklendi",
+   "durum": "egitimde",
    "set_id": "01a21e35-8b3b-7c71-8526-dc70ca851cde",
    "set_slug": "turkiye-futbol-sahasi-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -490,7 +490,8 @@
     "uretim_zamani": "2026-11-27T16:24Z"
    },
    "zamanlar": {
-    "yuklendi": "2026-11-27T18:15:48Z"
+    "yuklendi": "2026-11-27T18:15:48Z",
+    "egitimde": "2026-11-27T18:15:54Z"
    },
    "surum_id": "01a21e38-7d7c-7a33-be57-95fadda75419",
    "item_sayisi": 3327,
@@ -499,7 +500,11 @@
     "val": 666,
     "test": 339,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a21e38-84c0-7853-a2fd-d54d0a8e5fc8",
+   "is_id": "01a21e38-93f1-7913-8012-8586ab7c31b0",
+   "epok": 60,
+   "tahmin_cr": 0.22
   },
   {
    "id": "insaat_alani",

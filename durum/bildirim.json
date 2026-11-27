@@ -57,6 +57,13 @@
    "mesaj": "Eğitim başladı: Türkiye Sulak Alan Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2694 öğe, ~0 CR)."
   },
   {
+   "id": "2026-11-27T18:15:54Z-basladi-futbol_sahasi",
+   "zaman": "2026-11-27T18:15:54Z",
+   "tur": "basladi",
+   "tarif": "futbol_sahasi",
+   "mesaj": "Eğitim başladı: Türkiye Futbol Sahası Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (3327 öğe, ~1 CR)."
+  },
+  {
    "id": "2026-11-26T20:26:16Z-yayimlandi-mezarlik",
    "zaman": "2026-11-26T20:26:16Z",
    "tur": "yayimlandi",
@@ -183,6 +190,13 @@
    "tur": "basladi",
    "tarif": "sulak_alan",
    "mesaj": "Eğitim başladı: Türkiye Sulak Alan Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2694 öğe, ~0 CR)."
+  },
+  {
+   "id": "2026-11-27T18:15:54Z-basladi-futbol_sahasi",
+   "zaman": "2026-11-27T18:15:54Z",
+   "tur": "basladi",
+   "tarif": "futbol_sahasi",
+   "mesaj": "Eğitim başladı: Türkiye Futbol Sahası Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (3327 öğe, ~1 CR)."
   }
  ]
 }

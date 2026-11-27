@@ -72,6 +72,17 @@ jobs:
           git config user.name "set-fabrikasi-bot"
           git config user.email "set-fabrikasi-bot@users.noreply.github.com"
 
+      - name: CORINE 2024 Türkiye kırpımı (bir kez; sunucu kapalıysa sessizce geçer)
+        continue-on-error: true
+        timeout-minutes: 40
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view etiket-v1 --json assets -q '.assets[].name' | grep -qx clc2024_tr.tif; then echo "CORINE zaten hazır"; exit 0; fi
+          if ! curl -s -o /dev/null -m 30 https://sdi.eea.europa.eu/data/a65428d3-bd66-4b47-bcf9-6bfd6fa5df0c/; then echo "EEA sunucusu yanıt vermiyor; yarın"; exit 0; fi
+          python araclar/etiket_hazirla.py clc clc_cikti && gh release upload etiket-v1 clc_cikti/clc2024_tr.tif clc_cikti/clc_karolar.json --clobber
+          ls clc_cikti/_* 2>/dev/null && for f in clc_cikti/_*; do echo "== $f"; head -c 3000 "$f"; done || true
+
       - name: Fabrikayı çalıştır
         env:
           EVREN_PLATFORM_KEY: ${{ secrets.EVREN_PLATFORM_KEY }}

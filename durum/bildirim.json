@@ -50,6 +50,13 @@
    "mesaj": "Eğitim başladı: Türkiye Meyve Bahçesi ve Bağ Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2999 öğe, ~1 CR)."
   },
   {
+   "id": "2026-11-27T18:12:32Z-basladi-sulak_alan",
+   "zaman": "2026-11-27T18:12:32Z",
+   "tur": "basladi",
+   "tarif": "sulak_alan",
+   "mesaj": "Eğitim başladı: Türkiye Sulak Alan Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2694 öğe, ~0 CR)."
+  },
+  {
    "id": "2026-11-26T20:26:16Z-yayimlandi-mezarlik",
    "zaman": "2026-11-26T20:26:16Z",
    "tur": "yayimlandi",
@@ -169,6 +176,13 @@
    "tur": "basladi",
    "tarif": "meyve_bahcesi_ve_bag",
    "mesaj": "Eğitim başladı: Türkiye Meyve Bahçesi ve Bağ Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2999 öğe, ~1 CR)."
+  },
+  {
+   "id": "2026-11-27T18:12:32Z-basladi-sulak_alan",
+   "zaman": "2026-11-27T18:12:32Z",
+   "tur": "basladi",
+   "tarif": "sulak_alan",
+   "mesaj": "Eğitim başladı: Türkiye Sulak Alan Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2694 öğe, ~0 CR)."
   }
  ]
 }

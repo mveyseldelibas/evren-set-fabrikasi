@@ -45,7 +45,7 @@
   }
  ],
  "hatalar": [],
- "son_calisma": "2026-11-27T18:12:27Z",
+ "son_calisma": "2026-11-27T18:12:32Z",
  "bu_calismada_yapilanlar": [
   "meyve_bahcesi_ve_bag: veri kuruluyor",
   "sulak_alan: veri kuruluyor",
@@ -69,7 +69,8 @@
   "meyve_bahcesi_ve_bag: kuru koşu epok=60 tahmin=0.21 CR (x2.4=0.5)",
   "sulak_alan: set oluşturuldu (özel)",
   "sulak_alan: ZIP yükleme bitti",
-  "yükleme doğrulandı: platform {'train': 1889, 'validation': 538, 'test': 267}, yerel {'train': 1889, 'val': 538, 'test': 267}, etiketsiz 3"
+  "yükleme doğrulandı: platform {'train': 1889, 'validation': 538, 'test': 267}, yerel {'train': 1889, 'val': 538, 'test': 267}, etiketsiz 3",
+  "sulak_alan: kuru koşu epok=60 tahmin=0.20 CR (x2.4=0.5)"
  ],
  "bu_calismada_hatalar": [
   "zeytinlik: RuntimeError yeterli görüntü üretilemedi: 240 < 1000",
@@ -84,8 +85,7 @@
  "durum_sayilari": {
   "zayif": 1,
   "yayimlandi": 1,
-  "egitimde": 1,
-  "yuklendi": 1,
+  "egitimde": 2,
   "hata": 6,
   "bekliyor": 24
  }

@@ -300,7 +300,7 @@
   },
   {
    "id": "sulak_alan",
-   "durum": "yuklendi",
+   "durum": "egitimde",
    "set_id": "01a21e33-5fc6-7ce1-abc4-587302bb0756",
    "set_slug": "turkiye-sulak-alan-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -370,7 +370,8 @@
     "uretim_zamani": "2026-11-27T16:03Z"
    },
    "zamanlar": {
-    "yuklendi": "2026-11-27T18:12:27Z"
+    "yuklendi": "2026-11-27T18:12:27Z",
+    "egitimde": "2026-11-27T18:12:32Z"
    },
    "surum_id": "01a21e35-6c95-7c60-90ce-ca5f379f4615",
    "item_sayisi": 2694,
@@ -379,7 +380,11 @@
     "val": 538,
     "test": 267,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a21e35-7393-7c30-9f78-111e6733ac0f",
+   "is_id": "01a21e35-7fa4-7c91-a16c-16b4b9683c33",
+   "epok": 60,
+   "tahmin_cr": 0.2
   },
   {
    "id": "zeytinlik",

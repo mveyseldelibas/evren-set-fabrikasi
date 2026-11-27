@@ -300,7 +300,86 @@
   },
   {
    "id": "sulak_alan",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a21e33-5fc6-7ce1-abc4-587302bb0756",
+   "set_slug": "turkiye-sulak-alan-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "sulak_alan",
+    "siniflar": [
+     "sulak_alan"
+    ],
+    "goruntu_bolum": {
+     "train": 1889,
+     "val": 538,
+     "test": 267
+    },
+    "goruntu_toplam": 2694,
+    "pencere_bolum": {
+     "train": 630,
+     "val": 180,
+     "test": 90
+    },
+    "pencere_toplam": 900,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "sulak_alan": 3220
+     },
+     "val": {
+      "sulak_alan": 879
+     },
+     "test": {
+      "sulak_alan": 987
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "sulak_alan": 1889
+     },
+     "val": {
+      "sulak_alan": 538
+     },
+     "test": {
+      "sulak_alan": 267
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "sulak_alan": 1343
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 250,
+     "2020": 303,
+     "2021": 257,
+     "2022": 520,
+     "2023": 323,
+     "2024": 266,
+     "2025": 462,
+     "2026": 313
+    },
+    "mevsim_dagilimi": {
+     "sonbahar": 908,
+     "ilkbahar": 855,
+     "yaz": 931
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 887,
+     "yazilan_pencere": 900,
+     "goruntu": 2694,
+     "okumaHatasi": 2
+    },
+    "uretim_zamani": "2026-11-27T16:03Z"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-27T18:12:27Z"
+   },
+   "surum_id": "01a21e35-6c95-7c60-90ce-ca5f379f4615",
+   "item_sayisi": 2694,
+   "bolum_ayari": {
+    "train": 1889,
+    "val": 538,
+    "test": 267,
+    "unassigned": 0
+   }
   },
   {
    "id": "zeytinlik",

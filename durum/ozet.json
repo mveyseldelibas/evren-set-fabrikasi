@@ -45,10 +45,12 @@
   }
  ],
  "hatalar": [],
- "son_calisma": "2026-11-27T23:41:22Z",
+ "son_calisma": "2026-11-27T23:41:24Z",
  "bu_calismada_yapilanlar": [
   "futbol_sahasi: kapılar geçildi, yayım penceresini bekliyor",
-  "gunes_enerjisi: kapılar geçildi, yayım penceresini bekliyor"
+  "gunes_enerjisi: kapılar geçildi, yayım penceresini bekliyor",
+  "pencere dışı (02:41 TSİ) ve bugünkü kazanç 25 < 100; sonraki koşuya bırakıldı",
+  "yayım ertelendi (CR penceresi): ['futbol_sahasi', 'gunes_enerjisi']"
  ],
  "bu_calismada_hatalar": [],
  "kuyruk_uzunlugu": 34,

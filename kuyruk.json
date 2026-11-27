@@ -420,7 +420,86 @@
   },
   {
    "id": "futbol_sahasi",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a21e35-8b3b-7c71-8526-dc70ca851cde",
+   "set_slug": "turkiye-futbol-sahasi-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "futbol_sahasi",
+    "siniflar": [
+     "futbol_sahasi"
+    ],
+    "goruntu_bolum": {
+     "train": 2322,
+     "val": 666,
+     "test": 339
+    },
+    "goruntu_toplam": 3327,
+    "pencere_bolum": {
+     "train": 774,
+     "val": 222,
+     "test": 113
+    },
+    "pencere_toplam": 1109,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "futbol_sahasi": 3210
+     },
+     "val": {
+      "futbol_sahasi": 1011
+     },
+     "test": {
+      "futbol_sahasi": 486
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "futbol_sahasi": 2322
+     },
+     "val": {
+      "futbol_sahasi": 666
+     },
+     "test": {
+      "futbol_sahasi": 339
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "futbol_sahasi": 2241
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 345,
+     "2020": 350,
+     "2021": 252,
+     "2022": 627,
+     "2023": 441,
+     "2024": 375,
+     "2025": 534,
+     "2026": 403
+    },
+    "mevsim_dagilimi": {
+     "yaz": 1110,
+     "sonbahar": 1111,
+     "ilkbahar": 1106
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 738,
+     "yazilan_pencere": 1109,
+     "goruntu": 3327,
+     "etiket_az": 91
+    },
+    "uretim_zamani": "2026-11-27T16:24Z"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-27T18:15:48Z"
+   },
+   "surum_id": "01a21e38-7d7c-7a33-be57-95fadda75419",
+   "item_sayisi": 3327,
+   "bolum_ayari": {
+    "train": 2322,
+    "val": 666,
+    "test": 339,
+    "unassigned": 0
+   }
   },
   {
    "id": "insaat_alani",

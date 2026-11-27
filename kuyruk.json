@@ -1011,7 +1011,108 @@
   },
   {
    "id": "yapi_islev_yukseklik_ghsl",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a21e46-3446-7fb3-a25a-df9efd7020c6",
+   "set_slug": "turkiye-yapi-islevi-ve-yukseklik-sinifi-segmentasyonu-sentinel-2-jrc-ghsl-2018",
+   "veri_ozeti": {
+    "tarif": "yapi_islev_yukseklik_ghsl",
+    "siniflar": [
+     "konut_alcak",
+     "konut_orta",
+     "konut_yuksek",
+     "konut_disi_alcak",
+     "konut_disi_yuksek"
+    ],
+    "goruntu_bolum": {
+     "train": 1695,
+     "val": 510,
+     "test": 379
+    },
+    "goruntu_toplam": 2584,
+    "pencere_bolum": {
+     "train": 601,
+     "val": 179,
+     "test": 132
+    },
+    "pencere_toplam": 912,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "konut_alcak": 17088,
+      "konut_orta": 56905,
+      "konut_yuksek": 16313,
+      "konut_disi_yuksek": 13225,
+      "konut_disi_alcak": 4355
+     },
+     "val": {
+      "konut_alcak": 5507,
+      "konut_orta": 16324,
+      "konut_disi_alcak": 1186,
+      "konut_disi_yuksek": 2446,
+      "konut_yuksek": 4362
+     },
+     "test": {
+      "konut_alcak": 3147,
+      "konut_orta": 11354,
+      "konut_disi_alcak": 3522,
+      "konut_disi_yuksek": 4383,
+      "konut_yuksek": 2688
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "konut_alcak": 1636,
+      "konut_orta": 1424,
+      "konut_yuksek": 728,
+      "konut_disi_yuksek": 1129,
+      "konut_disi_alcak": 823
+     },
+     "val": {
+      "konut_alcak": 501,
+      "konut_orta": 438,
+      "konut_disi_alcak": 268,
+      "konut_disi_yuksek": 324,
+      "konut_yuksek": 213
+     },
+     "test": {
+      "konut_alcak": 373,
+      "konut_orta": 337,
+      "konut_disi_alcak": 254,
+      "konut_disi_yuksek": 298,
+      "konut_yuksek": 125
+     }
+    },
+    "yil_dagilimi": {
+     "2019": 2584
+    },
+    "mevsim_dagilimi": {
+     "ilkbahar": 885,
+     "yaz": 775,
+     "sonbahar": 924
+    },
+    "atlanan_ve_sayaclar": {
+     "etiket_bos": 81,
+     "gecerli_tarih_yok": 133,
+     "bulutKarBos": 3406,
+     "yazilan_pencere": 912,
+     "goruntu": 2584,
+     "hata:RasterioIOError": 11,
+     "okumaHatasi": 2,
+     "etiket_karo_siniri": 1
+    },
+    "uretim_zamani": "2026-11-27T17:52Z",
+    "kaynak_satiri": "Etiket haritası: JRC GHSL GHS-BUILT-C MSZ E2018 R2023A (10 m); görüntüler 2019 yılından"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-27T18:34:32Z"
+   },
+   "surum_id": "01a21e49-96b4-7521-8046-994b6666e5da",
+   "item_sayisi": 2584,
+   "bolum_ayari": {
+    "train": 1695,
+    "val": 510,
+    "test": 379,
+    "unassigned": 0
+   }
   },
   {
    "id": "urun_turu_worldcereal",

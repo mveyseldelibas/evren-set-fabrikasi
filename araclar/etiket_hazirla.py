@@ -191,10 +191,6 @@ def ghsl(cikti: Path):
     (cikti / "ghsl_karolar.json").write_text(json.dumps(kayit, indent=1), encoding="utf-8")
 
 
-if __name__ == "__main__":
-    is_, c = sys.argv[1], Path(sys.argv[2])
-    c.mkdir(parents=True, exist_ok=True)
-    {"worldcereal": worldcereal, "ghsl": ghsl, "clc": clc}[is_](c)
 
 
 CLC_KAYNAK = "https://sdi.eea.europa.eu/data/a65428d3-bd66-4b47-bcf9-6bfd6fa5df0c"
@@ -262,3 +258,9 @@ def clc(cikti: Path):
     tif.unlink(missing_ok=True)
     (cikti / "clc_karolar.json").write_text(json.dumps([{"dosya": hedef_cog.name, "sinirlar": list(TR_KUTU), "crs": str(prof["crs"]),
                                                           "deger": {str(k): v for k, v in dag.items()}, "kaynak": CLC_KAYNAK}], indent=1), encoding="utf-8")
+
+
+if __name__ == "__main__":
+    is_, c = sys.argv[1], Path(sys.argv[2])
+    c.mkdir(parents=True, exist_ok=True)
+    {"worldcereal": worldcereal, "ghsl": ghsl, "clc": clc}[is_](c)

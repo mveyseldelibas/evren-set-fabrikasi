@@ -1,6 +1,62 @@
 {
  "mesajlar": [
   {
+   "id": "2026-11-27T23:40:00Z-zayif-meyve_bahcesi_ve_bag",
+   "zaman": "2026-11-27T23:40:00Z",
+   "tur": "zayif",
+   "tarif": "meyve_bahcesi_ve_bag",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Meyve Bahçesi ve Bağ Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.123 < 0.50)."
+  },
+  {
+   "id": "2026-11-27T23:40:19Z-zayif-sulak_alan",
+   "zaman": "2026-11-27T23:40:19Z",
+   "tur": "zayif",
+   "tarif": "sulak_alan",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Sulak Alan Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.174 < 0.50)."
+  },
+  {
+   "id": "2026-11-27T23:40:44Z-zayif-insaat_alani",
+   "zaman": "2026-11-27T23:40:44Z",
+   "tur": "zayif",
+   "tarif": "insaat_alani",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye İnşaat Alanı Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.109 < 0.50)."
+  },
+  {
+   "id": "2026-11-27T23:40:59Z-zayif-maden_ocagi",
+   "zaman": "2026-11-27T23:40:59Z",
+   "tur": "zayif",
+   "tarif": "maden_ocagi",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Maden ve Taş Ocağı Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.280 < 0.50)."
+  },
+  {
+   "id": "2026-11-27T23:41:05Z-zayif-arazi_ortusu_worldcover",
+   "zaman": "2026-11-27T23:41:05Z",
+   "tur": "zayif",
+   "tarif": "arazi_ortusu_worldcover",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Arazi Örtüsü Segmentasyonu (10 sınıf) - Sentinel-2 2021 + ESA WorldCover (başarı ölçüsü 0.082 < 0.50)."
+  },
+  {
+   "id": "2026-11-27T23:41:12Z-zayif-su_gecisleri_jrc",
+   "zaman": "2026-11-27T23:41:12Z",
+   "tur": "zayif",
+   "tarif": "su_gecisleri_jrc",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Yüzey Suyu Değişimi Segmentasyonu (kalıcı, mevsimlik, yeni, kaybolan) - Sentinel-2 + JRC GSW (başarı ölçüsü 0.135 < 0.50)."
+  },
+  {
+   "id": "2026-11-27T23:41:17Z-zayif-yapi_islev_yukseklik_ghsl",
+   "zaman": "2026-11-27T23:41:17Z",
+   "tur": "zayif",
+   "tarif": "yapi_islev_yukseklik_ghsl",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Yapı İşlevi ve Yükseklik Sınıfı Segmentasyonu - Sentinel-2 + JRC GHSL (2018) (başarı ölçüsü 0.057 < 0.50)."
+  },
+  {
+   "id": "2026-11-27T23:41:22Z-zayif-urun_turu_worldcereal",
+   "zaman": "2026-11-27T23:41:22Z",
+   "tur": "zayif",
+   "tarif": "urun_turu_worldcereal",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Tarla Ürünü Segmentasyonu (kışlık tahıl, mısır, diğer) - Sentinel-2 2021 + ESA WorldCereal (başarı ölçüsü 0.094 < 0.50)."
+  },
+  {
    "id": "2026-11-27T16:04:45Z-hata-zeytinlik",
    "zaman": "2026-11-27T16:04:45Z",
    "tur": "hata",
@@ -295,6 +351,62 @@
    "tur": "basladi",
    "tarif": "urun_turu_worldcereal",
    "mesaj": "Eğitim başladı: Türkiye Tarla Ürünü Segmentasyonu (kışlık tahıl, mısır, diğer) - Sentinel-2 2021 + ESA WorldCereal (2767 öğe, ~1 CR)."
+  },
+  {
+   "id": "2026-11-27T23:40:00Z-zayif-meyve_bahcesi_ve_bag",
+   "zaman": "2026-11-27T23:40:00Z",
+   "tur": "zayif",
+   "tarif": "meyve_bahcesi_ve_bag",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Meyve Bahçesi ve Bağ Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.123 < 0.50)."
+  },
+  {
+   "id": "2026-11-27T23:40:19Z-zayif-sulak_alan",
+   "zaman": "2026-11-27T23:40:19Z",
+   "tur": "zayif",
+   "tarif": "sulak_alan",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Sulak Alan Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.174 < 0.50)."
+  },
+  {
+   "id": "2026-11-27T23:40:44Z-zayif-insaat_alani",
+   "zaman": "2026-11-27T23:40:44Z",
+   "tur": "zayif",
+   "tarif": "insaat_alani",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye İnşaat Alanı Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.109 < 0.50)."
+  },
+  {
+   "id": "2026-11-27T23:40:59Z-zayif-maden_ocagi",
+   "zaman": "2026-11-27T23:40:59Z",
+   "tur": "zayif",
+   "tarif": "maden_ocagi",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Maden ve Taş Ocağı Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.280 < 0.50)."
+  },
+  {
+   "id": "2026-11-27T23:41:05Z-zayif-arazi_ortusu_worldcover",
+   "zaman": "2026-11-27T23:41:05Z",
+   "tur": "zayif",
+   "tarif": "arazi_ortusu_worldcover",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Arazi Örtüsü Segmentasyonu (10 sınıf) - Sentinel-2 2021 + ESA WorldCover (başarı ölçüsü 0.082 < 0.50)."
+  },
+  {
+   "id": "2026-11-27T23:41:12Z-zayif-su_gecisleri_jrc",
+   "zaman": "2026-11-27T23:41:12Z",
+   "tur": "zayif",
+   "tarif": "su_gecisleri_jrc",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Yüzey Suyu Değişimi Segmentasyonu (kalıcı, mevsimlik, yeni, kaybolan) - Sentinel-2 + JRC GSW (başarı ölçüsü 0.135 < 0.50)."
+  },
+  {
+   "id": "2026-11-27T23:41:17Z-zayif-yapi_islev_yukseklik_ghsl",
+   "zaman": "2026-11-27T23:41:17Z",
+   "tur": "zayif",
+   "tarif": "yapi_islev_yukseklik_ghsl",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Yapı İşlevi ve Yükseklik Sınıfı Segmentasyonu - Sentinel-2 + JRC GHSL (2018) (başarı ölçüsü 0.057 < 0.50)."
+  },
+  {
+   "id": "2026-11-27T23:41:22Z-zayif-urun_turu_worldcereal",
+   "zaman": "2026-11-27T23:41:22Z",
+   "tur": "zayif",
+   "tarif": "urun_turu_worldcereal",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Tarla Ürünü Segmentasyonu (kışlık tahıl, mısır, diğer) - Sentinel-2 2021 + ESA WorldCereal (başarı ölçüsü 0.094 < 0.50)."
   }
  ]
 }

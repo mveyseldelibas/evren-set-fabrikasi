@@ -204,7 +204,7 @@
   },
   {
    "id": "meyve_bahcesi_ve_bag",
-   "durum": "egitimde",
+   "durum": "zayif",
    "set_id": "01a21e30-43f0-7e43-82c5-fc3e08becda2",
    "set_slug": "turkiye-meyve-bahcesi-ve-bag-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -283,7 +283,8 @@
    },
    "zamanlar": {
     "yuklendi": "2026-11-27T18:10:02Z",
-    "egitimde": "2026-11-27T18:10:08Z"
+    "egitimde": "2026-11-27T18:10:08Z",
+    "zayif": "2026-11-27T23:40:00Z"
    },
    "surum_id": "01a21e33-3689-74e3-8316-0bcf8fddff08",
    "item_sayisi": 2999,
@@ -296,11 +297,23 @@
    "proje_id": "01a21e33-3f35-7453-8bec-2ddfe9402e52",
    "is_id": "01a21e33-4ced-7692-809d-3d6cb489506b",
    "epok": 60,
-   "tahmin_cr": 0.21
+   "tahmin_cr": 0.21,
+   "model_id": "01a21e41-e3cd-7422-b647-bff7bc65e59b",
+   "metrik": {
+    "mAP50": 0.14943,
+    "mask_mAP50": 0.12317,
+    "mAP50_95": 0.06317,
+    "mask_mAP50_95": 0.04178,
+    "precision": 0.25269,
+    "recall": 0.19589,
+    "kapi_olcusu": 0.12317
+   },
+   "cr_gercek": "2.64",
+   "neden": "başarı ölçüsü 0.123 < 0.50"
   },
   {
    "id": "sulak_alan",
-   "durum": "egitimde",
+   "durum": "zayif",
    "set_id": "01a21e33-5fc6-7ce1-abc4-587302bb0756",
    "set_slug": "turkiye-sulak-alan-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -371,7 +384,8 @@
    },
    "zamanlar": {
     "yuklendi": "2026-11-27T18:12:27Z",
-    "egitimde": "2026-11-27T18:12:32Z"
+    "egitimde": "2026-11-27T18:12:32Z",
+    "zayif": "2026-11-27T23:40:19Z"
    },
    "surum_id": "01a21e35-6c95-7c60-90ce-ca5f379f4615",
    "item_sayisi": 2694,
@@ -384,7 +398,19 @@
    "proje_id": "01a21e35-7393-7c30-9f78-111e6733ac0f",
    "is_id": "01a21e35-7fa4-7c91-a16c-16b4b9683c33",
    "epok": 60,
-   "tahmin_cr": 0.2
+   "tahmin_cr": 0.2,
+   "model_id": "01a21e43-90e2-7452-9b39-1d8d3042542c",
+   "metrik": {
+    "mAP50": 0.28201,
+    "mask_mAP50": 0.17361,
+    "mAP50_95": 0.12223,
+    "mask_mAP50_95": 0.05614,
+    "precision": 0.39142,
+    "recall": 0.31463,
+    "kapi_olcusu": 0.17361
+   },
+   "cr_gercek": "2.55",
+   "neden": "başarı ölçüsü 0.174 < 0.50"
   },
   {
    "id": "zeytinlik",
@@ -504,11 +530,23 @@
    "proje_id": "01a21e38-84c0-7853-a2fd-d54d0a8e5fc8",
    "is_id": "01a21e38-93f1-7913-8012-8586ab7c31b0",
    "epok": 60,
-   "tahmin_cr": 0.22
+   "tahmin_cr": 0.22,
+   "model_id": "01a21e48-adac-7e21-8f36-f715f79beb9f",
+   "metrik": {
+    "mAP50": 0.73205,
+    "mask_mAP50": 0.52007,
+    "mAP50_95": 0.30819,
+    "mask_mAP50_95": 0.15368,
+    "precision": 0.78052,
+    "recall": 0.71053,
+    "kapi_olcusu": 0.52007
+   },
+   "cr_gercek": "2.92",
+   "yayina_hazir": true
   },
   {
    "id": "insaat_alani",
-   "durum": "egitimde",
+   "durum": "zayif",
    "set_id": "01a21e38-af76-7ee3-a388-2e2711904beb",
    "set_slug": "turkiye-insaat-alani-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -578,7 +616,8 @@
    },
    "zamanlar": {
     "yuklendi": "2026-11-27T18:18:19Z",
-    "egitimde": "2026-11-27T18:18:27Z"
+    "egitimde": "2026-11-27T18:18:27Z",
+    "zayif": "2026-11-27T23:40:44Z"
    },
    "surum_id": "01a21e3a-c93f-7a02-b6c2-a40616f2c4a4",
    "item_sayisi": 2100,
@@ -591,7 +630,19 @@
    "proje_id": "01a21e3a-d011-7291-a006-4645331b8c5c",
    "is_id": "01a21e3a-ea3e-72f1-ad75-5534f66bb310",
    "epok": 60,
-   "tahmin_cr": 0.18
+   "tahmin_cr": 0.18,
+   "model_id": "01a21e44-f070-7870-8e97-e0bd54a80dd4",
+   "metrik": {
+    "mAP50": 0.12845,
+    "mask_mAP50": 0.10907,
+    "mAP50_95": 0.0437,
+    "mask_mAP50_95": 0.02929,
+    "precision": 0.28106,
+    "recall": 0.15403,
+    "kapi_olcusu": 0.10907
+   },
+   "cr_gercek": "1.82",
+   "neden": "başarı ölçüsü 0.109 < 0.50"
   },
   {
    "id": "universite_kampusu",
@@ -697,11 +748,23 @@
    "proje_id": "01a21e3d-2781-7f90-97a9-100cad090dd0",
    "is_id": "01a21e3d-3737-7430-b6ce-26e212e543f6",
    "epok": 60,
-   "tahmin_cr": 0.2
+   "tahmin_cr": 0.2,
+   "model_id": "01a21e4a-f64a-7f22-a312-7bf8e9b8932b",
+   "metrik": {
+    "mAP50": 0.57559,
+    "mask_mAP50": 0.55085,
+    "mAP50_95": 0.33882,
+    "mask_mAP50_95": 0.27024,
+    "precision": 0.6487,
+    "recall": 0.55253,
+    "kapi_olcusu": 0.55085
+   },
+   "cr_gercek": "2.49",
+   "yayina_hazir": true
   },
   {
    "id": "maden_ocagi",
-   "durum": "egitimde",
+   "durum": "zayif",
    "set_id": "01a21e3d-4e21-7983-b098-7797182c1b04",
    "set_slug": "turkiye-maden-ve-tas-ocagi-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -773,7 +836,8 @@
    "zamanlar": {
     "yuklendi": "2026-11-27T18:23:49Z",
     "hata": "2026-11-27T18:23:59Z",
-    "egitimde": "2026-11-27T21:32:45Z"
+    "egitimde": "2026-11-27T21:32:45Z",
+    "zayif": "2026-11-27T23:40:59Z"
    },
    "surum_id": "01a21e3f-d2d0-7441-843b-b545a4055252",
    "item_sayisi": 2699,
@@ -784,14 +848,25 @@
     "unassigned": 0
    },
    "proje_id": "01a21e3f-e469-75a3-8365-de0fa2007e5b",
-   "neden": null,
+   "neden": "başarı ölçüsü 0.280 < 0.50",
    "is_id": "01a21eec-cc73-76c3-81fe-85d703b59276",
    "epok": 30,
-   "tahmin_cr": 0.14
+   "tahmin_cr": 0.14,
+   "model_id": "01a21ef4-4373-7c41-8dca-8f36ae5c967c",
+   "metrik": {
+    "mAP50": 0.31821,
+    "mask_mAP50": 0.28028,
+    "mAP50_95": 0.13398,
+    "mask_mAP50_95": 0.09578,
+    "precision": 0.41839,
+    "recall": 0.40881,
+    "kapi_olcusu": 0.28028
+   },
+   "cr_gercek": "1.35"
   },
   {
    "id": "arazi_ortusu_worldcover",
-   "durum": "egitimde",
+   "durum": "zayif",
    "set_id": "01a21e40-0790-7a71-a26a-00d982a60058",
    "set_slug": "turkiye-arazi-ortusu-segmentasyonu-10-sinif-sentinel-2-2021-esa-worldcover",
    "veri_ozeti": {
@@ -910,7 +985,8 @@
    },
    "zamanlar": {
     "yuklendi": "2026-11-27T18:28:14Z",
-    "egitimde": "2026-11-27T18:28:17Z"
+    "egitimde": "2026-11-27T18:28:17Z",
+    "zayif": "2026-11-27T23:41:05Z"
    },
    "surum_id": "01a21e43-cdce-78b1-b854-68b3dfb74672",
    "item_sayisi": 3004,
@@ -923,11 +999,23 @@
    "proje_id": "01a21e43-e658-7a91-8fd8-bba322d156c7",
    "is_id": "01a21e43-ea6d-7302-a1b3-8fc49b792c74",
    "epok": 60,
-   "tahmin_cr": 0.21
+   "tahmin_cr": 0.21,
+   "model_id": "01a21e51-8673-7590-97d1-16d98fd48d36",
+   "metrik": {
+    "mAP50": 0.10656,
+    "mask_mAP50": 0.08191,
+    "mAP50_95": 0.05696,
+    "mask_mAP50_95": 0.03551,
+    "precision": 0.32807,
+    "recall": 0.11806,
+    "kapi_olcusu": 0.08191
+   },
+   "cr_gercek": "2.46",
+   "neden": "başarı ölçüsü 0.082 < 0.50"
   },
   {
    "id": "su_gecisleri_jrc",
-   "durum": "egitimde",
+   "durum": "zayif",
    "set_id": "01a21e44-0167-7023-a7b6-d0d651e959a7",
    "set_slug": "turkiye-yuzey-suyu-degisimi-segmentasyonu-kalici-mevsimlik-yeni-kaybolan-sentinel-2-jrc-gsw",
    "veri_ozeti": {
@@ -1013,9 +1101,10 @@
    "zamanlar": {
     "hata": "2026-11-27T18:30:40Z",
     "yuklendi": "2026-11-27T21:32:28Z",
-    "egitimde": "2026-11-27T21:32:28Z"
+    "egitimde": "2026-11-27T21:32:28Z",
+    "zayif": "2026-11-27T23:41:12Z"
    },
-   "neden": null,
+   "neden": "başarı ölçüsü 0.135 < 0.50",
    "surum_id": "01a21eec-8134-7433-93ff-3975ceca1a29",
    "item_sayisi": 2537,
    "bolum_ayari": {
@@ -1027,11 +1116,22 @@
    "proje_id": "01a21eec-85b3-7003-bd3d-97825cfd5f4e",
    "is_id": "01a21eec-8a2c-7890-863b-98e6267fc6a9",
    "epok": 60,
-   "tahmin_cr": 0.2
+   "tahmin_cr": 0.2,
+   "model_id": "01a21ef8-d7cc-7df1-b5d6-b992f39d8499",
+   "metrik": {
+    "mAP50": 0.16458,
+    "mask_mAP50": 0.13492,
+    "mAP50_95": 0.1328,
+    "mask_mAP50_95": 0.11124,
+    "precision": 0.45696,
+    "recall": 0.16368,
+    "kapi_olcusu": 0.13492
+   },
+   "cr_gercek": "2.23"
   },
   {
    "id": "yapi_islev_yukseklik_ghsl",
-   "durum": "egitimde",
+   "durum": "zayif",
    "set_id": "01a21e46-3446-7fb3-a25a-df9efd7020c6",
    "set_slug": "turkiye-yapi-islevi-ve-yukseklik-sinifi-segmentasyonu-sentinel-2-jrc-ghsl-2018",
    "veri_ozeti": {
@@ -1124,7 +1224,8 @@
    },
    "zamanlar": {
     "yuklendi": "2026-11-27T18:34:32Z",
-    "egitimde": "2026-11-27T18:34:40Z"
+    "egitimde": "2026-11-27T18:34:40Z",
+    "zayif": "2026-11-27T23:41:17Z"
    },
    "surum_id": "01a21e49-96b4-7521-8046-994b6666e5da",
    "item_sayisi": 2584,
@@ -1137,11 +1238,23 @@
    "proje_id": "01a21e49-aa63-7593-8715-1e6dc9956177",
    "is_id": "01a21e49-c1cb-7871-861b-c0c17394caa9",
    "epok": 60,
-   "tahmin_cr": 0.2
+   "tahmin_cr": 0.2,
+   "model_id": "01a21e53-e374-7ba1-af7b-befb53b2ef11",
+   "metrik": {
+    "mAP50": 0.08142,
+    "mask_mAP50": 0.05719,
+    "mAP50_95": 0.02816,
+    "mask_mAP50_95": 0.0168,
+    "precision": 0.14358,
+    "recall": 0.16306,
+    "kapi_olcusu": 0.05719
+   },
+   "cr_gercek": "1.82",
+   "neden": "başarı ölçüsü 0.057 < 0.50"
   },
   {
    "id": "urun_turu_worldcereal",
-   "durum": "egitimde",
+   "durum": "zayif",
    "set_id": "01a21e49-e8fc-7681-9d14-67588f63aab3",
    "set_slug": "turkiye-tarla-urunu-segmentasyonu-kislik-tahil-misir-diger-sentinel-2-2021-esa-worldcereal",
    "veri_ozeti": {
@@ -1217,7 +1330,8 @@
    },
    "zamanlar": {
     "yuklendi": "2026-11-27T18:38:23Z",
-    "egitimde": "2026-11-27T18:38:28Z"
+    "egitimde": "2026-11-27T18:38:28Z",
+    "zayif": "2026-11-27T23:41:22Z"
    },
    "surum_id": "01a21e4d-1fdf-7af0-8cff-7ed3dfdb4af1",
    "item_sayisi": 2767,
@@ -1230,7 +1344,19 @@
    "proje_id": "01a21e4d-30f4-7ee0-b2c1-db9ea597919e",
    "is_id": "01a21e4d-3cf5-7650-aae0-c63bdd0d68c4",
    "epok": 60,
-   "tahmin_cr": 0.21
+   "tahmin_cr": 0.21,
+   "model_id": "01a21e58-50c7-7ed3-bc07-c1eb26f333b0",
+   "metrik": {
+    "mAP50": 0.12355,
+    "mask_mAP50": 0.09439,
+    "mAP50_95": 0.062,
+    "mask_mAP50_95": 0.03776,
+    "precision": 0.23461,
+    "recall": 0.162,
+    "kapi_olcusu": 0.09439
+   },
+   "cr_gercek": "1.99",
+   "neden": "başarı ölçüsü 0.094 < 0.50"
   },
   {
    "id": "orman",

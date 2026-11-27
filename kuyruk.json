@@ -699,7 +699,7 @@
   },
   {
    "id": "maden_ocagi",
-   "durum": "yuklendi",
+   "durum": "hata",
    "set_id": "01a21e3d-4e21-7983-b098-7797182c1b04",
    "set_slug": "turkiye-maden-ve-tas-ocagi-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -769,7 +769,8 @@
     "uretim_zamani": "2026-11-27T17:05Z"
    },
    "zamanlar": {
-    "yuklendi": "2026-11-27T18:23:49Z"
+    "yuklendi": "2026-11-27T18:23:49Z",
+    "hata": "2026-11-27T18:23:59Z"
    },
    "surum_id": "01a21e3f-d2d0-7441-843b-b545a4055252",
    "item_sayisi": 2699,
@@ -778,7 +779,9 @@
     "val": 543,
     "test": 270,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a21e3f-e469-75a3-8365-de0fa2007e5b",
+   "neden": "RuntimeError: eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz"
   },
   {
    "id": "arazi_ortusu_worldcover",

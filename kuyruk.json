@@ -237,6 +237,98 @@
   {
    "id": "universite_kampusu",
    "durum": "bekliyor"
+  },
+  {
+   "id": "sera",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "gunes_enerjisi",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "maden_ocagi",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "arazi_ortusu_worldcover",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "su_gecisleri_jrc",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "yapi_islev_yukseklik_ghsl",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "urun_turu_worldcereal",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "orman",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "tarim_arazisi",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "konut_alani",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "calilik_ve_funda",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "cayir_mera",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "ciplak_kaya_ve_kum",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "kentsel_park",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "ic_su_yuzeyleri",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "hayvancilik_tesisi",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "ticari_alan",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "cop_depolama",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "kumsal",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "atiksu_aritma",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "buyuk_otopark",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "saglik_egitim_yerleskesi",
+   "durum": "bekliyor"
+  },
+  {
+   "id": "ulasim_enerji_altyapisi",
+   "durum": "bekliyor"
   }
  ]
 }

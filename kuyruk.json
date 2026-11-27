@@ -785,7 +785,134 @@
   },
   {
    "id": "arazi_ortusu_worldcover",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a21e40-0790-7a71-a26a-00d982a60058",
+   "set_slug": "turkiye-arazi-ortusu-segmentasyonu-10-sinif-sentinel-2-2021-esa-worldcover",
+   "veri_ozeti": {
+    "tarif": "arazi_ortusu_worldcover",
+    "siniflar": [
+     "agac",
+     "calilik",
+     "cayir",
+     "tarim",
+     "yapi",
+     "ciplak",
+     "kar_buz",
+     "su",
+     "sulak_alan",
+     "yosun_liken"
+    ],
+    "goruntu_bolum": {
+     "train": 2051,
+     "test": 324,
+     "val": 629
+    },
+    "goruntu_toplam": 3004,
+    "pencere_bolum": {
+     "train": 688,
+     "test": 108,
+     "val": 211
+    },
+    "pencere_toplam": 1007,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "cayir": 28959,
+      "tarim": 16952,
+      "yapi": 3893,
+      "ciplak": 14856,
+      "su": 475,
+      "sulak_alan": 90,
+      "agac": 19288,
+      "calilik": 4669,
+      "kar_buz": 4,
+      "yosun_liken": 24
+     },
+     "val": {
+      "agac": 5695,
+      "cayir": 9483,
+      "tarim": 5127,
+      "yapi": 1360,
+      "ciplak": 4600,
+      "su": 124,
+      "sulak_alan": 33,
+      "calilik": 1878
+     },
+     "test": {
+      "agac": 3336,
+      "cayir": 4392,
+      "tarim": 2670,
+      "yapi": 840,
+      "ciplak": 2022,
+      "su": 87,
+      "calilik": 462
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "cayir": 2027,
+      "tarim": 1798,
+      "yapi": 1388,
+      "ciplak": 1766,
+      "su": 426,
+      "sulak_alan": 55,
+      "agac": 1693,
+      "calilik": 673,
+      "yosun_liken": 11,
+      "kar_buz": 5
+     },
+     "val": {
+      "agac": 524,
+      "calilik": 243,
+      "cayir": 626,
+      "tarim": 562,
+      "yapi": 454,
+      "ciplak": 557,
+      "su": 122,
+      "sulak_alan": 18,
+      "yosun_liken": 1
+     },
+     "test": {
+      "agac": 270,
+      "cayir": 318,
+      "tarim": 300,
+      "yapi": 237,
+      "ciplak": 282,
+      "su": 84,
+      "calilik": 99,
+      "sulak_alan": 9
+     }
+    },
+    "yil_dagilimi": {
+     "2021": 3004
+    },
+    "mevsim_dagilimi": {
+     "ilkbahar": 968,
+     "yaz": 1022,
+     "sonbahar": 1014
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 1002,
+     "yazilan_pencere": 1007,
+     "goruntu": 3004,
+     "tek_sinif_seyreltildi": 59,
+     "gecerli_tarih_yok": 81,
+     "etiket_karo_siniri": 16,
+     "okumaHatasi": 5
+    },
+    "uretim_zamani": "2026-11-27T17:23Z",
+    "kaynak_satiri": "Etiket haritası: ESA WorldCover 2021 v200 (10 m); görüntüler 2021 yılından"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-27T18:28:14Z"
+   },
+   "surum_id": "01a21e43-cdce-78b1-b854-68b3dfb74672",
+   "item_sayisi": 3004,
+   "bolum_ayari": {
+    "train": 2051,
+    "val": 629,
+    "test": 324,
+    "unassigned": 0
+   }
   },
   {
    "id": "su_gecisleri_jrc",

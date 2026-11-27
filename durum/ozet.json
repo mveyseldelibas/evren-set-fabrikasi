@@ -45,7 +45,7 @@
   }
  ],
  "hatalar": [],
- "son_calisma": "2026-11-27T18:23:59Z",
+ "son_calisma": "2026-11-27T18:28:14Z",
  "bu_calismada_yapilanlar": [
   "meyve_bahcesi_ve_bag: veri kuruluyor",
   "sulak_alan: veri kuruluyor",
@@ -87,7 +87,10 @@
   "maden_ocagi: ZIP yükleme bitti",
   "yükleme doğrulandı: platform {'train': 1886, 'validation': 543, 'test': 270}, yerel {'train': 1886, 'val': 543, 'test': 270}, etiketsiz 0",
   "maden_ocagi: kuru koşu epok=60 tahmin=0.00 CR (x2.4=0.0)",
-  "maden_ocagi: kuru koşu epok=36 tahmin=0.00 CR (x2.4=0.0)"
+  "maden_ocagi: kuru koşu epok=36 tahmin=0.00 CR (x2.4=0.0)",
+  "arazi_ortusu_worldcover: set oluşturuldu (özel)",
+  "arazi_ortusu_worldcover: ZIP yükleme bitti",
+  "yükleme doğrulandı: platform {'train': 2051, 'validation': 629, 'test': 324}, yerel {'train': 2051, 'val': 629, 'test': 324}, etiketsiz 0"
  ],
  "bu_calismada_hatalar": [
   "zeytinlik: RuntimeError yeterli görüntü üretilemedi: 240 < 1000",
@@ -99,12 +102,13 @@
   "maden_ocagi: RuntimeError eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz"
  ],
  "kuyruk_uzunlugu": 34,
- "kalan_tarif": 20,
+ "kalan_tarif": 19,
  "durum_sayilari": {
   "zayif": 1,
   "yayimlandi": 1,
   "egitimde": 5,
   "hata": 7,
-  "bekliyor": 20
+  "yuklendi": 1,
+  "bekliyor": 19
  }
 }

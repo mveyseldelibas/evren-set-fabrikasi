@@ -508,7 +508,7 @@
   },
   {
    "id": "insaat_alani",
-   "durum": "yuklendi",
+   "durum": "egitimde",
    "set_id": "01a21e38-af76-7ee3-a388-2e2711904beb",
    "set_slug": "turkiye-insaat-alani-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -577,7 +577,8 @@
     "uretim_zamani": "2026-11-27T16:33Z"
    },
    "zamanlar": {
-    "yuklendi": "2026-11-27T18:18:19Z"
+    "yuklendi": "2026-11-27T18:18:19Z",
+    "egitimde": "2026-11-27T18:18:27Z"
    },
    "surum_id": "01a21e3a-c93f-7a02-b6c2-a40616f2c4a4",
    "item_sayisi": 2100,
@@ -586,7 +587,11 @@
     "val": 765,
     "test": 168,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a21e3a-d011-7291-a006-4645331b8c5c",
+   "is_id": "01a21e3a-ea3e-72f1-ad75-5534f66bb310",
+   "epok": 60,
+   "tahmin_cr": 0.18
   },
   {
    "id": "universite_kampusu",

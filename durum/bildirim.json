@@ -71,6 +71,13 @@
    "mesaj": "Tarif başarısız: ciplak_kaya_ve_kum (RuntimeError: eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz)."
   },
   {
+   "id": "2026-11-28T18:08:46Z-hata-kentsel_park",
+   "zaman": "2026-11-28T18:08:46Z",
+   "tur": "hata",
+   "tarif": "kentsel_park",
+   "mesaj": "Tarif başarısız: kentsel_park (RuntimeError: eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz)."
+  },
+  {
    "id": "2026-11-27T23:40:00Z-zayif-meyve_bahcesi_ve_bag",
    "zaman": "2026-11-27T23:40:00Z",
    "tur": "zayif",
@@ -547,6 +554,13 @@
    "tur": "hata",
    "tarif": "ciplak_kaya_ve_kum",
    "mesaj": "Tarif başarısız: ciplak_kaya_ve_kum (RuntimeError: eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz)."
+  },
+  {
+   "id": "2026-11-28T18:08:46Z-hata-kentsel_park",
+   "zaman": "2026-11-28T18:08:46Z",
+   "tur": "hata",
+   "tarif": "kentsel_park",
+   "mesaj": "Tarif başarısız: kentsel_park (RuntimeError: eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz)."
   }
  ]
 }

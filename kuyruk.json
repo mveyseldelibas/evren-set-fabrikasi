@@ -1984,7 +1984,7 @@
   },
   {
    "id": "kentsel_park",
-   "durum": "yuklendi",
+   "durum": "hata",
    "set_id": "01a22355-8d49-70a0-9485-b700a94a4295",
    "set_slug": "turkiye-kentsel-park-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -2055,7 +2055,8 @@
     "uretim_zamani": "2026-11-28T17:19Z"
    },
    "zamanlar": {
-    "yuklendi": "2026-11-28T18:08:37Z"
+    "yuklendi": "2026-11-28T18:08:37Z",
+    "hata": "2026-11-28T18:08:46Z"
    },
    "surum_id": "01a22358-4747-7e11-8843-25f92492c721",
    "item_sayisi": 2697,
@@ -2064,7 +2065,9 @@
     "val": 552,
     "test": 270,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a22358-5954-7ed0-b2bc-689828a2e477",
+   "neden": "RuntimeError: eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz"
   },
   {
    "id": "ic_su_yuzeyleri",

@@ -1530,7 +1530,7 @@
   },
   {
    "id": "tarim_arazisi",
-   "durum": "yuklendi",
+   "durum": "egitimde",
    "set_id": "01a22348-5f5d-7b03-bbef-75981068eb6a",
    "set_slug": "turkiye-tarim-arazisi-tarla-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -1599,7 +1599,8 @@
     "uretim_zamani": "2026-11-28T16:15Z"
    },
    "zamanlar": {
-    "yuklendi": "2026-11-28T17:54:05Z"
+    "yuklendi": "2026-11-28T17:54:05Z",
+    "egitimde": "2026-11-28T17:54:10Z"
    },
    "surum_id": "01a2234a-f31a-78d3-adb4-c69468d6a42a",
    "item_sayisi": 3000,
@@ -1608,7 +1609,11 @@
     "val": 600,
     "test": 300,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a2234b-035f-76e0-ba2f-bee18d1b0c0a",
+   "is_id": "01a2234b-076f-7911-9bae-5c7a1e88e171",
+   "epok": 60,
+   "tahmin_cr": 0.26
   },
   {
    "id": "konut_alani",

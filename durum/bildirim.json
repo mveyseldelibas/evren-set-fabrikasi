@@ -36,6 +36,13 @@
    "mesaj": "Eğitim başladı: Türkiye Orman Alanı Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2997 öğe, ~1 CR)."
   },
   {
+   "id": "2026-11-28T17:54:10Z-basladi-tarim_arazisi",
+   "zaman": "2026-11-28T17:54:10Z",
+   "tur": "basladi",
+   "tarif": "tarim_arazisi",
+   "mesaj": "Eğitim başladı: Türkiye Tarım Arazisi (Tarla) Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (3000 öğe, ~1 CR)."
+  },
+  {
    "id": "2026-11-27T23:40:00Z-zayif-meyve_bahcesi_ve_bag",
    "zaman": "2026-11-27T23:40:00Z",
    "tur": "zayif",
@@ -477,6 +484,13 @@
    "tur": "basladi",
    "tarif": "orman",
    "mesaj": "Eğitim başladı: Türkiye Orman Alanı Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2997 öğe, ~1 CR)."
+  },
+  {
+   "id": "2026-11-28T17:54:10Z-basladi-tarim_arazisi",
+   "zaman": "2026-11-28T17:54:10Z",
+   "tur": "basladi",
+   "tarif": "tarim_arazisi",
+   "mesaj": "Eğitim başladı: Türkiye Tarım Arazisi (Tarla) Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (3000 öğe, ~1 CR)."
   }
  ]
 }

@@ -2071,7 +2071,109 @@
   },
   {
    "id": "ic_su_yuzeyleri",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a22358-7aaa-74f1-b8e8-d497b788c6bb",
+   "set_slug": "turkiye-ic-su-yuzeyleri-segmentasyonu-baraj-golu-dogal-gol-golet-nehir-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "ic_su_yuzeyleri",
+    "siniflar": [
+     "baraj_golu",
+     "dogal_gol",
+     "golet",
+     "nehir"
+    ],
+    "goruntu_bolum": {
+     "train": 2087,
+     "test": 297,
+     "val": 599
+    },
+    "goruntu_toplam": 2983,
+    "pencere_bolum": {
+     "train": 700,
+     "test": 100,
+     "val": 200
+    },
+    "pencere_toplam": 1000,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "dogal_gol": 684,
+      "nehir": 777,
+      "golet": 627,
+      "baraj_golu": 729
+     },
+     "val": {
+      "baraj_golu": 211,
+      "dogal_gol": 237,
+      "golet": 224,
+      "nehir": 186
+     },
+     "test": {
+      "dogal_gol": 85,
+      "baraj_golu": 93,
+      "nehir": 105,
+      "golet": 96
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "dogal_gol": 527,
+      "nehir": 567,
+      "golet": 534,
+      "baraj_golu": 597
+     },
+     "val": {
+      "baraj_golu": 158,
+      "dogal_gol": 159,
+      "golet": 155,
+      "nehir": 165
+     },
+     "test": {
+      "dogal_gol": 72,
+      "baraj_golu": 81,
+      "nehir": 81,
+      "golet": 75
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "nehir": 1028,
+     "baraj_golu": 1921,
+     "dogal_gol": 350,
+     "golet": 514
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 326,
+     "2020": 319,
+     "2021": 250,
+     "2022": 540,
+     "2023": 389,
+     "2024": 315,
+     "2025": 495,
+     "2026": 349
+    },
+    "mevsim_dagilimi": {
+     "ilkbahar": 953,
+     "yaz": 1015,
+     "sonbahar": 1015
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 1077,
+     "yazilan_pencere": 1000,
+     "goruntu": 2983
+    },
+    "uretim_zamani": "2026-11-28T17:33Z"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-28T18:11:44Z"
+   },
+   "surum_id": "01a2235b-1f37-7061-87f5-41d47978c2ed",
+   "item_sayisi": 2983,
+   "bolum_ayari": {
+    "train": 2087,
+    "val": 599,
+    "test": 297,
+    "unassigned": 0
+   }
   },
   {
    "id": "hayvancilik_tesisi",

@@ -1530,7 +1530,85 @@
   },
   {
    "id": "tarim_arazisi",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a22348-5f5d-7b03-bbef-75981068eb6a",
+   "set_slug": "turkiye-tarim-arazisi-tarla-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "tarim_arazisi",
+    "siniflar": [
+     "tarla"
+    ],
+    "goruntu_bolum": {
+     "test": 300,
+     "train": 2100,
+     "val": 600
+    },
+    "goruntu_toplam": 3000,
+    "pencere_bolum": {
+     "test": 100,
+     "train": 700,
+     "val": 200
+    },
+    "pencere_toplam": 1000,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "tarla": 16590
+     },
+     "val": {
+      "tarla": 4689
+     },
+     "test": {
+      "tarla": 2127
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "tarla": 2100
+     },
+     "val": {
+      "tarla": 600
+     },
+     "test": {
+      "tarla": 300
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "tarla": 49807
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 310,
+     "2020": 359,
+     "2021": 281,
+     "2022": 509,
+     "2023": 387,
+     "2024": 330,
+     "2025": 503,
+     "2026": 321
+    },
+    "mevsim_dagilimi": {
+     "ilkbahar": 996,
+     "yaz": 1003,
+     "sonbahar": 1001
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 488,
+     "yazilan_pencere": 1000,
+     "goruntu": 3000
+    },
+    "uretim_zamani": "2026-11-28T16:15Z"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-28T17:54:05Z"
+   },
+   "surum_id": "01a2234a-f31a-78d3-adb4-c69468d6a42a",
+   "item_sayisi": 3000,
+   "bolum_ayari": {
+    "train": 2100,
+    "val": 600,
+    "test": 300,
+    "unassigned": 0
+   }
   },
   {
    "id": "konut_alani",

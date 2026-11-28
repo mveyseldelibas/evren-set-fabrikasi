@@ -1,6 +1,6 @@
 """Türkçe sesli robot komutu seti: tr-robot-komut-yonlendirme cümlelerini Seslen TTS ile sese çevirir (bulutta).
 
-Her cümle BİR kez seslendirilir; sesler cümleler arasında sırayla dağıtılır (aynı cümlenin çok sesli kopyası yok).
+Her cümle BİR kez seslendirilir (yazım gürültüsü kopyaları hariç); sesler cümleler arasında sırayla dağıtılır (aynı cümlenin çok sesli kopyası yok).
 Çıktı: <cikti>/ses/<bolum>_<no>.wav (16 kHz mono), <cikti>/meta.jsonl (metin, etiket, ses adı, süre, bolum).
 Kullanım: python araclar/ses_komut_uret.py <cikti> [en_cok=0]
 """
@@ -52,6 +52,8 @@ def main(cikti: Path, en_cok: int):
     for b in ("train", "test"):
         p = hf_hub_download("mvdelibas/tr-robot-komut-yonlendirme", f"data/{b}.jsonl", repo_type="dataset")
         satir += [json.loads(l) for l in open(p, encoding="utf-8") if l.strip()]
+    # yazım gürültüsü cümleleri (ör. "diskı ıt") konuşmada anlamsız: seslendirilmez
+    satir = [o for o in satir if o.get("kaynak") != "yazim_gurultusu"]
     if en_cok:
         satir = satir[:en_cok]
     t0 = time.time(); meta = []

@@ -19,6 +19,11 @@
    "yeni_yukleme": 10,
    "set_yayin": 0,
    "model_yayin": 0
+  },
+  "2026-11-28": {
+   "yeni_yukleme": 0,
+   "set_yayin": 0,
+   "model_yayin": 0
   }
  },
  "yayinlananlar": [
@@ -45,12 +50,10 @@
   }
  ],
  "hatalar": [],
- "son_calisma": "2026-11-27T23:41:24Z",
+ "son_calisma": "2026-11-28T15:37:49Z",
  "bu_calismada_yapilanlar": [
   "futbol_sahasi: kapılar geçildi, yayım penceresini bekliyor",
-  "gunes_enerjisi: kapılar geçildi, yayım penceresini bekliyor",
-  "pencere dışı (02:41 TSİ) ve bugünkü kazanç 25 < 100; sonraki koşuya bırakıldı",
-  "yayım ertelendi (CR penceresi): ['futbol_sahasi', 'gunes_enerjisi']"
+  "gunes_enerjisi: kapılar geçildi, yayım penceresini bekliyor"
  ],
  "bu_calismada_hatalar": [],
  "kuyruk_uzunlugu": 34,

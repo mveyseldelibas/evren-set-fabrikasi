@@ -1984,7 +1984,87 @@
   },
   {
    "id": "kentsel_park",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a22355-8d49-70a0-9485-b700a94a4295",
+   "set_slug": "turkiye-kentsel-park-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "kentsel_park",
+    "siniflar": [
+     "park"
+    ],
+    "goruntu_bolum": {
+     "train": 1875,
+     "val": 552,
+     "test": 270
+    },
+    "goruntu_toplam": 2697,
+    "pencere_bolum": {
+     "train": 625,
+     "val": 184,
+     "test": 90
+    },
+    "pencere_toplam": 899,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "park": 5154
+     },
+     "val": {
+      "park": 1605
+     },
+     "test": {
+      "park": 687
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "park": 1875
+     },
+     "val": {
+      "park": 552
+     },
+     "test": {
+      "park": 270
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "park": 3296
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 249,
+     "2020": 322,
+     "2021": 194,
+     "2022": 483,
+     "2023": 373,
+     "2024": 315,
+     "2025": 437,
+     "2026": 324
+    },
+    "mevsim_dagilimi": {
+     "ilkbahar": 897,
+     "sonbahar": 900,
+     "yaz": 900
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 651,
+     "yazilan_pencere": 899,
+     "goruntu": 2697,
+     "okumaHatasi": 3,
+     "gecerli_tarih_yok": 1
+    },
+    "uretim_zamani": "2026-11-28T17:19Z"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-28T18:08:37Z"
+   },
+   "surum_id": "01a22358-4747-7e11-8843-25f92492c721",
+   "item_sayisi": 2697,
+   "bolum_ayari": {
+    "train": 1875,
+    "val": 552,
+    "test": 270,
+    "unassigned": 0
+   }
   },
   {
    "id": "ic_su_yuzeyleri",

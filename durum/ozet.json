@@ -92,7 +92,7 @@
   }
  ],
  "hatalar": [],
- "son_calisma": "2026-11-28T18:05:31Z",
+ "son_calisma": "2026-11-28T18:08:37Z",
  "bu_calismada_yapilanlar": [
   "futbol_sahasi: kapılar geçildi, yayım penceresini bekliyor",
   "gunes_enerjisi: kapılar geçildi, yayım penceresini bekliyor",
@@ -137,19 +137,23 @@
   "ciplak_kaya_ve_kum: ZIP yükleme bitti",
   "yükleme doğrulandı: platform {'train': 1969, 'validation': 576, 'test': 290}, yerel {'train': 1969, 'val': 576, 'test': 290}, etiketsiz 0",
   "ciplak_kaya_ve_kum: kuru koşu epok=60 tahmin=0.00 CR (x2.4=0.0)",
-  "ciplak_kaya_ve_kum: kuru koşu epok=36 tahmin=0.00 CR (x2.4=0.0)"
+  "ciplak_kaya_ve_kum: kuru koşu epok=36 tahmin=0.00 CR (x2.4=0.0)",
+  "kentsel_park: set oluşturuldu (özel)",
+  "kentsel_park: ZIP yükleme bitti",
+  "yükleme doğrulandı: platform {'train': 1875, 'validation': 552, 'test': 270}, yerel {'train': 1875, 'val': 552, 'test': 270}, etiketsiz 0"
  ],
  "bu_calismada_hatalar": [
   "sera: RuntimeError yeterli görüntü üretilemedi: 498 < 1000",
   "ciplak_kaya_ve_kum: RuntimeError eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz"
  ],
  "kuyruk_uzunlugu": 34,
- "kalan_tarif": 10,
+ "kalan_tarif": 9,
  "durum_sayilari": {
   "zayif": 9,
   "yayimlandi": 3,
   "hata": 6,
   "egitimde": 6,
-  "bekliyor": 10
+  "yuklendi": 1,
+  "bekliyor": 9
  }
 }

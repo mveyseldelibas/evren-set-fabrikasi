@@ -1,6 +1,62 @@
 {
  "mesajlar": [
   {
+   "id": "2026-11-28T18:41:57Z-zayif-universite_kampusu",
+   "zaman": "2026-11-28T18:41:57Z",
+   "tur": "zayif",
+   "tarif": "universite_kampusu",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Üniversite Kampüsü Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.487 < 0.50)."
+  },
+  {
+   "id": "2026-11-28T18:42:14Z-zayif-orman",
+   "zaman": "2026-11-28T18:42:14Z",
+   "tur": "zayif",
+   "tarif": "orman",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Orman Alanı Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.292 < 0.50)."
+  },
+  {
+   "id": "2026-11-28T18:42:20Z-zayif-tarim_arazisi",
+   "zaman": "2026-11-28T18:42:20Z",
+   "tur": "zayif",
+   "tarif": "tarim_arazisi",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Tarım Arazisi (Tarla) Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.228 < 0.50)."
+  },
+  {
+   "id": "2026-11-28T18:42:29Z-zayif-konut_alani",
+   "zaman": "2026-11-28T18:42:29Z",
+   "tur": "zayif",
+   "tarif": "konut_alani",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Konut Alanı Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.398 < 0.50)."
+  },
+  {
+   "id": "2026-11-28T18:42:37Z-zayif-calilik_ve_funda",
+   "zaman": "2026-11-28T18:42:37Z",
+   "tur": "zayif",
+   "tarif": "calilik_ve_funda",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Çalılık (Maki) ve Funda Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.039 < 0.50)."
+  },
+  {
+   "id": "2026-11-28T18:42:43Z-zayif-cayir_mera",
+   "zaman": "2026-11-28T18:42:43Z",
+   "tur": "zayif",
+   "tarif": "cayir_mera",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Çayır ve Mera Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.127 < 0.50)."
+  },
+  {
+   "id": "2026-11-28T18:42:51Z-zayif-ic_su_yuzeyleri",
+   "zaman": "2026-11-28T18:42:51Z",
+   "tur": "zayif",
+   "tarif": "ic_su_yuzeyleri",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye İç Su Yüzeyleri Segmentasyonu (baraj gölü, doğal göl, gölet, nehir) - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.327 < 0.50)."
+  },
+  {
+   "id": "2026-11-28T18:42:58Z-zayif-hayvancilik_tesisi",
+   "zaman": "2026-11-28T18:42:58Z",
+   "tur": "zayif",
+   "tarif": "hayvancilik_tesisi",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Hayvancılık Tesisi (Çiftlik Avlusu) Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.333 < 0.50)."
+  },
+  {
    "id": "2026-11-28T15:47:20Z-hata-sera",
    "zaman": "2026-11-28T15:47:20Z",
    "tur": "hata",
@@ -589,6 +645,62 @@
    "tur": "basladi",
    "tarif": "hayvancilik_tesisi",
    "mesaj": "Eğitim başladı: Türkiye Hayvancılık Tesisi (Çiftlik Avlusu) Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2398 öğe, ~1 CR)."
+  },
+  {
+   "id": "2026-11-28T18:41:57Z-zayif-universite_kampusu",
+   "zaman": "2026-11-28T18:41:57Z",
+   "tur": "zayif",
+   "tarif": "universite_kampusu",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Üniversite Kampüsü Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.487 < 0.50)."
+  },
+  {
+   "id": "2026-11-28T18:42:14Z-zayif-orman",
+   "zaman": "2026-11-28T18:42:14Z",
+   "tur": "zayif",
+   "tarif": "orman",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Orman Alanı Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.292 < 0.50)."
+  },
+  {
+   "id": "2026-11-28T18:42:20Z-zayif-tarim_arazisi",
+   "zaman": "2026-11-28T18:42:20Z",
+   "tur": "zayif",
+   "tarif": "tarim_arazisi",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Tarım Arazisi (Tarla) Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.228 < 0.50)."
+  },
+  {
+   "id": "2026-11-28T18:42:29Z-zayif-konut_alani",
+   "zaman": "2026-11-28T18:42:29Z",
+   "tur": "zayif",
+   "tarif": "konut_alani",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Konut Alanı Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.398 < 0.50)."
+  },
+  {
+   "id": "2026-11-28T18:42:37Z-zayif-calilik_ve_funda",
+   "zaman": "2026-11-28T18:42:37Z",
+   "tur": "zayif",
+   "tarif": "calilik_ve_funda",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Çalılık (Maki) ve Funda Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.039 < 0.50)."
+  },
+  {
+   "id": "2026-11-28T18:42:43Z-zayif-cayir_mera",
+   "zaman": "2026-11-28T18:42:43Z",
+   "tur": "zayif",
+   "tarif": "cayir_mera",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Çayır ve Mera Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.127 < 0.50)."
+  },
+  {
+   "id": "2026-11-28T18:42:51Z-zayif-ic_su_yuzeyleri",
+   "zaman": "2026-11-28T18:42:51Z",
+   "tur": "zayif",
+   "tarif": "ic_su_yuzeyleri",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye İç Su Yüzeyleri Segmentasyonu (baraj gölü, doğal göl, gölet, nehir) - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.327 < 0.50)."
+  },
+  {
+   "id": "2026-11-28T18:42:58Z-zayif-hayvancilik_tesisi",
+   "zaman": "2026-11-28T18:42:58Z",
+   "tur": "zayif",
+   "tarif": "hayvancilik_tesisi",
+   "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Hayvancılık Tesisi (Çiftlik Avlusu) Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (başarı ölçüsü 0.333 < 0.50)."
   }
  ]
 }

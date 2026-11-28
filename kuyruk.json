@@ -1443,7 +1443,7 @@
   },
   {
    "id": "orman",
-   "durum": "yuklendi",
+   "durum": "egitimde",
    "set_id": "01a22345-9f3d-78e1-9e64-0af8215c89f2",
    "set_slug": "turkiye-orman-alani-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -1512,7 +1512,8 @@
     "uretim_zamani": "2026-11-28T16:02Z"
    },
    "zamanlar": {
-    "yuklendi": "2026-11-28T17:51:04Z"
+    "yuklendi": "2026-11-28T17:51:04Z",
+    "egitimde": "2026-11-28T17:51:10Z"
    },
    "surum_id": "01a22348-33a0-7890-bd77-26709abd358f",
    "item_sayisi": 2997,
@@ -1521,7 +1522,11 @@
     "val": 600,
     "test": 300,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a22348-3c13-7bf3-9409-356aa1d96b91",
+   "is_id": "01a22348-4b10-7362-a7a3-15fab8fd17d6",
+   "epok": 60,
+   "tahmin_cr": 0.26
   },
   {
    "id": "tarim_arazisi",

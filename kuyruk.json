@@ -1803,7 +1803,85 @@
   },
   {
    "id": "cayir_mera",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a22350-72c2-76d3-8b3d-8a6eea6b96c2",
+   "set_slug": "turkiye-cayir-ve-mera-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "cayir_mera",
+    "siniflar": [
+     "cayir_mera"
+    ],
+    "goruntu_bolum": {
+     "train": 2091,
+     "val": 600,
+     "test": 302
+    },
+    "goruntu_toplam": 2993,
+    "pencere_bolum": {
+     "train": 699,
+     "val": 200,
+     "test": 101
+    },
+    "pencere_toplam": 1000,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "cayir_mera": 6555
+     },
+     "val": {
+      "cayir_mera": 2409
+     },
+     "test": {
+      "cayir_mera": 1597
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "cayir_mera": 2091
+     },
+     "val": {
+      "cayir_mera": 600
+     },
+     "test": {
+      "cayir_mera": 302
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "cayir_mera": 7518
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 289,
+     "2020": 326,
+     "2021": 313,
+     "2022": 523,
+     "2023": 359,
+     "2024": 333,
+     "2025": 466,
+     "2026": 384
+    },
+    "mevsim_dagilimi": {
+     "sonbahar": 1015,
+     "ilkbahar": 942,
+     "yaz": 1036
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 1137,
+     "yazilan_pencere": 1000,
+     "goruntu": 2993
+    },
+    "uretim_zamani": "2026-11-28T16:56Z"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-28T18:02:47Z"
+   },
+   "surum_id": "01a22352-ee1b-7190-93fb-5d919873fc37",
+   "item_sayisi": 2993,
+   "bolum_ayari": {
+    "train": 2091,
+    "val": 600,
+    "test": 302,
+    "unassigned": 0
+   }
   },
   {
    "id": "ciplak_kaya_ve_kum",

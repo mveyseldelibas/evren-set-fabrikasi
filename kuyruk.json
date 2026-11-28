@@ -1803,7 +1803,7 @@
   },
   {
    "id": "cayir_mera",
-   "durum": "yuklendi",
+   "durum": "egitimde",
    "set_id": "01a22350-72c2-76d3-8b3d-8a6eea6b96c2",
    "set_slug": "turkiye-cayir-ve-mera-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -1872,7 +1872,8 @@
     "uretim_zamani": "2026-11-28T16:56Z"
    },
    "zamanlar": {
-    "yuklendi": "2026-11-28T18:02:47Z"
+    "yuklendi": "2026-11-28T18:02:47Z",
+    "egitimde": "2026-11-28T18:02:53Z"
    },
    "surum_id": "01a22352-ee1b-7190-93fb-5d919873fc37",
    "item_sayisi": 2993,
@@ -1881,7 +1882,11 @@
     "val": 600,
     "test": 302,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a22352-f67e-7f13-a75b-bbc5784be9bf",
+   "is_id": "01a22353-04d8-7a41-8b68-b4bbda994f9b",
+   "epok": 60,
+   "tahmin_cr": 0.26
   },
   {
    "id": "ciplak_kaya_ve_kum",

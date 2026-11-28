@@ -92,7 +92,7 @@
   }
  ],
  "hatalar": [],
- "son_calisma": "2026-11-28T17:48:12Z",
+ "son_calisma": "2026-11-28T17:51:04Z",
  "bu_calismada_yapilanlar": [
   "futbol_sahasi: kapılar geçildi, yayım penceresini bekliyor",
   "gunes_enerjisi: kapılar geçildi, yayım penceresini bekliyor",
@@ -112,18 +112,22 @@
   "universite_kampusu: set oluşturuldu (özel)",
   "universite_kampusu: ZIP yükleme bitti",
   "yükleme doğrulandı: platform {'train': 858, 'validation': 249, 'test': 126}, yerel {'train': 858, 'val': 249, 'test': 126}, etiketsiz 0",
-  "universite_kampusu: kuru koşu epok=60 tahmin=0.17 CR (x2.4=0.4)"
+  "universite_kampusu: kuru koşu epok=60 tahmin=0.17 CR (x2.4=0.4)",
+  "orman: set oluşturuldu (özel)",
+  "orman: ZIP yükleme bitti",
+  "yükleme doğrulandı: platform {'train': 2097, 'validation': 600, 'test': 300}, yerel {'train': 2097, 'val': 600, 'test': 300}, etiketsiz 0"
  ],
  "bu_calismada_hatalar": [
   "sera: RuntimeError yeterli görüntü üretilemedi: 498 < 1000"
  ],
  "kuyruk_uzunlugu": 34,
- "kalan_tarif": 16,
+ "kalan_tarif": 15,
  "durum_sayilari": {
   "zayif": 9,
   "yayimlandi": 3,
   "hata": 5,
   "egitimde": 1,
-  "bekliyor": 16
+  "yuklendi": 1,
+  "bekliyor": 15
  }
 }

@@ -1443,7 +1443,85 @@
   },
   {
    "id": "orman",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a22345-9f3d-78e1-9e64-0af8215c89f2",
+   "set_slug": "turkiye-orman-alani-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "orman",
+    "siniflar": [
+     "orman"
+    ],
+    "goruntu_bolum": {
+     "test": 300,
+     "train": 2097,
+     "val": 600
+    },
+    "goruntu_toplam": 2997,
+    "pencere_bolum": {
+     "test": 100,
+     "train": 700,
+     "val": 200
+    },
+    "pencere_toplam": 1000,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "orman": 6250
+     },
+     "val": {
+      "orman": 1788
+     },
+     "test": {
+      "orman": 822
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "orman": 2097
+     },
+     "val": {
+      "orman": 600
+     },
+     "test": {
+      "orman": 300
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "orman": 26834
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 319,
+     "2020": 341,
+     "2021": 305,
+     "2022": 470,
+     "2023": 396,
+     "2024": 305,
+     "2025": 512,
+     "2026": 349
+    },
+    "mevsim_dagilimi": {
+     "sonbahar": 1012,
+     "yaz": 1006,
+     "ilkbahar": 979
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 794,
+     "yazilan_pencere": 1000,
+     "goruntu": 2997
+    },
+    "uretim_zamani": "2026-11-28T16:02Z"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-28T17:51:04Z"
+   },
+   "surum_id": "01a22348-33a0-7890-bd77-26709abd358f",
+   "item_sayisi": 2997,
+   "bolum_ayari": {
+    "train": 2097,
+    "val": 600,
+    "test": 300,
+    "unassigned": 0
+   }
   },
   {
    "id": "tarim_arazisi",

@@ -1707,7 +1707,7 @@
   },
   {
    "id": "calilik_ve_funda",
-   "durum": "yuklendi",
+   "durum": "egitimde",
    "set_id": "01a2234d-9963-7923-861e-6c02945381bd",
    "set_slug": "turkiye-calilik-maki-ve-funda-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -1785,7 +1785,8 @@
     "uretim_zamani": "2026-11-28T16:43Z"
    },
    "zamanlar": {
-    "yuklendi": "2026-11-28T17:59:54Z"
+    "yuklendi": "2026-11-28T17:59:54Z",
+    "egitimde": "2026-11-28T17:59:59Z"
    },
    "surum_id": "01a22350-48e4-74b1-90c0-d67717327c83",
    "item_sayisi": 2986,
@@ -1794,7 +1795,11 @@
     "val": 819,
     "test": 277,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a22350-5157-71e3-8c5b-86f54789c588",
+   "is_id": "01a22350-5e03-7563-b527-54856cbbec5f",
+   "epok": 60,
+   "tahmin_cr": 0.26
   },
   {
    "id": "cayir_mera",

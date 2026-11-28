@@ -50,6 +50,13 @@
    "mesaj": "Eğitim başladı: Türkiye Konut Alanı Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2990 öğe, ~1 CR)."
   },
   {
+   "id": "2026-11-28T17:59:59Z-basladi-calilik_ve_funda",
+   "zaman": "2026-11-28T17:59:59Z",
+   "tur": "basladi",
+   "tarif": "calilik_ve_funda",
+   "mesaj": "Eğitim başladı: Türkiye Çalılık (Maki) ve Funda Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2986 öğe, ~1 CR)."
+  },
+  {
    "id": "2026-11-27T23:40:00Z-zayif-meyve_bahcesi_ve_bag",
    "zaman": "2026-11-27T23:40:00Z",
    "tur": "zayif",
@@ -505,6 +512,13 @@
    "tur": "basladi",
    "tarif": "konut_alani",
    "mesaj": "Eğitim başladı: Türkiye Konut Alanı Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2990 öğe, ~1 CR)."
+  },
+  {
+   "id": "2026-11-28T17:59:59Z-basladi-calilik_ve_funda",
+   "zaman": "2026-11-28T17:59:59Z",
+   "tur": "basladi",
+   "tarif": "calilik_ve_funda",
+   "mesaj": "Eğitim başladı: Türkiye Çalılık (Maki) ve Funda Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2986 öğe, ~1 CR)."
   }
  ]
 }

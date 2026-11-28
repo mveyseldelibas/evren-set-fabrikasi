@@ -1617,7 +1617,7 @@
   },
   {
    "id": "konut_alani",
-   "durum": "yuklendi",
+   "durum": "egitimde",
    "set_id": "01a2234b-32db-7292-acf6-bed58f3bbbe8",
    "set_slug": "turkiye-konut-alani-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -1689,7 +1689,8 @@
     "uretim_zamani": "2026-11-28T16:30Z"
    },
    "zamanlar": {
-    "yuklendi": "2026-11-28T17:56:51Z"
+    "yuklendi": "2026-11-28T17:56:51Z",
+    "egitimde": "2026-11-28T17:56:55Z"
    },
    "surum_id": "01a2234d-8110-7941-b12f-b87fa89ff5c7",
    "item_sayisi": 2990,
@@ -1698,7 +1699,11 @@
     "val": 598,
     "test": 298,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a2234d-88a9-76d3-b32e-9408fe0d3335",
+   "is_id": "01a2234d-8d1f-7b80-872f-833a92b7519f",
+   "epok": 60,
+   "tahmin_cr": 0.26
   },
   {
    "id": "calilik_ve_funda",

@@ -646,11 +646,12 @@
   },
   {
    "id": "universite_kampusu",
-   "durum": "yuklendi",
+   "durum": "egitimde",
    "zamanlar": {
     "hata": "2026-11-27T16:38:27Z",
     "bekliyor": "2026-11-27T21:32:28Z",
-    "yuklendi": "2026-11-28T17:48:07Z"
+    "yuklendi": "2026-11-28T17:48:07Z",
+    "egitimde": "2026-11-28T17:48:12Z"
    },
    "neden": null,
    "set_id": "01a22344-0299-7693-84f0-c5a7336b8a33",
@@ -729,7 +730,11 @@
     "val": 249,
     "test": 126,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a22345-8f27-7801-a88d-96aff3732a4b",
+   "is_id": "01a22345-9347-7ee0-8747-a694a70891c9",
+   "epok": 60,
+   "tahmin_cr": 0.17
   },
   {
    "id": "sera",

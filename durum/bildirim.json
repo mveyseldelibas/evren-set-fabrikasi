@@ -22,6 +22,13 @@
    "mesaj": "Yayımlandı: Türkiye Güneş Enerjisi Santrali Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (ölçü %55.1, 2693 öğe). https://evren.ssyz.org.tr/models/u43bd0650c87e/tr-gunes-santrali-seg-sentinel2-yolo11s-seg"
   },
   {
+   "id": "2026-11-28T17:48:12Z-basladi-universite_kampusu",
+   "zaman": "2026-11-28T17:48:12Z",
+   "tur": "basladi",
+   "tarif": "universite_kampusu",
+   "mesaj": "Eğitim başladı: Türkiye Üniversite Kampüsü Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (1233 öğe, ~0 CR)."
+  },
+  {
    "id": "2026-11-27T23:40:00Z-zayif-meyve_bahcesi_ve_bag",
    "zaman": "2026-11-27T23:40:00Z",
    "tur": "zayif",
@@ -449,6 +456,13 @@
    "tur": "yayimlandi",
    "tarif": "gunes_enerjisi",
    "mesaj": "Yayımlandı: Türkiye Güneş Enerjisi Santrali Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (ölçü %55.1, 2693 öğe). https://evren.ssyz.org.tr/models/u43bd0650c87e/tr-gunes-santrali-seg-sentinel2-yolo11s-seg"
+  },
+  {
+   "id": "2026-11-28T17:48:12Z-basladi-universite_kampusu",
+   "zaman": "2026-11-28T17:48:12Z",
+   "tur": "basladi",
+   "tarif": "universite_kampusu",
+   "mesaj": "Eğitim başladı: Türkiye Üniversite Kampüsü Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (1233 öğe, ~0 CR)."
   }
  ]
 }

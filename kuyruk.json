@@ -1890,7 +1890,94 @@
   },
   {
    "id": "ciplak_kaya_ve_kum",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a22353-236d-7253-a8d9-c975aba80953",
+   "set_slug": "turkiye-ciplak-kaya-ve-kum-alani-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "ciplak_kaya_ve_kum",
+    "siniflar": [
+     "ciplak_kaya",
+     "kum"
+    ],
+    "goruntu_bolum": {
+     "train": 1969,
+     "val": 576,
+     "test": 290
+    },
+    "goruntu_toplam": 2835,
+    "pencere_bolum": {
+     "train": 658,
+     "val": 196,
+     "test": 97
+    },
+    "pencere_toplam": 951,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "ciplak_kaya": 7338,
+      "kum": 543
+     },
+     "val": {
+      "ciplak_kaya": 1386,
+      "kum": 153
+     },
+     "test": {
+      "kum": 87,
+      "ciplak_kaya": 695
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "ciplak_kaya": 1699,
+      "kum": 318
+     },
+     "val": {
+      "ciplak_kaya": 498,
+      "kum": 90
+     },
+     "test": {
+      "kum": 51,
+      "ciplak_kaya": 245
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "ciplak_kaya": 5853,
+     "kum": 219
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 248,
+     "2020": 301,
+     "2021": 277,
+     "2022": 501,
+     "2023": 441,
+     "2024": 267,
+     "2025": 497,
+     "2026": 303
+    },
+    "mevsim_dagilimi": {
+     "ilkbahar": 897,
+     "sonbahar": 968,
+     "yaz": 970
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 1012,
+     "yazilan_pencere": 951,
+     "goruntu": 2835,
+     "bosPiksel": 1
+    },
+    "uretim_zamani": "2026-11-28T17:07Z"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-28T18:05:26Z"
+   },
+   "surum_id": "01a22355-58b4-7103-8ea5-5f80baf4da9c",
+   "item_sayisi": 2835,
+   "bolum_ayari": {
+    "train": 1969,
+    "val": 576,
+    "test": 290,
+    "unassigned": 0
+   }
   },
   {
    "id": "kentsel_park",

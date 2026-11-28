@@ -85,6 +85,13 @@
    "mesaj": "Eğitim başladı: Türkiye İç Su Yüzeyleri Segmentasyonu (baraj gölü, doğal göl, gölet, nehir) - Sentinel-2 çok zamanlı (OSM) (2983 öğe, ~1 CR)."
   },
   {
+   "id": "2026-11-28T18:14:01Z-basladi-hayvancilik_tesisi",
+   "zaman": "2026-11-28T18:14:01Z",
+   "tur": "basladi",
+   "tarif": "hayvancilik_tesisi",
+   "mesaj": "Eğitim başladı: Türkiye Hayvancılık Tesisi (Çiftlik Avlusu) Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2398 öğe, ~1 CR)."
+  },
+  {
    "id": "2026-11-27T23:40:00Z-zayif-meyve_bahcesi_ve_bag",
    "zaman": "2026-11-27T23:40:00Z",
    "tur": "zayif",
@@ -575,6 +582,13 @@
    "tur": "basladi",
    "tarif": "ic_su_yuzeyleri",
    "mesaj": "Eğitim başladı: Türkiye İç Su Yüzeyleri Segmentasyonu (baraj gölü, doğal göl, gölet, nehir) - Sentinel-2 çok zamanlı (OSM) (2983 öğe, ~1 CR)."
+  },
+  {
+   "id": "2026-11-28T18:14:01Z-basladi-hayvancilik_tesisi",
+   "zaman": "2026-11-28T18:14:01Z",
+   "tur": "basladi",
+   "tarif": "hayvancilik_tesisi",
+   "mesaj": "Eğitim başladı: Türkiye Hayvancılık Tesisi (Çiftlik Avlusu) Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2398 öğe, ~1 CR)."
   }
  ]
 }

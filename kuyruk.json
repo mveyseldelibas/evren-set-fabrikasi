@@ -2182,7 +2182,7 @@
   },
   {
    "id": "hayvancilik_tesisi",
-   "durum": "yuklendi",
+   "durum": "egitimde",
    "set_id": "01a2235b-3eb0-7060-ae99-b79d4b17dff7",
    "set_slug": "turkiye-hayvancilik-tesisi-ciftlik-avlusu-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -2252,7 +2252,8 @@
     "uretim_zamani": "2026-11-28T17:44Z"
    },
    "zamanlar": {
-    "yuklendi": "2026-11-28T18:13:57Z"
+    "yuklendi": "2026-11-28T18:13:57Z",
+    "egitimde": "2026-11-28T18:14:01Z"
    },
    "surum_id": "01a2235d-28ca-7533-8068-5e9f6e88d8c7",
    "item_sayisi": 2398,
@@ -2261,7 +2262,11 @@
     "val": 479,
     "test": 243,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a2235d-3009-7ee0-bd9f-987ee94bdde1",
+   "is_id": "01a2235d-343e-72c0-be1b-76cd3bb1f9b5",
+   "epok": 60,
+   "tahmin_cr": 0.21
   },
   {
    "id": "ticari_alan",

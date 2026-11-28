@@ -2071,7 +2071,7 @@
   },
   {
    "id": "ic_su_yuzeyleri",
-   "durum": "yuklendi",
+   "durum": "egitimde",
    "set_id": "01a22358-7aaa-74f1-b8e8-d497b788c6bb",
    "set_slug": "turkiye-ic-su-yuzeyleri-segmentasyonu-baraj-golu-dogal-gol-golet-nehir-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -2164,7 +2164,8 @@
     "uretim_zamani": "2026-11-28T17:33Z"
    },
    "zamanlar": {
-    "yuklendi": "2026-11-28T18:11:44Z"
+    "yuklendi": "2026-11-28T18:11:44Z",
+    "egitimde": "2026-11-28T18:11:49Z"
    },
    "surum_id": "01a2235b-1f37-7061-87f5-41d47978c2ed",
    "item_sayisi": 2983,
@@ -2173,7 +2174,11 @@
     "val": 599,
     "test": 297,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a2235b-2641-7161-9a3f-946cb1f4cb81",
+   "is_id": "01a2235b-3345-7b31-8390-80aece81fdf9",
+   "epok": 60,
+   "tahmin_cr": 0.23
   },
   {
    "id": "hayvancilik_tesisi",

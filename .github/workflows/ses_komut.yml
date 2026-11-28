@@ -1,0 +1,30 @@
+name: ses-komut
+# Türkçe sesli robot komutu seti: tr-robot-komut-yonlendirme cümleleri Seslen TTS ile sese çevrilir; sonuç yapıt.
+on:
+  workflow_dispatch:
+    inputs:
+      en_cok:
+        description: "En çok kaç cümle (0 = hepsi)"
+        default: "0"
+permissions:
+  contents: read
+jobs:
+  uret:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    env:
+      PYTHONIOENCODING: utf-8
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "seslen-tts>=0.3.16" scipy huggingface_hub numpy
+      - run: python araclar/ses_komut_uret.py cikti "${{ github.event.inputs.en_cok }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ses-komut
+          path: cikti
+          retention-days: 14

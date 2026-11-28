@@ -1707,7 +1707,94 @@
   },
   {
    "id": "calilik_ve_funda",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a2234d-9963-7923-861e-6c02945381bd",
+   "set_slug": "turkiye-calilik-maki-ve-funda-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "calilik_ve_funda",
+    "siniflar": [
+     "calilik",
+     "funda"
+    ],
+    "goruntu_bolum": {
+     "val": 819,
+     "train": 1890,
+     "test": 277
+    },
+    "goruntu_toplam": 2986,
+    "pencere_bolum": {
+     "val": 273,
+     "train": 634,
+     "test": 93
+    },
+    "pencere_toplam": 1000,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "calilik": 6120,
+      "funda": 2818
+     },
+     "val": {
+      "calilik": 2328,
+      "funda": 2196
+     },
+     "test": {
+      "calilik": 790,
+      "funda": 465
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "calilik": 1530,
+      "funda": 953
+     },
+     "val": {
+      "calilik": 621,
+      "funda": 558
+     },
+     "test": {
+      "calilik": 208,
+      "funda": 150
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "calilik": 9661,
+     "funda": 2368
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 289,
+     "2020": 323,
+     "2021": 319,
+     "2022": 477,
+     "2023": 408,
+     "2024": 331,
+     "2025": 494,
+     "2026": 345
+    },
+    "mevsim_dagilimi": {
+     "sonbahar": 1037,
+     "yaz": 1053,
+     "ilkbahar": 896
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 1408,
+     "yazilan_pencere": 1000,
+     "goruntu": 2986,
+     "okumaHatasi": 4
+    },
+    "uretim_zamani": "2026-11-28T16:43Z"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-28T17:59:54Z"
+   },
+   "surum_id": "01a22350-48e4-74b1-90c0-d67717327c83",
+   "item_sayisi": 2986,
+   "bolum_ayari": {
+    "train": 1890,
+    "val": 819,
+    "test": 277,
+    "unassigned": 0
+   }
   },
   {
    "id": "cayir_mera",

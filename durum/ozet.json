@@ -92,7 +92,7 @@
   }
  ],
  "hatalar": [],
- "son_calisma": "2026-11-28T18:11:49Z",
+ "son_calisma": "2026-11-28T18:13:57Z",
  "bu_calismada_yapilanlar": [
   "futbol_sahasi: kapılar geçildi, yayım penceresini bekliyor",
   "gunes_enerjisi: kapılar geçildi, yayım penceresini bekliyor",
@@ -146,7 +146,10 @@
   "ic_su_yuzeyleri: set oluşturuldu (özel)",
   "ic_su_yuzeyleri: ZIP yükleme bitti",
   "yükleme doğrulandı: platform {'train': 2087, 'validation': 599, 'test': 297}, yerel {'train': 2087, 'val': 599, 'test': 297}, etiketsiz 3",
-  "ic_su_yuzeyleri: kuru koşu epok=60 tahmin=0.23 CR (x2.4=0.6)"
+  "ic_su_yuzeyleri: kuru koşu epok=60 tahmin=0.23 CR (x2.4=0.6)",
+  "hayvancilik_tesisi: set oluşturuldu (özel)",
+  "hayvancilik_tesisi: ZIP yükleme bitti",
+  "yükleme doğrulandı: platform {'train': 1676, 'validation': 479, 'test': 243}, yerel {'train': 1676, 'val': 479, 'test': 243}, etiketsiz 0"
  ],
  "bu_calismada_hatalar": [
   "sera: RuntimeError yeterli görüntü üretilemedi: 498 < 1000",
@@ -154,12 +157,13 @@
   "kentsel_park: RuntimeError eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz"
  ],
  "kuyruk_uzunlugu": 34,
- "kalan_tarif": 8,
+ "kalan_tarif": 7,
  "durum_sayilari": {
   "zayif": 9,
   "yayimlandi": 3,
   "hata": 7,
   "egitimde": 7,
-  "bekliyor": 8
+  "yuklendi": 1,
+  "bekliyor": 7
  }
 }

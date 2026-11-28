@@ -2182,7 +2182,86 @@
   },
   {
    "id": "hayvancilik_tesisi",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a2235b-3eb0-7060-ae99-b79d4b17dff7",
+   "set_slug": "turkiye-hayvancilik-tesisi-ciftlik-avlusu-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "hayvancilik_tesisi",
+    "siniflar": [
+     "hayvancilik_tesisi"
+    ],
+    "goruntu_bolum": {
+     "train": 1676,
+     "test": 243,
+     "val": 479
+    },
+    "goruntu_toplam": 2398,
+    "pencere_bolum": {
+     "train": 559,
+     "test": 81,
+     "val": 160
+    },
+    "pencere_toplam": 800,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "hayvancilik_tesisi": 2894
+     },
+     "val": {
+      "hayvancilik_tesisi": 902
+     },
+     "test": {
+      "hayvancilik_tesisi": 378
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "hayvancilik_tesisi": 1676
+     },
+     "val": {
+      "hayvancilik_tesisi": 479
+     },
+     "test": {
+      "hayvancilik_tesisi": 243
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "hayvancilik_tesisi": 1926
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 248,
+     "2020": 265,
+     "2021": 249,
+     "2022": 425,
+     "2023": 301,
+     "2024": 256,
+     "2025": 359,
+     "2026": 295
+    },
+    "mevsim_dagilimi": {
+     "sonbahar": 806,
+     "yaz": 809,
+     "ilkbahar": 783
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 511,
+     "yazilan_pencere": 800,
+     "goruntu": 2398,
+     "bosPiksel": 1
+    },
+    "uretim_zamani": "2026-11-28T17:44Z"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-28T18:13:57Z"
+   },
+   "surum_id": "01a2235d-28ca-7533-8068-5e9f6e88d8c7",
+   "item_sayisi": 2398,
+   "bolum_ayari": {
+    "train": 1676,
+    "val": 479,
+    "test": 243,
+    "unassigned": 0
+   }
   },
   {
    "id": "ticari_alan",

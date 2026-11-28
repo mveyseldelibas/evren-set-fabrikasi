@@ -1,6 +1,27 @@
 {
  "mesajlar": [
   {
+   "id": "2026-11-28T15:47:20Z-hata-sera",
+   "zaman": "2026-11-28T15:47:20Z",
+   "tur": "hata",
+   "tarif": "sera",
+   "mesaj": "Tarif başarısız: sera (RuntimeError: yeterli görüntü üretilemedi: 498 < 1000)."
+  },
+  {
+   "id": "2026-11-28T17:45:26Z-yayimlandi-futbol_sahasi",
+   "zaman": "2026-11-28T17:45:26Z",
+   "tur": "yayimlandi",
+   "tarif": "futbol_sahasi",
+   "mesaj": "Yayımlandı: Türkiye Futbol Sahası Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (ölçü %52.0, 3327 öğe). https://evren.ssyz.org.tr/models/u43bd0650c87e/tr-futbol-sahasi-seg-sentinel2-yolo11s-seg"
+  },
+  {
+   "id": "2026-11-28T17:46:26Z-yayimlandi-gunes_enerjisi",
+   "zaman": "2026-11-28T17:46:26Z",
+   "tur": "yayimlandi",
+   "tarif": "gunes_enerjisi",
+   "mesaj": "Yayımlandı: Türkiye Güneş Enerjisi Santrali Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (ölçü %55.1, 2693 öğe). https://evren.ssyz.org.tr/models/u43bd0650c87e/tr-gunes-santrali-seg-sentinel2-yolo11s-seg"
+  },
+  {
    "id": "2026-11-27T23:40:00Z-zayif-meyve_bahcesi_ve_bag",
    "zaman": "2026-11-27T23:40:00Z",
    "tur": "zayif",
@@ -407,6 +428,27 @@
    "tur": "zayif",
    "tarif": "urun_turu_worldcereal",
    "mesaj": "Zayıf kaldı, gizli tutuldu: Türkiye Tarla Ürünü Segmentasyonu (kışlık tahıl, mısır, diğer) - Sentinel-2 2021 + ESA WorldCereal (başarı ölçüsü 0.094 < 0.50)."
+  },
+  {
+   "id": "2026-11-28T15:47:20Z-hata-sera",
+   "zaman": "2026-11-28T15:47:20Z",
+   "tur": "hata",
+   "tarif": "sera",
+   "mesaj": "Tarif başarısız: sera (RuntimeError: yeterli görüntü üretilemedi: 498 < 1000)."
+  },
+  {
+   "id": "2026-11-28T17:45:26Z-yayimlandi-futbol_sahasi",
+   "zaman": "2026-11-28T17:45:26Z",
+   "tur": "yayimlandi",
+   "tarif": "futbol_sahasi",
+   "mesaj": "Yayımlandı: Türkiye Futbol Sahası Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (ölçü %52.0, 3327 öğe). https://evren.ssyz.org.tr/models/u43bd0650c87e/tr-futbol-sahasi-seg-sentinel2-yolo11s-seg"
+  },
+  {
+   "id": "2026-11-28T17:46:26Z-yayimlandi-gunes_enerjisi",
+   "zaman": "2026-11-28T17:46:26Z",
+   "tur": "yayimlandi",
+   "tarif": "gunes_enerjisi",
+   "mesaj": "Yayımlandı: Türkiye Güneş Enerjisi Santrali Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (ölçü %55.1, 2693 öğe). https://evren.ssyz.org.tr/models/u43bd0650c87e/tr-gunes-santrali-seg-sentinel2-yolo11s-seg"
   }
  ]
 }

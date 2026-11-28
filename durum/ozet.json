@@ -21,9 +21,9 @@
    "model_yayin": 0
   },
   "2026-11-28": {
-   "yeni_yukleme": 0,
-   "set_yayin": 0,
-   "model_yayin": 0
+   "yeni_yukleme": 10,
+   "set_yayin": 2,
+   "model_yayin": 2
   }
  },
  "yayinlananlar": [
@@ -47,22 +47,82 @@
    "zaman": "2026-11-26T20:26:16Z",
    "set_url": "https://evren.ssyz.org.tr/datasets/u43bd0650c87e/turkiye-mezarlik-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "model_url": "https://evren.ssyz.org.tr/models/u43bd0650c87e/tr-mezarlik-seg-sentinel2-yolo11s-seg"
+  },
+  {
+   "tarif": "futbol_sahasi",
+   "ad": "Türkiye Futbol Sahası Segmentasyonu - Sentinel-2 çok zamanlı (OSM)",
+   "set_id": "01a21e35-8b3b-7c71-8526-dc70ca851cde",
+   "set_slug": "turkiye-futbol-sahasi-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "model_adi": "tr-futbol-sahasi-seg-sentinel2-yolo11s-seg",
+   "model_id": "01a21e48-adac-7e21-8f36-f715f79beb9f",
+   "model_slug": "tr-futbol-sahasi-seg-sentinel2-yolo11s-seg",
+   "metrik": {
+    "mAP50": 0.73205,
+    "mask_mAP50": 0.52007,
+    "mAP50_95": 0.30819,
+    "mask_mAP50_95": 0.15368,
+    "precision": 0.78052,
+    "recall": 0.71053,
+    "kapi_olcusu": 0.52007
+   },
+   "zaman": "2026-11-28T17:45:26Z",
+   "set_url": "https://evren.ssyz.org.tr/datasets/u43bd0650c87e/turkiye-futbol-sahasi-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "model_url": "https://evren.ssyz.org.tr/models/u43bd0650c87e/tr-futbol-sahasi-seg-sentinel2-yolo11s-seg"
+  },
+  {
+   "tarif": "gunes_enerjisi",
+   "ad": "Türkiye Güneş Enerjisi Santrali Segmentasyonu - Sentinel-2 çok zamanlı (OSM)",
+   "set_id": "01a21e3b-001f-79b2-ad42-a5a19202ba4f",
+   "set_slug": "turkiye-gunes-enerjisi-santrali-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "model_adi": "tr-gunes-santrali-seg-sentinel2-yolo11s-seg",
+   "model_id": "01a21e4a-f64a-7f22-a312-7bf8e9b8932b",
+   "model_slug": "tr-gunes-santrali-seg-sentinel2-yolo11s-seg",
+   "metrik": {
+    "mAP50": 0.57559,
+    "mask_mAP50": 0.55085,
+    "mAP50_95": 0.33882,
+    "mask_mAP50_95": 0.27024,
+    "precision": 0.6487,
+    "recall": 0.55253,
+    "kapi_olcusu": 0.55085
+   },
+   "zaman": "2026-11-28T17:46:26Z",
+   "set_url": "https://evren.ssyz.org.tr/datasets/u43bd0650c87e/turkiye-gunes-enerjisi-santrali-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "model_url": "https://evren.ssyz.org.tr/models/u43bd0650c87e/tr-gunes-santrali-seg-sentinel2-yolo11s-seg"
   }
  ],
  "hatalar": [],
- "son_calisma": "2026-11-28T15:37:49Z",
+ "son_calisma": "2026-11-28T17:48:07Z",
  "bu_calismada_yapilanlar": [
   "futbol_sahasi: kapılar geçildi, yayım penceresini bekliyor",
-  "gunes_enerjisi: kapılar geçildi, yayım penceresini bekliyor"
+  "gunes_enerjisi: kapılar geçildi, yayım penceresini bekliyor",
+  "universite_kampusu: veri kuruluyor",
+  "sera: veri kuruluyor",
+  "orman: veri kuruluyor",
+  "tarim_arazisi: veri kuruluyor",
+  "konut_alani: veri kuruluyor",
+  "calilik_ve_funda: veri kuruluyor",
+  "cayir_mera: veri kuruluyor",
+  "ciplak_kaya_ve_kum: veri kuruluyor",
+  "kentsel_park: veri kuruluyor",
+  "ic_su_yuzeyleri: veri kuruluyor",
+  "hayvancilik_tesisi: veri kuruluyor",
+  "futbol_sahasi: yayımlandı",
+  "gunes_enerjisi: yayımlandı",
+  "universite_kampusu: set oluşturuldu (özel)",
+  "universite_kampusu: ZIP yükleme bitti",
+  "yükleme doğrulandı: platform {'train': 858, 'validation': 249, 'test': 126}, yerel {'train': 858, 'val': 249, 'test': 126}, etiketsiz 0"
  ],
- "bu_calismada_hatalar": [],
+ "bu_calismada_hatalar": [
+  "sera: RuntimeError yeterli görüntü üretilemedi: 498 < 1000"
+ ],
  "kuyruk_uzunlugu": 34,
- "kalan_tarif": 18,
+ "kalan_tarif": 16,
  "durum_sayilari": {
   "zayif": 9,
-  "yayimlandi": 1,
-  "hata": 4,
-  "egitimde": 2,
-  "bekliyor": 18
+  "yayimlandi": 3,
+  "hata": 5,
+  "yuklendi": 1,
+  "bekliyor": 16
  }
 }

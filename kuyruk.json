@@ -446,7 +446,7 @@
   },
   {
    "id": "futbol_sahasi",
-   "durum": "egitimde",
+   "durum": "yayimlandi",
    "set_id": "01a21e35-8b3b-7c71-8526-dc70ca851cde",
    "set_slug": "turkiye-futbol-sahasi-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -517,7 +517,8 @@
    },
    "zamanlar": {
     "yuklendi": "2026-11-27T18:15:48Z",
-    "egitimde": "2026-11-27T18:15:54Z"
+    "egitimde": "2026-11-27T18:15:54Z",
+    "yayimlandi": "2026-11-28T17:45:26Z"
    },
    "surum_id": "01a21e38-7d7c-7a33-be57-95fadda75419",
    "item_sayisi": 3327,
@@ -541,8 +542,7 @@
     "recall": 0.71053,
     "kapi_olcusu": 0.52007
    },
-   "cr_gercek": "2.92",
-   "yayina_hazir": true
+   "cr_gercek": "2.92"
   },
   {
    "id": "insaat_alani",
@@ -646,25 +646,103 @@
   },
   {
    "id": "universite_kampusu",
-   "durum": "bekliyor",
+   "durum": "yuklendi",
    "zamanlar": {
     "hata": "2026-11-27T16:38:27Z",
-    "bekliyor": "2026-11-27T21:32:28Z"
+    "bekliyor": "2026-11-27T21:32:28Z",
+    "yuklendi": "2026-11-28T17:48:07Z"
    },
-   "neden": null
+   "neden": null,
+   "set_id": "01a22344-0299-7693-84f0-c5a7336b8a33",
+   "set_slug": "turkiye-universite-kampusu-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "universite_kampusu",
+    "siniflar": [
+     "universite_kampusu"
+    ],
+    "goruntu_bolum": {
+     "val": 249,
+     "train": 858,
+     "test": 126
+    },
+    "goruntu_toplam": 1233,
+    "pencere_bolum": {
+     "val": 83,
+     "train": 286,
+     "test": 42
+    },
+    "pencere_toplam": 411,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "universite_kampusu": 1074
+     },
+     "val": {
+      "universite_kampusu": 267
+     },
+     "test": {
+      "universite_kampusu": 153
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "universite_kampusu": 858
+     },
+     "val": {
+      "universite_kampusu": 249
+     },
+     "test": {
+      "universite_kampusu": 126
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "universite_kampusu": 464
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 93,
+     "2020": 127,
+     "2021": 84,
+     "2022": 234,
+     "2023": 175,
+     "2024": 147,
+     "2025": 216,
+     "2026": 157
+    },
+    "mevsim_dagilimi": {
+     "ilkbahar": 408,
+     "yaz": 412,
+     "sonbahar": 413
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 241,
+     "yazilan_pencere": 411,
+     "goruntu": 1233,
+     "okumaHatasi": 3,
+     "gecerli_tarih_yok": 1
+    },
+    "uretim_zamani": "2026-11-28T15:44Z"
+   },
+   "surum_id": "01a22345-8052-74c0-8e1f-0c7b3092a674",
+   "item_sayisi": 1233,
+   "bolum_ayari": {
+    "train": 858,
+    "val": 249,
+    "test": 126,
+    "unassigned": 0
+   }
   },
   {
    "id": "sera",
-   "durum": "bekliyor",
+   "durum": "hata",
    "zamanlar": {
-    "hata": "2026-11-27T16:40:41Z",
+    "hata": "2026-11-28T15:47:20Z",
     "bekliyor": "2026-11-27T21:32:28Z"
    },
-   "neden": null
+   "neden": "RuntimeError: yeterli görüntü üretilemedi: 498 < 1000"
   },
   {
    "id": "gunes_enerjisi",
-   "durum": "egitimde",
+   "durum": "yayimlandi",
    "set_id": "01a21e3b-001f-79b2-ad42-a5a19202ba4f",
    "set_slug": "turkiye-gunes-enerjisi-santrali-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -735,7 +813,8 @@
    },
    "zamanlar": {
     "yuklendi": "2026-11-27T18:20:52Z",
-    "egitimde": "2026-11-27T18:20:58Z"
+    "egitimde": "2026-11-27T18:20:58Z",
+    "yayimlandi": "2026-11-28T17:46:26Z"
    },
    "surum_id": "01a21e3d-1ff5-7f20-8d10-da2e8754f138",
    "item_sayisi": 2693,
@@ -759,8 +838,7 @@
     "recall": 0.55253,
     "kapi_olcusu": 0.55085
    },
-   "cr_gercek": "2.49",
-   "yayina_hazir": true
+   "cr_gercek": "2.49"
   },
   {
    "id": "maden_ocagi",

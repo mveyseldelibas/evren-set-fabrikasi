@@ -1617,7 +1617,88 @@
   },
   {
    "id": "konut_alani",
-   "durum": "bekliyor"
+   "durum": "yuklendi",
+   "set_id": "01a2234b-32db-7292-acf6-bed58f3bbbe8",
+   "set_slug": "turkiye-konut-alani-segmentasyonu-sentinel-2-cok-zamanli-osm",
+   "veri_ozeti": {
+    "tarif": "konut_alani",
+    "siniflar": [
+     "konut_alani"
+    ],
+    "goruntu_bolum": {
+     "train": 2094,
+     "val": 598,
+     "test": 298
+    },
+    "goruntu_toplam": 2990,
+    "pencere_bolum": {
+     "train": 699,
+     "val": 200,
+     "test": 100
+    },
+    "pencere_toplam": 999,
+    "etiket_satiri_bolum_sinif": {
+     "train": {
+      "konut_alani": 4945
+     },
+     "val": {
+      "konut_alani": 1630
+     },
+     "test": {
+      "konut_alani": 652
+     }
+    },
+    "goruntu_sayisi_sinifi_iceren": {
+     "train": {
+      "konut_alani": 2094
+     },
+     "val": {
+      "konut_alani": 598
+     },
+     "test": {
+      "konut_alani": 298
+     }
+    },
+    "osm_kullanilabilir_cokgen": {
+     "konut_alani": 49891
+    },
+    "osm_dokum_tarihi": "2026-11-24",
+    "yil_dagilimi": {
+     "2019": 327,
+     "2020": 355,
+     "2021": 301,
+     "2022": 514,
+     "2023": 392,
+     "2024": 317,
+     "2025": 442,
+     "2026": 342
+    },
+    "mevsim_dagilimi": {
+     "yaz": 1001,
+     "sonbahar": 1002,
+     "ilkbahar": 987
+    },
+    "atlanan_ve_sayaclar": {
+     "bulutKarBos": 573,
+     "yazilan_pencere": 999,
+     "goruntu": 2990,
+     "okumaHatasi": 9,
+     "bosPiksel": 1,
+     "gecerli_tarih_yok": 1
+    },
+    "uretim_zamani": "2026-11-28T16:30Z"
+   },
+   "zamanlar": {
+    "yuklendi": "2026-11-28T17:56:51Z"
+   },
+   "surum_id": "01a2234d-8110-7941-b12f-b87fa89ff5c7",
+   "item_sayisi": 2990,
+   "bolum_ayari": {
+    "train": 2094,
+    "val": 598,
+    "test": 298,
+    "unassigned": 0
+   }
   },
   {
    "id": "calilik_ve_funda",

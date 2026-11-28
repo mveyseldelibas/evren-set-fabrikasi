@@ -1890,7 +1890,7 @@
   },
   {
    "id": "ciplak_kaya_ve_kum",
-   "durum": "hata",
+   "durum": "egitimde",
    "set_id": "01a22353-236d-7253-a8d9-c975aba80953",
    "set_slug": "turkiye-ciplak-kaya-ve-kum-alani-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -1969,7 +1969,8 @@
    },
    "zamanlar": {
     "yuklendi": "2026-11-28T18:05:26Z",
-    "hata": "2026-11-28T18:05:31Z"
+    "hata": "2026-11-28T18:05:31Z",
+    "egitimde": "2026-11-28T18:34:45Z"
    },
    "surum_id": "01a22355-58b4-7103-8ea5-5f80baf4da9c",
    "item_sayisi": 2835,
@@ -1980,11 +1981,14 @@
     "unassigned": 0
    },
    "proje_id": "01a22355-60cd-7613-b019-6e7ba23bdab2",
-   "neden": "RuntimeError: eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz"
+   "neden": null,
+   "is_id": "01a22370-45e1-7a71-92c6-5a4d744beb57",
+   "epok": 60,
+   "tahmin_cr": 0.23
   },
   {
    "id": "kentsel_park",
-   "durum": "hata",
+   "durum": "egitimde",
    "set_id": "01a22355-8d49-70a0-9485-b700a94a4295",
    "set_slug": "turkiye-kentsel-park-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -2056,7 +2060,8 @@
    },
    "zamanlar": {
     "yuklendi": "2026-11-28T18:08:37Z",
-    "hata": "2026-11-28T18:08:46Z"
+    "hata": "2026-11-28T18:08:46Z",
+    "egitimde": "2026-11-28T18:34:45Z"
    },
    "surum_id": "01a22358-4747-7e11-8843-25f92492c721",
    "item_sayisi": 2697,
@@ -2067,7 +2072,10 @@
     "unassigned": 0
    },
    "proje_id": "01a22358-5954-7ed0-b2bc-689828a2e477",
-   "neden": "RuntimeError: eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz"
+   "neden": null,
+   "is_id": "01a22370-4af0-7861-8bfe-bada42569535",
+   "epok": 60,
+   "tahmin_cr": 0.22
   },
   {
    "id": "ic_su_yuzeyleri",

@@ -335,6 +335,11 @@ class Fabrika:
         for deneme in range(2):
             govde = egitim.govde(tarif, o["surum_id"], epok)
             j = self.api.egitim_kuru(proje, govde)
+            for _ in range(4):        # 28.11: sürüm yeni oluşturulunca kuru koşu bir süre hatasız "geçersiz" dönüyor
+                if j.get("valid") or j.get("errors"):
+                    break
+                self.bekle(60)
+                j = self.api.egitim_kuru(proje, govde)
             tahmin = float(j.get("estimated_cr") or 0)
             self.d.eylem(f"{o['id']}: kuru koşu epok={epok} tahmin={tahmin:.2f} CR (x{egitim.KATSAYI}={tahmin * egitim.KATSAYI:.1f})")
             if j.get("valid") and egitim.maliyet_uygun(tahmin):

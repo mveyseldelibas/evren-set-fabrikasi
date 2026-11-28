@@ -64,6 +64,13 @@
    "mesaj": "Eğitim başladı: Türkiye Çayır ve Mera Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2993 öğe, ~1 CR)."
   },
   {
+   "id": "2026-11-28T18:05:31Z-hata-ciplak_kaya_ve_kum",
+   "zaman": "2026-11-28T18:05:31Z",
+   "tur": "hata",
+   "tarif": "ciplak_kaya_ve_kum",
+   "mesaj": "Tarif başarısız: ciplak_kaya_ve_kum (RuntimeError: eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz)."
+  },
+  {
    "id": "2026-11-27T23:40:00Z-zayif-meyve_bahcesi_ve_bag",
    "zaman": "2026-11-27T23:40:00Z",
    "tur": "zayif",
@@ -533,6 +540,13 @@
    "tur": "basladi",
    "tarif": "cayir_mera",
    "mesaj": "Eğitim başladı: Türkiye Çayır ve Mera Segmentasyonu - Sentinel-2 çok zamanlı (OSM) (2993 öğe, ~1 CR)."
+  },
+  {
+   "id": "2026-11-28T18:05:31Z-hata-ciplak_kaya_ve_kum",
+   "zaman": "2026-11-28T18:05:31Z",
+   "tur": "hata",
+   "tarif": "ciplak_kaya_ve_kum",
+   "mesaj": "Tarif başarısız: ciplak_kaya_ve_kum (RuntimeError: eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz)."
   }
  ]
 }

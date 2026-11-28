@@ -1890,7 +1890,7 @@
   },
   {
    "id": "ciplak_kaya_ve_kum",
-   "durum": "yuklendi",
+   "durum": "hata",
    "set_id": "01a22353-236d-7253-a8d9-c975aba80953",
    "set_slug": "turkiye-ciplak-kaya-ve-kum-alani-segmentasyonu-sentinel-2-cok-zamanli-osm",
    "veri_ozeti": {
@@ -1968,7 +1968,8 @@
     "uretim_zamani": "2026-11-28T17:07Z"
    },
    "zamanlar": {
-    "yuklendi": "2026-11-28T18:05:26Z"
+    "yuklendi": "2026-11-28T18:05:26Z",
+    "hata": "2026-11-28T18:05:31Z"
    },
    "surum_id": "01a22355-58b4-7103-8ea5-5f80baf4da9c",
    "item_sayisi": 2835,
@@ -1977,7 +1978,9 @@
     "val": 576,
     "test": 290,
     "unassigned": 0
-   }
+   },
+   "proje_id": "01a22355-60cd-7613-b019-6e7ba23bdab2",
+   "neden": "RuntimeError: eğitim maliyeti 30 CR sınırını aşıyor ya da kuru koşu geçersiz"
   },
   {
    "id": "kentsel_park",
